@@ -1,8 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Shield } from 'lucide-react';
+import { updatePageSEO } from '../utils/seo';
 
 const PrivacyPolicy: React.FC = () => {
+  useEffect(() => {
+    updatePageSEO(
+      'Privacy Policy - GREAT Visa Network',
+      'Read our privacy policy to understand how GREAT Visa Network collects, uses, and protects your personal information during visa and immigration services.',
+      [
+        'GREAT Visa Network privacy policy',
+        'visa consultants privacy policy',
+        'data protection policy',
+        'privacy policy immigration services',
+        'personal data protection',
+        'visa services privacy',
+        'client data security'
+      ]
+    );
+  }, []);
+
   return (
     <div className="min-h-screen bg-white">
       <section className="relative py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white overflow-hidden">

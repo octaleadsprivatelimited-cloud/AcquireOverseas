@@ -1,9 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Globe, ArrowRight } from 'lucide-react';
+import { updatePageSEO } from '../utils/seo';
 
 const Sitemap: React.FC = () => {
+  useEffect(() => {
+    updatePageSEO(
+      'Sitemap - GREAT Visa Network',
+      'Browse through all pages and services of GREAT Visa Network. Complete sitemap for visa services, immigration consultation, and specialized visa programs.',
+      [
+        'GREAT Visa Network sitemap',
+        'visa services sitemap',
+        'immigration services pages',
+        'visa consultants sitemap',
+        'website sitemap',
+        'all visa services',
+        'visa pages directory'
+      ]
+    );
+  }, []);
+
   const sitemapLinks = [
     {
       category: 'Main Pages',

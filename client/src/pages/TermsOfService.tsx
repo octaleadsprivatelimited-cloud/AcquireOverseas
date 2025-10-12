@@ -1,8 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FileText } from 'lucide-react';
+import { updatePageSEO } from '../utils/seo';
 
 const TermsOfService: React.FC = () => {
+  useEffect(() => {
+    updatePageSEO(
+      'Terms of Service - GREAT Visa Network',
+      'Read the terms of service for using GREAT Visa Network visa and immigration consultancy services. Understand our policies, responsibilities, and client agreements.',
+      [
+        'GREAT Visa Network terms of service',
+        'visa consultants terms',
+        'immigration services terms',
+        'visa consultancy agreement',
+        'service terms and conditions',
+        'visa services policy',
+        'client agreement terms'
+      ]
+    );
+  }, []);
+
   return (
     <div className="min-h-screen bg-white">
       <section className="relative py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white overflow-hidden">

@@ -1,8 +1,37 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Award, CheckCircle, Users, Clock, Shield, ArrowRight } from 'lucide-react';
+import { updatePageSEO } from '../utils/seo';
 
 const SkillAssessment: React.FC = () => {
+  useEffect(() => {
+    updatePageSEO(
+      'Skill Assessment Services for PR - Migration Skills Evaluation',
+      'Professional skill assessment services for Australia, Canada PR applications. Expert assistance with qualification recognition, competency assessment, and skills evaluation for immigration.',
+      [
+        'skill assessment services',
+        'skills assessment for PR',
+        'Australia skill assessment',
+        'Canada skill assessment',
+        'migration skills evaluation',
+        'professional skill assessment',
+        'qualification recognition services',
+        'competency assessment services',
+        'skills assessment Hyderabad',
+        'PR skill assessment',
+        'immigration skill assessment',
+        'qualification evaluation',
+        'professional skills evaluation',
+        'trade assessment services',
+        'skills recognition services',
+        'CDR writing services',
+        'RPL assessment',
+        'skill assessment consultants',
+        'points test assessment'
+      ]
+    );
+  }, []);
+
   const features = [
     { icon: Award, title: 'Professional Evaluation', description: 'Comprehensive assessment of your skills and qualifications' },
     { icon: Users, title: 'Qualification Recognition', description: 'Get your qualifications recognized internationally' },

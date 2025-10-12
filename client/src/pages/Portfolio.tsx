@@ -1,8 +1,32 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, ArrowRight } from 'lucide-react';
+import { updatePageSEO } from '../utils/seo';
 
 const Portfolio: React.FC = () => {
+  useEffect(() => {
+    updatePageSEO(
+      'Portfolio - GREAT Visa Network Success Stories',
+      'View our portfolio of successful visa cases and immigration services. Thousands of satisfied clients across study visas, work permits, PR applications, and tourist visas.',
+      [
+        'visa consultants portfolio',
+        'immigration success stories',
+        'visa approval cases',
+        'GREAT Visa Network portfolio',
+        'successful visa applications',
+        'visa services portfolio',
+        'immigration consultants work',
+        'visa success cases',
+        'client success stories',
+        'visa approval portfolio',
+        'immigration services portfolio',
+        'visa consultancy projects',
+        'successful immigration cases',
+        'visa consultants achievements'
+      ]
+    );
+  }, []);
+
   const projects = [
     { title: 'Study Visa Approvals', description: 'Admissions and visas for top universities in Canada, UK, and Australia.', image: '/services/study_visa.jpg', stats: '1200+ approvals' },
     { title: 'Work Visa Placements', description: 'Skilled professionals placed in reputed companies across multiple countries.', image: '/services/word_visa.jpg', stats: '900+ placements' },

@@ -1,8 +1,37 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Clock, CheckCircle, Users, Shield, ArrowRight } from 'lucide-react';
+import { updatePageSEO } from '../utils/seo';
 
 const VisaExtension: React.FC = () => {
+  useEffect(() => {
+    updatePageSEO(
+      'Visa Extension Services - Visa Renewal Consultants',
+      'Professional visa extension and renewal services. Expert assistance for extending your visa stay, status change, and visa renewal applications for all countries.',
+      [
+        'visa extension services',
+        'visa renewal consultants',
+        'visa extension Hyderabad',
+        'tourist visa extension',
+        'work visa extension',
+        'student visa extension',
+        'visa status change',
+        'visa renewal services',
+        'extend visa stay',
+        'visa reapplication services',
+        'visa extension consultants',
+        'UK visa extension',
+        'USA visa extension',
+        'Australia visa extension',
+        'Canada visa extension',
+        'visa extension assistance',
+        'visa renewal help',
+        'immigration status change',
+        'visa extension application'
+      ]
+    );
+  }, []);
+
   const features = [
     { icon: Clock, title: 'Visa Extension', description: 'Extend your stay legally with our visa extension services' },
     { icon: Users, title: 'Status Change', description: 'Change your visa status to a different category' },

@@ -1,10 +1,38 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, Calendar, Clock } from 'lucide-react';
 import { blogPosts } from '../data/blogPosts';
+import { updatePageSEO } from '../utils/seo';
 
 const Blog: React.FC = () => {
+  useEffect(() => {
+    updatePageSEO(
+      'Blog - Visa & Immigration Guides | GREAT Visa Network',
+      'Read expert articles, guides, and updates on visas, immigration, study abroad, work permits, and international opportunities. Stay informed with GREAT Visa Network blog.',
+      [
+        'visa blog',
+        'immigration blog',
+        'study abroad articles',
+        'visa guides',
+        'immigration guides',
+        'visa tips',
+        'visa news',
+        'immigration updates',
+        'study visa guides',
+        'work visa articles',
+        'PR visa information',
+        'visa application tips',
+        'immigration advice blog',
+        'visa consultants blog',
+        'international education blog',
+        'visa process guides',
+        'immigration news India',
+        'visa requirements blog'
+      ]
+    );
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50">
       <section className="py-16">

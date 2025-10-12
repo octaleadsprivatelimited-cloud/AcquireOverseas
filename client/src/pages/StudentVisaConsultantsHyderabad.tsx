@@ -1,8 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { GraduationCap, CheckCircle, Users, Mail, Phone, MapPin, ArrowRight, MessageCircle, Book, Globe, Award, TrendingUp, ClipboardCheck, FileText, ShieldCheck } from 'lucide-react';
+import { updatePageSEO } from '../utils/seo';
 
 const StudentVisaConsultantsHyderabad = () => {
+  useEffect(() => {
+    updatePageSEO(
+      'Student Visa Consultants in Hyderabad - Study Abroad Experts',
+      'Leading student visa consultants in Hyderabad for study abroad. Expert assistance for student visas to USA, UK, Canada, Australia, Germany, and other countries. University admissions and visa processing.',
+      [
+        'student visa consultants Hyderabad',
+        'study visa consultants Hyderabad',
+        'study abroad consultants Hyderabad',
+        'overseas education consultants Hyderabad',
+        'student visa services Hyderabad',
+        'best student visa consultants',
+        'foreign education consultants',
+        'university admission consultants',
+        'USA student visa Hyderabad',
+        'UK student visa Hyderabad',
+        'Canada study visa Hyderabad',
+        'Australia student visa Hyderabad',
+        'Germany student visa',
+        'student visa processing Hyderabad',
+        'study abroad visa consultants',
+        'international education consultants',
+        'student visa application help',
+        'study visa services Hyderabad',
+        'overseas study consultants'
+      ]
+    );
+  }, []);
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',

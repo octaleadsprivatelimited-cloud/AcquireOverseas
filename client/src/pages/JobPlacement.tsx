@@ -1,8 +1,37 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Briefcase, CheckCircle, Users, Clock, Shield, ArrowRight } from 'lucide-react';
+import { updatePageSEO } from '../utils/seo';
 
 const JobPlacement: React.FC = () => {
+  useEffect(() => {
+    updatePageSEO(
+      'Job Placement Services Abroad - Overseas Employment',
+      'Professional job placement services for international employment. Find jobs abroad with our expert assistance for UK, Canada, Australia, USA, Europe, and Middle East.',
+      [
+        'job placement services abroad',
+        'overseas job placement Hyderabad',
+        'international job consultants',
+        'foreign job placement',
+        'overseas employment services',
+        'job placement consultants',
+        'abroad job opportunities',
+        'international recruitment services',
+        'overseas job consultancy',
+        'job placement for UK',
+        'Canada job placement',
+        'Australia job placement',
+        'Middle East job placement',
+        'Europe job consultants',
+        'overseas career services',
+        'international job assistance',
+        'work abroad job placement',
+        'global job opportunities',
+        'job placement Hyderabad'
+      ]
+    );
+  }, []);
+
   const features = [
     { icon: Briefcase, title: 'Job Matching', description: 'Connect with top employers worldwide' },
     { icon: Users, title: 'Career Guidance', description: 'Professional career counseling and advice' },

@@ -1,8 +1,37 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FileText, CheckCircle, Users, Clock, Shield, ArrowRight } from 'lucide-react';
+import { updatePageSEO } from '../utils/seo';
 
 const DocumentAttestation: React.FC = () => {
+  useEffect(() => {
+    updatePageSEO(
+      'Document Attestation Services - Certificate Attestation Hyderabad',
+      'Professional document attestation and certificate attestation services in Hyderabad. Embassy attestation, MEA attestation, apostille services for all documents.',
+      [
+        'document attestation Hyderabad',
+        'certificate attestation services',
+        'MEA attestation Hyderabad',
+        'embassy attestation services',
+        'apostille services Hyderabad',
+        'HRD attestation',
+        'notary attestation',
+        'educational certificate attestation',
+        'marriage certificate attestation',
+        'birth certificate attestation',
+        'degree certificate attestation',
+        'document verification services',
+        'attestation services Hyderabad',
+        'document legalization',
+        'consulate attestation',
+        'PCC attestation',
+        'document apostille',
+        'certificate verification',
+        'embassy legalization services'
+      ]
+    );
+  }, []);
+
   const features = [
     { icon: FileText, title: 'Document Verification', description: 'Professional verification and attestation of all documents' },
     { icon: Shield, title: 'Embassy Services', description: 'Complete embassy and consulate services' },

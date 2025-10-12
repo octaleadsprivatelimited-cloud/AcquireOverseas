@@ -1,8 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Plane, CheckCircle, Users, Mail, Phone, ArrowRight, MessageCircle, Globe, Award, TrendingUp, ClipboardCheck, FileText, ShieldCheck } from 'lucide-react';
+import { updatePageSEO } from '../utils/seo';
 
 const UKVisitorVisaConsultants = () => {
+  useEffect(() => {
+    updatePageSEO(
+      'UK Visitor Visa Consultants Hyderabad - UK Tourist Visa Services',
+      'Expert UK visitor visa consultants in Hyderabad. Complete assistance for UK tourist visa, standard visitor visa, and UK travel visa applications with high success rate.',
+      [
+        'UK visitor visa consultants Hyderabad',
+        'UK tourist visa consultants',
+        'UK standard visitor visa',
+        'UK visitor visa services',
+        'UK tourist visa Hyderabad',
+        'UK travel visa consultants',
+        'UK visitor visa application',
+        'UK visa consultants Hyderabad',
+        'UK tourist visa processing',
+        'UK visitor visa assistance',
+        'UK family visitor visa',
+        'UK business visitor visa',
+        'UK short stay visa',
+        'UK visitor visa documentation',
+        'UK tourist visa services Hyderabad',
+        'best UK visa consultants',
+        'UK visitor visa help',
+        'UK visa application Hyderabad',
+        'UK standard visitor visa Hyderabad'
+      ]
+    );
+  }, []);
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
