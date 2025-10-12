@@ -265,7 +265,7 @@ const UKTier2VisaConsultantsHyderabad = () => {
                       <strong>GREAT Visa Network - Hyderabad Office</strong>
                     </p>
                     <p className="text-gray-600">
-                      Banjara Hills, Hyderabad, Telangana 500034
+                      Hyderabad, Telangana 500034
                     </p>
                     <p className="text-gray-600 mt-2">
                       Office Hours: Mon-Sat, 10:00 AM - 6:00 PM

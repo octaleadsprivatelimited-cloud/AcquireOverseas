@@ -89,7 +89,7 @@ const Contact: React.FC = () => {
     {
       icon: MapPin,
       title: 'Visit Our Office',
-      details: ['123 Immigration Street', 'Hyderabad, Telangana, India'],
+      details: ['Hyderabad, Telangana, India'],
       color: 'text-red-500'
     },
     {
