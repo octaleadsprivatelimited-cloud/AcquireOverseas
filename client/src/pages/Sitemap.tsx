@@ -36,7 +36,31 @@ const Sitemap: React.FC = () => {
         { name: 'Job Placement', path: '/job-placement' },
         { name: 'Skill Assessment', path: '/skill-assessment' },
         { name: 'Document Attestation', path: '/document-attestation' },
-        { name: 'Visa Extension', path: '/visa-extension' }
+        { name: 'Visa Extension', path: '/visa-extension' },
+        { name: 'Skilled Migration', path: '/skilled-migration' }
+      ]
+    },
+    {
+      category: 'UK Visa Services',
+      links: [
+        { name: 'UK Visitor Visa Consultants', path: '/uk-visitor-visa-consultants' },
+        { name: 'UK Healthcare Professionals Work Visa', path: '/uk-health-care-professionals-work-visa' },
+        { name: 'UK IT Professionals Visa Consultancy', path: '/uk-it-professionals-visa-consultancy' },
+        { name: 'UK Skilled Worker Visa Consultants in Hyderabad', path: '/uk-skilled-worker-visa-consultants-in-hyderabad' },
+        { name: 'Tier 2 Work Visa for UK', path: '/tier-2-work-visa-for-uk' },
+        { name: 'UK Healthcare Worker Visa Consultants', path: '/uk-healthcare-worker-visa-consultants' },
+        { name: 'UK Tier 2 Visa Consultants in Hyderabad', path: '/uk-tier-2-visa-consultants-in-hyderabad' },
+        { name: 'UK Skilled Work Visa Consultancy', path: '/uk-skilled-work-visa-consultancy' }
+      ]
+    },
+    {
+      category: 'Other Countries',
+      links: [
+        { name: 'Student Visa Consultants in Hyderabad', path: '/student-visa-consultants-in-hyderabad' },
+        { name: 'Ireland IT Professional Work Visa Consultancy', path: '/best-ireland-it-professional-work-visa-consultancy' },
+        { name: 'Ireland Healthcare Work Visa Consultancy', path: '/best-ireland-health-care-work-visa-consultancy' },
+        { name: 'Netherlands Skilled Worker Visa', path: '/netherlands-skilled-worker-visa' },
+        { name: 'Albania Work Visa', path: '/albania-work-visa' }
       ]
     },
     {
@@ -81,7 +105,7 @@ const Sitemap: React.FC = () => {
 
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {sitemapLinks.map((section, index) => (
               <motion.div
                 key={section.category}
