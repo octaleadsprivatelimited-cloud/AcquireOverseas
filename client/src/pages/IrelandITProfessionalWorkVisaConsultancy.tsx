@@ -245,11 +245,20 @@ const IrelandITProfessionalWorkVisaConsultancy = () => {
                     className="bg-white rounded-2xl shadow-lg p-6"
                   >
                     <div className="text-center mb-6">
-                      <img
-                        src={`${import.meta.env.BASE_URL}services/immigration.jpg`}
-                        alt="Migration Expert"
-                        className="w-full h-48 object-cover rounded-xl mb-4"
-                      />
+                      <div className="relative mb-4">
+                        <img
+                          src={`${import.meta.env.BASE_URL}services/immigration.jpg`}
+                          alt="Migration Expert"
+                          className="w-full h-48 object-cover rounded-xl"
+                        />
+                        <div className="absolute top-2 right-2 bg-white rounded-full p-3 shadow-lg">
+                          <img
+                            src="/logo.png"
+                            alt="GREAT Visa Network"
+                            className="w-20 h-auto"
+                          />
+                        </div>
+                      </div>
                       <h3 className="text-xl font-bold text-gray-900 mb-2">Talk to a Migration Expert</h3>
                       <p className="text-gray-600 text-sm mb-4">Get personalized guidance for your Ireland IT visa application</p>
                     </div>

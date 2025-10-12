@@ -285,11 +285,20 @@ const IrelandHealthcareWorkVisaConsultancy = () => {
             <aside className="lg:col-span-1">
               <div className="lg:sticky lg:top-24 space-y-6">
                 <div className="bg-white rounded-2xl shadow-xl p-6">
-                  <img
-                    src={`${import.meta.env.BASE_URL}services/immigration.jpg`}
-                    alt="Healthcare Expert"
-                    className="w-full h-40 rounded-xl object-cover mb-4 ring-4 ring-green-50"
-                  />
+                  <div className="relative mb-4">
+                    <img
+                      src={`${import.meta.env.BASE_URL}services/immigration.jpg`}
+                      alt="Healthcare Expert"
+                      className="w-full h-40 rounded-xl object-cover ring-4 ring-green-50"
+                    />
+                    <div className="absolute top-2 right-2 bg-white rounded-full p-3 shadow-lg">
+                      <img
+                        src="/logo.png"
+                        alt="GREAT Visa Network"
+                        className="w-20 h-auto"
+                      />
+                    </div>
+                  </div>
                   <h3 className="text-xl font-bold mb-2">Talk to Healthcare Visa Expert</h3>
                   <p className="text-gray-600 mb-4">Get a free profile evaluation within 24 hours.</p>
                   <div className="flex flex-col gap-3">
