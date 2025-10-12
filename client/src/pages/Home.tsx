@@ -326,6 +326,13 @@ const Home: React.FC = () => {
                     <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full">
                       <h3 className="text-lg font-bold text-gray-900">{country.title}</h3>
                     </div>
+                    <div className="absolute top-4 right-4 bg-white rounded-full p-3 shadow-lg">
+                      <img
+                        src="/logo.png"
+                        alt="GREAT Visa Network"
+                        className="w-16 h-auto"
+                      />
+                    </div>
                   </div>
 
                   {/* Content - 30% */}

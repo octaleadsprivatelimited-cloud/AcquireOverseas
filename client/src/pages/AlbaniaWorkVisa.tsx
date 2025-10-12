@@ -67,23 +67,28 @@ const AlbaniaWorkVisa = () => {
   };
 
   const openPositions = [
-    "Forklift Operator",
-    "Shovel Operator",
-    "Food Delivery",
-    "Courier Delivery",
-    "Construction Helper",
-    "Agriculture Helpers",
-    "Waiter",
-    "Dishwasher Cleaners",
-    "Factory Helper",
-    "Kitchen Helpers",
-    "Welder (Arc & TIG & MIG)",
-    "Furniture Carpenter",
-    "Auto Denter",
-    "Auto Electrician",
-    "Car Mechanics",
-    "Mason",
-    "Spray Painter"
+    { category: "GNM", positions: ["General Nursing Staff", "Ward Nurses", "ICU Nurses", "Emergency Nurses", "Operation Theatre Nurses"] },
+    { category: "ANM", positions: ["Auxiliary Nursing Midwife", "Community Health Workers", "Primary Health Care Nurses", "Maternity Nurses"] },
+    { category: "IT", positions: ["Software Developers", "Web Developers", "Database Administrators", "Network Engineers", "System Administrators", "IT Support Specialists"] },
+    { category: "NON IT", positions: [
+      "Forklift Operator",
+      "Shovel Operator",
+      "Food Delivery",
+      "Courier Delivery",
+      "Construction Helper",
+      "Agriculture Helpers",
+      "Waiter",
+      "Dishwasher Cleaners",
+      "Factory Helper",
+      "Kitchen Helpers",
+      "Welder (Arc & TIG & MIG)",
+      "Furniture Carpenter",
+      "Auto Denter",
+      "Auto Electrician",
+      "Car Mechanics",
+      "Mason",
+      "Spray Painter"
+    ]}
   ];
 
   return (
@@ -202,11 +207,18 @@ const AlbaniaWorkVisa = () => {
                 className="bg-gradient-to-br from-red-600 to-red-800 rounded-2xl shadow-xl p-8 md:p-12 text-white"
               >
                 <h2 className="text-3xl md:text-4xl font-bold mb-8">Open Positions</h2>
-                <div className="grid md:grid-cols-2 gap-4">
-                  {openPositions.map((position, index) => (
-                    <div key={index} className="flex items-center text-lg">
-                      <CheckCircle className="mr-3 flex-shrink-0" size={22} />
-                      <span>{position}</span>
+                <div className="space-y-8">
+                  {openPositions.map((category, catIndex) => (
+                    <div key={catIndex} className="bg-white/10 rounded-xl p-6 backdrop-blur-sm">
+                      <h3 className="text-2xl font-bold mb-4 text-yellow-300">{category.category}</h3>
+                      <div className="grid md:grid-cols-2 gap-3">
+                        {category.positions.map((position, posIndex) => (
+                          <div key={posIndex} className="flex items-center text-base">
+                            <CheckCircle className="mr-2 flex-shrink-0" size={18} />
+                            <span>{position}</span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   ))}
                 </div>
