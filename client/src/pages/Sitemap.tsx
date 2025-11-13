@@ -1,83 +1,41 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Globe, ArrowRight } from 'lucide-react';
-import { updatePageSEO } from '../utils/seo';
-
 const Sitemap: React.FC = () => {
-  useEffect(() => {
-    updatePageSEO(
-      'Sitemap - GREAT Visa Network',
-      'Browse through all pages and services of GREAT Visa Network. Complete sitemap for visa services, immigration consultation, and specialized visa programs.',
-      [
-        'GREAT Visa Network sitemap',
-        'visa services sitemap',
-        'immigration services pages',
-        'visa consultants sitemap',
-        'website sitemap',
-        'all visa services',
-        'visa pages directory'
-      ]
-    );
-  }, []);
 
   const sitemapLinks = [
     {
       category: 'Main Pages',
       links: [
         { name: 'Home', path: '/' },
-        { name: 'About Us', path: '/about' },
-        { name: 'Services', path: '/services' },
-        { name: 'Contact', path: '/contact' },
-        { name: 'Portfolio', path: '/portfolio' },
-        { name: 'Blog', path: '/blog' },
-        { name: 'Testimonials', path: '/testimonials' },
-        { name: 'FAQ', path: '/faq' },
-        { name: 'Careers', path: '/careers' }
+        { name: 'Your Trusted Education Partner', path: '/your-trusted-education-partner' },
+        { name: 'Comprehensive Education Solutions', path: '/comprehensive-education-solutions' },
+        { name: "Let's Start Your Journey", path: '/lets-start-your-journey' },
+        { name: 'Our Portfolio', path: '/our-portfolio' },
+        { name: 'Blog & Resources', path: '/blog-resources' },
+        { name: 'Success Stories', path: '/success-stories' },
+        { name: 'Frequently Asked Questions', path: '/frequently-asked-questions' },
+        { name: 'Build Your Career With Us', path: '/build-your-career-with-us' }
       ]
     },
     {
-      category: 'Visa Services',
+      category: 'Education Services',
       links: [
-        { name: 'Study Visa', path: '/study-visa' },
-        { name: 'Work Visa', path: '/work-visa' },
-        { name: 'Tourist Visa', path: '/tourist-visa' },
-        { name: 'Family Visa', path: '/family-visa' },
-        { name: 'Business Visa', path: '/business-visa' }
+        { name: 'Study Abroad Programs', path: '/study-abroad-programs' }
       ]
     },
     {
-      category: 'Immigration Services',
+      category: 'Consultation Services',
       links: [
-        { name: 'Immigration Consultation', path: '/immigration-consultation' },
-        { name: 'Job Placement', path: '/job-placement' },
-        { name: 'Skill Assessment', path: '/skill-assessment' },
-        { name: 'Document Attestation', path: '/document-attestation' },
-        { name: 'Visa Extension', path: '/visa-extension' },
-        { name: 'Skilled Migration', path: '/skilled-migration' }
-      ]
-    },
-    {
-      category: 'UK Visa Services',
-      links: [
-        { name: 'UK Visitor Visa Consultants', path: '/uk-visitor-visa-consultants' },
-        { name: 'UK Healthcare Professionals Work Visa', path: '/uk-health-care-professionals-work-visa' },
-        { name: 'UK IT Professionals Visa Consultancy', path: '/uk-it-professionals-visa-consultancy' },
-        { name: 'UK Skilled Worker Visa Consultants in Hyderabad', path: '/uk-skilled-worker-visa-consultants-in-hyderabad' },
-        { name: 'Tier 2 Work Visa for UK', path: '/tier-2-work-visa-for-uk' },
-        { name: 'UK Healthcare Worker Visa Consultants', path: '/uk-healthcare-worker-visa-consultants' },
-        { name: 'UK Tier 2 Visa Consultants in Hyderabad', path: '/uk-tier-2-visa-consultants-in-hyderabad' },
-        { name: 'UK Skilled Work Visa Consultancy', path: '/uk-skilled-work-visa-consultancy' }
-      ]
-    },
-    {
-      category: 'Other Countries',
-      links: [
-        { name: 'Student Visa Consultants in Hyderabad', path: '/student-visa-consultants-in-hyderabad' },
-        { name: 'Ireland IT Professional Work Visa Consultancy', path: '/best-ireland-it-professional-work-visa-consultancy' },
-        { name: 'Ireland Healthcare Work Visa Consultancy', path: '/best-ireland-health-care-work-visa-consultancy' },
-        { name: 'Netherlands Skilled Worker Visa', path: '/netherlands-skilled-worker-visa' },
-        { name: 'Albania Work Visa', path: '/albania-work-visa' }
+        { name: 'Education Consultation', path: '/education-consultation' },
+        { name: 'Career Counseling Services', path: '/career-counseling-services' },
+        { name: 'Academic Profile Assessment', path: '/academic-profile-assessment' },
+        { name: 'Document Preparation Services', path: '/document-preparation-services' },
+        { name: 'Application Support', path: '/application-support' },
+        { name: 'Course Selection', path: '/course-selection' },
+        { name: 'University Selection', path: '/university-selection' },
+        { name: 'Student Visa Extension Services', path: '/student-visa-extension-services' }
       ]
     },
     {
@@ -114,7 +72,7 @@ const Sitemap: React.FC = () => {
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">Sitemap</h1>
             <p className="text-xl text-primary-100 leading-relaxed">
-              Navigate through all pages of GREAT Visa Network website
+              Navigate through all pages of Acquire Overseas Education website
             </p>
           </motion.div>
         </div>

@@ -1,37 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, Calendar, Clock } from 'lucide-react';
 import { blogPosts } from '../data/blogPosts';
-import { updatePageSEO } from '../utils/seo';
 
 const Blog: React.FC = () => {
-  useEffect(() => {
-    updatePageSEO(
-      'Blog - Visa & Immigration Guides | GREAT Visa Network',
-      'Read expert articles, guides, and updates on visas, immigration, study abroad, work permits, and international opportunities. Stay informed with GREAT Visa Network blog.',
-      [
-        'visa blog',
-        'immigration blog',
-        'study abroad articles',
-        'visa guides',
-        'immigration guides',
-        'visa tips',
-        'visa news',
-        'immigration updates',
-        'study visa guides',
-        'work visa articles',
-        'PR visa information',
-        'visa application tips',
-        'immigration advice blog',
-        'visa consultants blog',
-        'international education blog',
-        'visa process guides',
-        'immigration news India',
-        'visa requirements blog'
-      ]
-    );
-  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50">
@@ -51,7 +24,7 @@ const Blog: React.FC = () => {
               transition={{ delay: 0.1 }}
               className="text-lg text-gray-600"
             >
-              Expert insights, guides, and updates on visas, immigration, and international opportunities.
+              Expert insights, guides, and updates on study abroad, university admissions, and international education opportunities.
             </motion.p>
           </div>
 
@@ -109,12 +82,12 @@ const Blog: React.FC = () => {
             viewport={{ once: true }}
             className="mt-16 max-w-4xl mx-auto bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8 md:p-12 text-center text-white"
           >
-            <h2 className="text-3xl font-bold mb-4">Ready to Start Your Visa Journey?</h2>
+            <h2 className="text-3xl font-bold mb-4">Ready to Start Your Study Abroad Journey?</h2>
             <p className="text-white/90 mb-6 text-lg">
-              Get expert guidance from our experienced visa consultants.
+              Get expert guidance from our experienced education consultants.
             </p>
             <Link
-              to="/contact"
+              to="/lets-start-your-journey"
               className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 rounded-lg font-semibold hover:bg-yellow-400 hover:text-gray-900 transition"
             >
               Get Free Consultation

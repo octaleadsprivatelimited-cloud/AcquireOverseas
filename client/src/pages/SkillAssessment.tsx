@@ -1,51 +1,22 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Award, CheckCircle, Users, Clock, Shield, ArrowRight } from 'lucide-react';
-import { updatePageSEO } from '../utils/seo';
-
 const SkillAssessment: React.FC = () => {
-  useEffect(() => {
-    updatePageSEO(
-      'Skill Assessment Services for PR - Migration Skills Evaluation',
-      'Professional skill assessment services for Australia, Canada PR applications. Expert assistance with qualification recognition, competency assessment, and skills evaluation for immigration.',
-      [
-        'skill assessment services',
-        'skills assessment for PR',
-        'Australia skill assessment',
-        'Canada skill assessment',
-        'migration skills evaluation',
-        'professional skill assessment',
-        'qualification recognition services',
-        'competency assessment services',
-        'skills assessment Hyderabad',
-        'PR skill assessment',
-        'immigration skill assessment',
-        'qualification evaluation',
-        'professional skills evaluation',
-        'trade assessment services',
-        'skills recognition services',
-        'CDR writing services',
-        'RPL assessment',
-        'skill assessment consultants',
-        'points test assessment'
-      ]
-    );
-  }, []);
 
   const features = [
-    { icon: Award, title: 'Professional Evaluation', description: 'Comprehensive assessment of your skills and qualifications' },
-    { icon: Users, title: 'Qualification Recognition', description: 'Get your qualifications recognized internationally' },
-    { icon: Shield, title: 'Competency Assessment', description: 'Professional competency evaluation and certification' },
-    { icon: Clock, title: 'Career Guidance', description: 'Expert advice on career pathways and opportunities' }
+    { icon: Award, title: 'Academic Evaluation', description: 'Comprehensive assessment of your academic background and achievements' },
+    { icon: Users, title: 'Eligibility Assessment', description: 'Evaluate your eligibility for various study abroad programs' },
+    { icon: Shield, title: 'Profile Matching', description: 'Match your profile with suitable universities and courses' },
+    { icon: Clock, title: 'Improvement Guidance', description: 'Expert advice on strengthening your academic profile' }
   ];
 
   const services = [
-    'Professional skill evaluation',
-    'Qualification recognition services',
-    'Competency assessment preparation',
-    'Certification and licensing support',
-    'Career pathway guidance',
-    'Document verification and attestation'
+    'Academic background evaluation',
+    'GPA and transcript analysis',
+    'Eligibility assessment for programs',
+    'University and course matching',
+    'Profile improvement recommendations',
+    'Academic document verification'
   ];
 
   return (
@@ -70,10 +41,10 @@ const SkillAssessment: React.FC = () => {
                 <Award size={40} />
               </div>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Skill Assessment Services</h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">Academic Profile Assessment</h1>
             <p className="text-xl text-primary-100 leading-relaxed">
-              Get your professional skills recognized and assessed for international opportunities. 
-              We help you showcase your expertise to potential employers worldwide.
+              Get your academic profile evaluated and assessed for study abroad opportunities. 
+              We help you understand your strengths and match you with suitable universities and programs.
             </p>
           </motion.div>
         </div>
@@ -88,9 +59,9 @@ const SkillAssessment: React.FC = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Professional Skill Assessment</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Academic Profile Assessment</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We provide comprehensive skill assessment services to help you validate your qualifications for international opportunities.
+              We provide comprehensive academic profile assessment services to help you understand your eligibility for study abroad programs.
             </p>
           </motion.div>
 
@@ -126,7 +97,7 @@ const SkillAssessment: React.FC = () => {
             >
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Assessment Services</h2>
               <p className="text-lg text-gray-600 mb-8">
-                We offer comprehensive skill assessment services to help you validate your qualifications and advance your career.
+                We offer comprehensive academic profile assessment services to help you understand your study abroad options and eligibility.
               </p>
               
               <div className="space-y-4">
@@ -190,7 +161,7 @@ const SkillAssessment: React.FC = () => {
             
             <div className="flex flex-row gap-4 justify-center">
               <a
-                href="/contact"
+                href="/lets-start-your-journey"
                 className="inline-flex items-center justify-center bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
               >
                 Start Assessment
@@ -198,7 +169,7 @@ const SkillAssessment: React.FC = () => {
               </a>
               
               <a
-                href="/services"
+                href="/comprehensive-education-solutions"
                 className="inline-flex items-center justify-center bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary-600 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
               >
                 View All Services

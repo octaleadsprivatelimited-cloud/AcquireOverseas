@@ -1,51 +1,22 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Briefcase, CheckCircle, Users, Clock, Shield, ArrowRight } from 'lucide-react';
-import { updatePageSEO } from '../utils/seo';
-
 const JobPlacement: React.FC = () => {
-  useEffect(() => {
-    updatePageSEO(
-      'Job Placement Services Abroad - Overseas Employment',
-      'Professional job placement services for international employment. Find jobs abroad with our expert assistance for UK, Canada, Australia, USA, Europe, and Middle East.',
-      [
-        'job placement services abroad',
-        'overseas job placement Hyderabad',
-        'international job consultants',
-        'foreign job placement',
-        'overseas employment services',
-        'job placement consultants',
-        'abroad job opportunities',
-        'international recruitment services',
-        'overseas job consultancy',
-        'job placement for UK',
-        'Canada job placement',
-        'Australia job placement',
-        'Middle East job placement',
-        'Europe job consultants',
-        'overseas career services',
-        'international job assistance',
-        'work abroad job placement',
-        'global job opportunities',
-        'job placement Hyderabad'
-      ]
-    );
-  }, []);
 
   const features = [
-    { icon: Briefcase, title: 'Job Matching', description: 'Connect with top employers worldwide' },
-    { icon: Users, title: 'Career Guidance', description: 'Professional career counseling and advice' },
-    { icon: Shield, title: 'Interview Preparation', description: 'Comprehensive interview training and support' },
-    { icon: Clock, title: 'Relocation Support', description: 'Complete assistance for your move abroad' }
+    { icon: Briefcase, title: 'Career Assessment', description: 'Evaluate your interests and career goals' },
+    { icon: Users, title: 'Career Guidance', description: 'Professional career counseling and pathway planning' },
+    { icon: Shield, title: 'Course Matching', description: 'Match courses to your career aspirations' },
+    { icon: Clock, title: 'Future Planning', description: 'Long-term career and education planning' }
   ];
 
   const services = [
-    'Job search and placement assistance',
-    'Resume and cover letter optimization',
-    'Interview preparation and coaching',
-    'Salary negotiation support',
-    'Relocation planning and assistance',
-    'Post-placement follow-up and support'
+    'Career interest and aptitude assessment',
+    'Course and program matching',
+    'University selection based on career goals',
+    'Industry trend analysis and guidance',
+    'Career pathway planning',
+    'Post-graduation career support'
   ];
 
   return (
@@ -70,10 +41,10 @@ const JobPlacement: React.FC = () => {
                 <Briefcase size={40} />
               </div>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Job Placement Services</h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">Career Counseling Services</h1>
             <p className="text-xl text-primary-100 leading-relaxed">
-              Find your dream job abroad with our comprehensive recruitment and job placement services. 
-              We connect talented professionals with top employers worldwide.
+              Plan your career path with our comprehensive career counseling services. 
+              We help students choose the right courses and universities to achieve their career goals.
             </p>
           </motion.div>
         </div>
@@ -88,9 +59,9 @@ const JobPlacement: React.FC = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Complete Job Placement Solutions</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Complete Career Guidance Solutions</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We provide end-to-end job placement services to help you secure your ideal position abroad.
+              We provide end-to-end career counseling services to help you choose the right educational path for your career goals.
             </p>
           </motion.div>
 
@@ -124,9 +95,9 @@ const JobPlacement: React.FC = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Job Placement Services</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Career Counseling Services</h2>
               <p className="text-lg text-gray-600 mb-8">
-                We offer comprehensive job placement services to help you find the right opportunity abroad.
+                We offer comprehensive career counseling services to help you choose the right educational path for your future.
               </p>
               
               <div className="space-y-4">
@@ -194,7 +165,7 @@ const JobPlacement: React.FC = () => {
             
             <div className="flex flex-row gap-4 justify-center">
               <a
-                href="/contact"
+                href="/lets-start-your-journey"
                 className="inline-flex items-center justify-center bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
               >
                 Get Started
@@ -202,7 +173,7 @@ const JobPlacement: React.FC = () => {
               </a>
               
               <a
-                href="/services"
+                href="/comprehensive-education-solutions"
                 className="inline-flex items-center justify-center bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary-600 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
               >
                 View All Services

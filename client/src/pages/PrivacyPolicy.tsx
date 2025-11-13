@@ -1,24 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield } from 'lucide-react';
-import { updatePageSEO } from '../utils/seo';
-
 const PrivacyPolicy: React.FC = () => {
-  useEffect(() => {
-    updatePageSEO(
-      'Privacy Policy - GREAT Visa Network',
-      'Read our privacy policy to understand how GREAT Visa Network collects, uses, and protects your personal information during visa and immigration services.',
-      [
-        'GREAT Visa Network privacy policy',
-        'visa consultants privacy policy',
-        'data protection policy',
-        'privacy policy immigration services',
-        'personal data protection',
-        'visa services privacy',
-        'client data security'
-      ]
-    );
-  }, []);
 
   return (
     <div className="min-h-screen bg-white">
@@ -57,7 +40,7 @@ const PrivacyPolicy: React.FC = () => {
             <p>We collect information that you provide directly to us, including personal information such as your name, email address, phone number, and other contact details when you use our services or contact us.</p>
 
             <h2>2. How We Use Your Information</h2>
-            <p>We use the information we collect to provide, maintain, and improve our services, process visa applications, communicate with you, and comply with legal obligations.</p>
+            <p>We use the information we collect to provide, maintain, and improve our services, process university applications, communicate with you, and comply with legal obligations.</p>
 
             <h2>3. Information Sharing and Disclosure</h2>
             <p>We do not sell your personal information. We may share your information with third parties only as described in this policy or with your consent.</p>
@@ -75,7 +58,7 @@ const PrivacyPolicy: React.FC = () => {
             <p>We may update this privacy policy from time to time. We will notify you of any changes by posting the new policy on this page.</p>
 
             <h2>8. Contact Us</h2>
-            <p>If you have any questions about this privacy policy, please contact us at info@greatvisanetwork.com.</p>
+            <p>If you have any questions about this privacy policy, please contact us at <a href="mailto:info@acquireoverseas.in" className="text-blue-600 hover:underline">info@acquireoverseas.in</a>.</p>
           </div>
         </div>
       </section>

@@ -1,24 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { FileText } from 'lucide-react';
-import { updatePageSEO } from '../utils/seo';
-
 const TermsOfService: React.FC = () => {
-  useEffect(() => {
-    updatePageSEO(
-      'Terms of Service - GREAT Visa Network',
-      'Read the terms of service for using GREAT Visa Network visa and immigration consultancy services. Understand our policies, responsibilities, and client agreements.',
-      [
-        'GREAT Visa Network terms of service',
-        'visa consultants terms',
-        'immigration services terms',
-        'visa consultancy agreement',
-        'service terms and conditions',
-        'visa services policy',
-        'client agreement terms'
-      ]
-    );
-  }, []);
 
   return (
     <div className="min-h-screen bg-white">
@@ -54,10 +37,10 @@ const TermsOfService: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-8 md:p-12 prose prose-lg">
             <h2>1. Acceptance of Terms</h2>
-            <p>By accessing and using GREAT Visa Network's services, you accept and agree to be bound by these Terms of Service.</p>
+            <p>By accessing and using Acquire Overseas Education's services, you accept and agree to be bound by these Terms of Service.</p>
 
             <h2>2. Services</h2>
-            <p>We provide visa and immigration consultation services. Our services include visa application support, document preparation, and immigration advice.</p>
+            <p>We provide education consultancy services. Our services include university application support, document preparation, and study abroad guidance.</p>
 
             <h2>3. User Responsibilities</h2>
             <p>You agree to provide accurate and complete information and to comply with all applicable laws and regulations.</p>
@@ -66,13 +49,13 @@ const TermsOfService: React.FC = () => {
             <p>You agree to pay all fees for services as outlined in our service agreements. All fees are non-refundable unless otherwise stated.</p>
 
             <h2>5. Intellectual Property</h2>
-            <p>All content on our website is the property of GREAT Visa Network and is protected by copyright and other intellectual property laws.</p>
+            <p>All content on our website is the property of Acquire Overseas Education and is protected by copyright and other intellectual property laws.</p>
 
             <h2>6. Limitation of Liability</h2>
             <p>We are not liable for any indirect, incidental, special, or consequential damages arising from your use of our services.</p>
 
             <h2>7. Disclaimer</h2>
-            <p>While we strive for success, we cannot guarantee visa approval as final decisions are made by immigration authorities.</p>
+            <p>While we strive for success, we cannot guarantee university admission as final decisions are made by university admission committees.</p>
 
             <h2>8. Termination</h2>
             <p>We reserve the right to terminate or suspend access to our services at our discretion.</p>
@@ -81,7 +64,7 @@ const TermsOfService: React.FC = () => {
             <p>We may modify these terms at any time. Continued use of our services constitutes acceptance of modified terms.</p>
 
             <h2>10. Contact</h2>
-            <p>For questions about these terms, contact us at info@greatvisanetwork.com.</p>
+            <p>For questions about these terms, contact us at <a href="mailto:info@acquireoverseas.in" className="text-blue-600 hover:underline">info@acquireoverseas.in</a>.</p>
           </div>
         </div>
       </section>

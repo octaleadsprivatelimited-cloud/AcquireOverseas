@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Users, 
@@ -12,34 +12,8 @@ import {
   Award,
   Star
 } from 'lucide-react';
-import { updatePageSEO } from '../utils/seo';
 
 const About: React.FC = () => {
-  useEffect(() => {
-    updatePageSEO(
-      'About GREAT Visa Network - Leading Immigration Consultants',
-      'Learn about GREAT Visa Network, your trusted visa and immigration consultants in Hyderabad with 98% success rate. We specialize in study visas, work permits, PR applications, and immigration services.',
-      [
-        'about GREAT Visa Network',
-        'visa consultants Hyderabad',
-        'immigration consultants India',
-        'visa success stories',
-        'trusted visa agents',
-        'best immigration services',
-        'visa company Hyderabad',
-        'overseas consultancy',
-        'study abroad consultants',
-        'work visa experts',
-        'PR consultants India',
-        'visa processing company',
-        'immigration success rate',
-        'professional visa services',
-        'certified immigration consultants',
-        'GREAT Visa Network team',
-        'visa consultation experts'
-      ]
-    );
-  }, []);
 
   const values = [
     {
@@ -66,7 +40,7 @@ const About: React.FC = () => {
     {
       icon: Globe,
       title: 'Innovation',
-      description: 'We continuously adapt and innovate to provide cutting-edge immigration solutions.',
+      description: 'We continuously adapt and innovate to provide cutting-edge education consultancy solutions.',
       gradient: 'from-purple-500 to-indigo-500',
       iconBg: 'bg-gradient-to-br from-purple-500 to-indigo-500'
     }
@@ -76,7 +50,7 @@ const About: React.FC = () => {
     {
       number: '5000+',
       label: 'Successful Applications',
-      description: 'We have successfully processed thousands of visa applications',
+      description: 'We have successfully helped thousands of students get admitted to top universities',
       icon: CheckCircle,
       color: 'text-emerald-500'
     },
@@ -90,14 +64,14 @@ const About: React.FC = () => {
     {
       number: '50+',
       label: 'Countries Covered',
-      description: 'We provide services for immigration to over 50 countries worldwide',
+      description: 'We provide study abroad services for universities in over 50 countries worldwide',
       icon: Globe,
       color: 'text-blue-500'
     },
     {
       number: '15+',
       label: 'Years Experience',
-      description: 'Over a decade of experience in immigration and visa services',
+      description: 'Over a decade of experience in overseas education consultancy and student services',
       icon: Star,
       color: 'text-purple-500'
     }
@@ -107,13 +81,13 @@ const About: React.FC = () => {
     {
       icon: Shield,
       title: 'Certified Experts',
-      description: 'Our team consists of certified immigration consultants with years of experience.',
+      description: 'Our team consists of certified education consultants with years of experience.',
       color: 'text-green-500'
     },
     {
       icon: Sparkles,
       title: 'Personalized Service',
-      description: 'Every client receives personalized attention and tailored immigration solutions.',
+      description: 'Every student receives personalized attention and tailored education solutions.',
       color: 'text-purple-500'
     },
     {
@@ -146,24 +120,24 @@ const About: React.FC = () => {
           >
             <div className="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold mb-6 border border-white/30">
               <Sparkles className="w-5 h-5 mr-2" />
-              About GREAT Visa Network
+              About Acquire Overseas Education
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              Your Trusted <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Immigration Partner</span>
+              Your Trusted <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Education Partner</span>
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto mb-8">
-              We are a leading immigration consultancy dedicated to helping individuals and families achieve their dreams of living, working, and studying abroad.
+              We are a leading overseas education consultancy dedicated to helping students achieve their dreams of studying at top universities worldwide.
             </p>
             <div className="flex flex-row gap-2 md:gap-4 justify-center">
               <a
-                href="/contact"
+                href="/lets-start-your-journey"
                 className="inline-flex items-center justify-center bg-white text-blue-600 hover:bg-gray-100 px-4 py-3 md:px-8 md:py-4 rounded-lg md:rounded-2xl font-semibold text-sm md:text-base transition-all duration-300 hover:scale-105 shadow-xl"
               >
                 <span>Get Started Today</span>
                 <ArrowRight size={16} className="ml-1 md:ml-2 md:w-5 md:h-5" />
               </a>
               <a
-                href="/services"
+                href="/comprehensive-education-solutions"
                 className="inline-flex items-center justify-center bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-4 py-3 md:px-8 md:py-4 rounded-lg md:rounded-2xl font-semibold text-sm md:text-base transition-all duration-300 hover:scale-105"
               >
                 <span>Our Services</span>
@@ -191,7 +165,7 @@ const About: React.FC = () => {
               Excellence in Every <span className="text-blue-600">Service</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We combine expertise, technology, and personalized service to make your immigration journey smooth and successful.
+              We combine expertise, technology, and personalized service to make your study abroad journey smooth and successful.
             </p>
           </motion.div>
 
@@ -305,7 +279,7 @@ const About: React.FC = () => {
               Our <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Achievements</span>
             </h2>
             <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-              Our track record speaks for itself. These numbers represent our commitment to excellence and client success.
+              Our track record speaks for itself. These numbers represent our commitment to excellence and student success.
             </p>
           </motion.div>
 
@@ -360,12 +334,12 @@ const About: React.FC = () => {
               Let's Make Your <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Dreams Reality</span>
             </h2>
             <p className="text-xl text-blue-100 mb-10 max-w-3xl mx-auto">
-              Join thousands of successful clients who have achieved their immigration goals with our expert guidance and personalized service.
+              Join thousands of successful students who have achieved their study abroad goals with our expert guidance and personalized service.
             </p>
             
             <div className="flex flex-row gap-6 justify-center items-center">
               <a
-                href="/contact"
+                href="/lets-start-your-journey"
                 className="inline-flex items-center justify-center bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 <Sparkles className="w-4 h-4 mr-2" />
@@ -374,7 +348,7 @@ const About: React.FC = () => {
               </a>
               
               <a
-                href="/services"
+                href="/comprehensive-education-solutions"
                 className="inline-flex items-center justify-center bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 hover:scale-105"
               >
                 <span>Explore Services</span>

@@ -1,19 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Phone, 
-  Mail, 
-  Clock,
-  Facebook,
-  Twitter,
-  Instagram,
-  Linkedin,
-  Youtube,
   ChevronRight,
   ChevronDown,
   Globe,
   Award,
-  Shield
+  Shield,
+  Mail,
+  Phone
 } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -27,46 +21,51 @@ const Footer: React.FC = () => {
     }));
   };
 
-  const visaServices = [
-    { name: 'Study Visa', path: '/study-visa' },
-    { name: 'Work Visa', path: '/work-visa' },
-    { name: 'Tourist Visa', path: '/tourist-visa' },
-    { name: 'Family Visa', path: '/family-visa' },
-    { name: 'Business Visa', path: '/business-visa' },
-    { name: 'Visa Extension', path: '/visa-extension' }
+  // Quick Links - Most important pages for easy access
+  const quickLinks = [
+    { name: 'Home', path: '/' },
+    { name: 'About Us', path: '/your-trusted-education-partner' },
+    { name: 'Our Services', path: '/comprehensive-education-solutions' },
+    { name: 'Contact Us', path: '/lets-start-your-journey' },
+    { name: 'Success Stories', path: '/success-stories' },
+    { name: 'FAQ', path: '/frequently-asked-questions' }
   ];
 
-  const consultingServices = [
-    { name: 'Immigration Consultation', path: '/immigration-consultation' },
-    { name: 'Job Placement', path: '/job-placement' },
-    { name: 'Skill Assessment', path: '/skill-assessment' },
-    { name: 'Document Attestation', path: '/document-attestation' }
+  // Study Destinations - Popular countries
+  const studyDestinations = [
+    { name: 'Study in USA', path: '/study-abroad-programs' },
+    { name: 'Study in Canada', path: '/study-abroad-programs' },
+    { name: 'Study in UK', path: '/study-abroad-programs' },
+    { name: 'Study in Australia', path: '/study-abroad-programs' },
+    { name: 'Study in Germany', path: '/study-abroad-programs' },
+    { name: 'Study in Europe', path: '/study-abroad-programs' }
   ];
 
-  const company = [
-    { name: 'About Us', path: '/about' },
-    { name: 'Our Services', path: '/services' },
-    { name: 'Portfolio', path: '/portfolio' },
-    { name: 'Testimonials', path: '/testimonials' },
-    { name: 'Blog', path: '/blog' },
-    { name: 'Careers', path: '/careers' }
+  // Our Services - All education services
+  const ourServices = [
+    { name: 'Study Abroad Programs', path: '/study-abroad-programs' },
+    { name: 'University Selection', path: '/university-selection' },
+    { name: 'Course Selection', path: '/course-selection' },
+    { name: 'Application Support', path: '/application-support' },
+    { name: 'Education Consultation', path: '/education-consultation' },
+    { name: 'Career Counseling', path: '/career-counseling-services' },
+    { name: 'Academic Profile Assessment', path: '/academic-profile-assessment' },
+    { name: 'Document Preparation', path: '/document-preparation-services' },
+    { name: 'Student Visa Extension', path: '/student-visa-extension-services' }
   ];
 
-  const support = [
-    { name: 'Contact Us', path: '/contact' },
-    { name: 'FAQ', path: '/faq' },
+  // Resources & Support
+  const resources = [
+    { name: 'Blog & Resources', path: '/blog-resources' },
+    { name: 'Our Portfolio', path: '/our-portfolio' },
+    { name: 'Success Stories', path: '/success-stories' },
+    { name: 'Careers', path: '/build-your-career-with-us' },
     { name: 'Privacy Policy', path: '/privacy-policy' },
     { name: 'Terms of Service', path: '/terms-of-service' },
     { name: 'Sitemap', path: '/sitemap' }
   ];
 
-  const socialLinks = [
-    { name: 'Facebook', icon: Facebook, href: '#', color: 'hover:bg-blue-600' },
-    { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/greatvisanetwork?igsh=ajdlY2Y0MW44aTFm', color: 'hover:bg-pink-600' },
-    { name: 'LinkedIn', icon: Linkedin, href: '#', color: 'hover:bg-blue-700' },
-    { name: 'Twitter', icon: Twitter, href: '#', color: 'hover:bg-sky-500' },
-    { name: 'YouTube', icon: Youtube, href: 'https://www.youtube.com/@greatvisanetwork', color: 'hover:bg-red-600' }
-  ];
+  const socialLinks: any[] = [];
 
   const trustBadges = [
     { icon: Award, text: '98% Success Rate' },
@@ -75,19 +74,50 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-slate-900 text-slate-300">
+    <footer className="relative bg-slate-900 text-slate-300 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img
+          src="/footer-background.jpg"
+          alt="Footer Background"
+          className="w-full h-full object-cover"
+        />
+        {/* Dark Overlay for Text Readability */}
+        <div className="absolute inset-0 bg-slate-900/75"></div>
+      </div>
+
       {/* Main Footer */}
-      <div className="border-b border-slate-800">
+      <div className="relative z-10 border-b border-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-8">
-            {/* Company Info - 2 cols */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-8">
+            {/* Company Info - 2 cols on large screens */}
             <div className="lg:col-span-2">
-              <h3 className="text-white text-lg md:text-2xl font-bold mb-4 md:mb-6">GREAT Visa Network</h3>
+              <h3 className="text-white text-lg md:text-2xl font-bold mb-4 md:mb-6">Acquire Overseas Education</h3>
               <p className="text-slate-400 mb-4 md:mb-6 leading-relaxed text-xs md:text-sm">
-                Your trusted partner for visa consultancy and immigration services. 
-                We help individuals and businesses achieve their international goals 
-                with expert guidance and proven success.
+                Your trusted partner for overseas education consultancy. 
+                We help students achieve their dreams of studying abroad 
+                with expert guidance, university selection, and comprehensive support.
               </p>
+              
+              {/* Contact Information */}
+              <div className="mb-4 md:mb-6 space-y-2">
+                <a 
+                  href="tel:+919515612909" 
+                  className="inline-flex items-center text-slate-300 hover:text-white transition-colors text-xs md:text-sm"
+                >
+                  <Phone size={16} className="mr-2 text-green-400" />
+                  <span>+91 95156 12909</span>
+                </a>
+                <div>
+                  <a 
+                    href="mailto:info@acquireoverseas.in" 
+                    className="inline-flex items-center text-slate-300 hover:text-white transition-colors text-xs md:text-sm"
+                  >
+                    <Mail size={16} className="mr-2 text-blue-400" />
+                    <span>info@acquireoverseas.in</span>
+                  </a>
+                </div>
+              </div>
               
               {/* Trust Badges */}
               <div className="flex flex-wrap gap-2 md:gap-3 mb-4 md:mb-6">
@@ -99,106 +129,26 @@ const Footer: React.FC = () => {
                 ))}
               </div>
 
-              {/* Social Links */}
-                  <div>
-                <p className="text-xs md:text-sm font-semibold text-slate-400 mb-2 md:mb-3">Connect With Us</p>
-                <div className="flex space-x-2">
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.name}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                      className={`w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 ${social.color} hover:text-white transition-all duration-300`}
-                    aria-label={social.name}
-                  >
-                      <social.icon size={18} />
-                  </a>
-                ))}
-                </div>
-              </div>
-          </div>
-
-            {/* Visa Services - 1 col */}
-          <div className="lg:col-span-1">
-              {/* Mobile Accordion */}
-              <button
-                onClick={() => toggleSection('visa')}
-                className="lg:hidden w-full flex items-center justify-between text-white text-base font-bold mb-3"
-              >
-                <span>Visa Services</span>
-                <ChevronDown 
-                  size={18} 
-                  className={`transition-transform duration-300 ${openSections.visa ? 'rotate-180' : ''}`}
-                />
-              </button>
-              {/* Desktop Title */}
-              <h3 className="hidden lg:block text-white text-lg font-bold mb-6">Visa Services</h3>
-              
-              <ul className={`space-y-2 md:space-y-3 ${openSections.visa || window.innerWidth >= 1024 ? 'block' : 'hidden'} lg:block`}>
-                {visaServices.map((link) => (
-                  <li key={link.path}>
-                    <Link
-                      to={link.path}
-                      className="group inline-flex items-center text-slate-400 hover:text-white transition-colors text-xs md:text-sm"
-                    >
-                      <ChevronRight size={14} className="mr-1 group-hover:translate-x-1 transition-transform" />
-                      <span>{link.name}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
             </div>
 
-            {/* Consulting Services - 1 col */}
-            <div className="lg:col-span-1">
-              {/* Mobile Accordion */}
-                  <button 
-                onClick={() => toggleSection('consulting')}
-                className="lg:hidden w-full flex items-center justify-between text-white text-base font-bold mb-3 border-t border-slate-800 pt-3"
-              >
-                <span>Consulting Services</span>
-                <ChevronDown 
-                  size={18} 
-                  className={`transition-transform duration-300 ${openSections.consulting ? 'rotate-180' : ''}`}
-                />
-                  </button>
-              {/* Desktop Title */}
-              <h3 className="hidden lg:block text-white text-lg font-bold mb-6">Consulting Services</h3>
-              
-              <ul className={`space-y-2 md:space-y-3 mb-3 lg:mb-0 ${openSections.consulting || window.innerWidth >= 1024 ? 'block' : 'hidden'} lg:block`}>
-                {consultingServices.map((link) => (
-                  <li key={link.path}>
-                    <Link
-                      to={link.path}
-                      className="group inline-flex items-center text-slate-400 hover:text-white transition-colors text-xs md:text-sm"
-                    >
-                      <ChevronRight size={14} className="mr-1 group-hover:translate-x-1 transition-transform" />
-                      <span>{link.name}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-                </div>
-                
-            {/* Company - 1 col */}
+            {/* Quick Links - 1 col */}
             <div className="lg:col-span-1">
               {/* Mobile Accordion */}
               <button
-                onClick={() => toggleSection('company')}
+                onClick={() => toggleSection('quick')}
                 className="lg:hidden w-full flex items-center justify-between text-white text-base font-bold mb-3 border-t border-slate-800 pt-3"
               >
-                <span>Company</span>
+                <span>Quick Links</span>
                 <ChevronDown 
                   size={18} 
-                  className={`transition-transform duration-300 ${openSections.company ? 'rotate-180' : ''}`}
+                  className={`transition-transform duration-300 ${openSections.quick ? 'rotate-180' : ''}`}
                 />
               </button>
               {/* Desktop Title */}
-              <h3 className="hidden lg:block text-white text-lg font-bold mb-6">Company</h3>
+              <h3 className="hidden lg:block text-white text-lg font-bold mb-6">Quick Links</h3>
               
-              <ul className={`space-y-2 md:space-y-3 mb-3 lg:mb-0 ${openSections.company || window.innerWidth >= 1024 ? 'block' : 'hidden'} lg:block`}>
-                {company.map((link) => (
+              <ul className={`space-y-2 md:space-y-3 ${openSections.quick || window.innerWidth >= 1024 ? 'block' : 'hidden'} lg:block`}>
+                {quickLinks.map((link) => (
                   <li key={link.path}>
                     <Link
                       to={link.path}
@@ -212,25 +162,25 @@ const Footer: React.FC = () => {
               </ul>
             </div>
 
-            {/* Support - 1 col */}
+            {/* Study Destinations - 1 col */}
             <div className="lg:col-span-1">
               {/* Mobile Accordion */}
               <button
-                onClick={() => toggleSection('support')}
+                onClick={() => toggleSection('destinations')}
                 className="lg:hidden w-full flex items-center justify-between text-white text-base font-bold mb-3 border-t border-slate-800 pt-3"
               >
-                <span>Support</span>
+                <span>Study Destinations</span>
                 <ChevronDown 
                   size={18} 
-                  className={`transition-transform duration-300 ${openSections.support ? 'rotate-180' : ''}`}
+                  className={`transition-transform duration-300 ${openSections.destinations ? 'rotate-180' : ''}`}
                 />
               </button>
               {/* Desktop Title */}
-              <h3 className="hidden lg:block text-white text-lg font-bold mb-6">Support</h3>
+              <h3 className="hidden lg:block text-white text-lg font-bold mb-6">Study Destinations</h3>
               
-              <ul className={`space-y-2 md:space-y-3 ${openSections.support || window.innerWidth >= 1024 ? 'block' : 'hidden'} lg:block`}>
-                {support.map((link) => (
-                  <li key={link.path}>
+              <ul className={`space-y-2 md:space-y-3 ${openSections.destinations || window.innerWidth >= 1024 ? 'block' : 'hidden'} lg:block`}>
+                {studyDestinations.map((link) => (
+                  <li key={link.path + link.name}>
                     <Link
                       to={link.path}
                       className="group inline-flex items-center text-slate-400 hover:text-white transition-colors text-xs md:text-sm"
@@ -241,59 +191,49 @@ const Footer: React.FC = () => {
                   </li>
                 ))}
               </ul>
-              </div>
-          </div>
-        </div>
-        </div>
-
-      {/* Contact Bar */}
-      <div className="bg-slate-950 border-b border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6">
-            <div className="flex items-center space-x-3 md:space-x-4">
-              <div className="w-8 h-8 md:w-12 md:h-12 bg-slate-800 rounded-lg md:rounded-xl flex items-center justify-center flex-shrink-0">
-                <Phone size={16} className="md:w-5 md:h-5 text-blue-400" />
-              </div>
-              <div>
-                <p className="text-[10px] md:text-xs text-slate-500 font-medium">Call Us</p>
-                <a href="tel:+919533974711" className="text-white text-xs md:text-base font-semibold hover:text-blue-400 transition-colors">
-                  +91 9533 974 711
-                </a>
-              </div>
             </div>
 
-            <div className="flex items-center space-x-3 md:space-x-4">
-              <div className="w-8 h-8 md:w-12 md:h-12 bg-slate-800 rounded-lg md:rounded-xl flex items-center justify-center flex-shrink-0">
-                <Mail size={16} className="md:w-5 md:h-5 text-blue-400" />
-              </div>
-              <div>
-                <p className="text-[10px] md:text-xs text-slate-500 font-medium">Email Us</p>
-                <a href="mailto:info@greatvisanetwork.com" className="text-white text-xs md:text-base font-semibold hover:text-blue-400 transition-colors">
-                  info@greatvisanetwork.com
-                </a>
-              </div>
-            </div>
-
-            <div className="flex items-center space-x-3 md:space-x-4">
-              <div className="w-8 h-8 md:w-12 md:h-12 bg-slate-800 rounded-lg md:rounded-xl flex items-center justify-center flex-shrink-0">
-                <Clock size={16} className="md:w-5 md:h-5 text-blue-400" />
-              </div>
-              <div>
-                <p className="text-[10px] md:text-xs text-slate-500 font-medium">Working Hours</p>
-                <p className="text-white font-semibold text-xs md:text-sm">Mon - Sat: 9:00 AM - 6:00 PM</p>
-              </div>
+            {/* Our Services - 1 col */}
+            <div className="lg:col-span-1">
+              {/* Mobile Accordion */}
+              <button
+                onClick={() => toggleSection('services')}
+                className="lg:hidden w-full flex items-center justify-between text-white text-base font-bold mb-3 border-t border-slate-800 pt-3"
+              >
+                <span>Our Services</span>
+                <ChevronDown 
+                  size={18} 
+                  className={`transition-transform duration-300 ${openSections.services ? 'rotate-180' : ''}`}
+                />
+              </button>
+              {/* Desktop Title */}
+              <h3 className="hidden lg:block text-white text-lg font-bold mb-6">Our Services</h3>
+              
+              <ul className={`space-y-2 md:space-y-3 ${openSections.services || window.innerWidth >= 1024 ? 'block' : 'hidden'} lg:block`}>
+                {ourServices.map((link) => (
+                  <li key={link.path + link.name}>
+                    <Link
+                      to={link.path}
+                      className="group inline-flex items-center text-slate-400 hover:text-white transition-colors text-xs md:text-sm"
+                    >
+                      <ChevronRight size={14} className="mr-1 group-hover:translate-x-1 transition-transform" />
+                      <span>{link.name}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
-      </div>
+        </div>
 
       {/* Bottom Bar */}
-      <div className="bg-slate-950">
+      <div className="relative z-10 bg-slate-950/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-3 md:space-y-0 text-xs md:text-sm">
             <div className="flex flex-col items-center md:items-start space-y-1 md:space-y-2">
               <p className="text-slate-500 text-[10px] md:text-sm">
-                © {currentYear} <span className="text-white font-semibold">GREAT Visa Network</span>. All rights reserved.
+                © {currentYear} <span className="text-white font-semibold">Acquire Overseas Education</span>. All rights reserved.
               </p>
               <p className="text-slate-600 text-[9px] md:text-xs">
                 Developed by{' '}

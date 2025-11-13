@@ -1,50 +1,21 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Clock, CheckCircle, Users, Shield, ArrowRight } from 'lucide-react';
-import { updatePageSEO } from '../utils/seo';
-
 const VisaExtension: React.FC = () => {
-  useEffect(() => {
-    updatePageSEO(
-      'Visa Extension Services - Visa Renewal Consultants',
-      'Professional visa extension and renewal services. Expert assistance for extending your visa stay, status change, and visa renewal applications for all countries.',
-      [
-        'visa extension services',
-        'visa renewal consultants',
-        'visa extension Hyderabad',
-        'tourist visa extension',
-        'work visa extension',
-        'student visa extension',
-        'visa status change',
-        'visa renewal services',
-        'extend visa stay',
-        'visa reapplication services',
-        'visa extension consultants',
-        'UK visa extension',
-        'USA visa extension',
-        'Australia visa extension',
-        'Canada visa extension',
-        'visa extension assistance',
-        'visa renewal help',
-        'immigration status change',
-        'visa extension application'
-      ]
-    );
-  }, []);
 
   const features = [
-    { icon: Clock, title: 'Visa Extension', description: 'Extend your stay legally with our visa extension services' },
-    { icon: Users, title: 'Status Change', description: 'Change your visa status to a different category' },
-    { icon: Shield, title: 'Renewal Support', description: 'Complete assistance with visa renewal and reapplication' },
-    { icon: CheckCircle, title: 'Compliance Guidance', description: 'Expert guidance on immigration compliance and legal requirements' }
+    { icon: Clock, title: 'Student Visa Extension', description: 'Extend your student visa to continue your studies' },
+    { icon: Users, title: 'Program Extension', description: 'Extend your program duration and maintain student status' },
+    { icon: Shield, title: 'Renewal Support', description: 'Complete assistance with student visa renewal and reapplication' },
+    { icon: CheckCircle, title: 'Compliance Guidance', description: 'Expert guidance on student visa compliance and requirements' }
   ];
 
   const services = [
-    'Visa extension applications',
-    'Status change assistance',
-    'Renewal and reapplication support',
-    'Compliance and legal guidance',
-    'Emergency processing options',
+    'Student visa extension applications',
+    'Program extension assistance',
+    'Visa renewal and reapplication support',
+    'Student visa compliance guidance',
+    'Emergency processing for urgent cases',
     'Document preparation and submission'
   ];
 
@@ -70,10 +41,10 @@ const VisaExtension: React.FC = () => {
                 <Clock size={40} />
               </div>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Visa Extension Services</h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">Student Visa Extension Services</h1>
             <p className="text-xl text-primary-100 leading-relaxed">
-              Extend your stay legally with our visa extension and renewal services. 
-              We help you maintain your legal status and continue your journey abroad.
+              Extend your student visa to continue your studies abroad. 
+              We help you maintain your student status and continue your education journey.
             </p>
           </motion.div>
         </div>
@@ -88,9 +59,9 @@ const VisaExtension: React.FC = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Complete Visa Extension Solutions</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Complete Student Visa Extension Solutions</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We provide comprehensive visa extension and renewal services to help you maintain your legal status abroad.
+              We provide comprehensive student visa extension and renewal services to help you continue your studies abroad.
             </p>
           </motion.div>
 
@@ -126,7 +97,7 @@ const VisaExtension: React.FC = () => {
             >
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Extension Services</h2>
               <p className="text-lg text-gray-600 mb-8">
-                We offer comprehensive visa extension and renewal services to help you maintain your legal status abroad.
+                We offer comprehensive student visa extension and renewal services to help you continue your education abroad.
               </p>
               
               <div className="space-y-4">
@@ -151,7 +122,7 @@ const VisaExtension: React.FC = () => {
                   <Clock size={40} className="text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">98% Success Rate</h3>
-                <p className="text-gray-600">Our visa extension applications have an excellent success rate</p>
+                <p className="text-gray-600">Our student visa extension applications have an excellent success rate</p>
               </div>
 
               <div className="space-y-4">
@@ -182,15 +153,15 @@ const VisaExtension: React.FC = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Extend Your Visa?
+              Ready to Extend Your Student Visa?
             </h2>
             <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-              Get professional assistance with your visa extension and maintain your legal status abroad.
+              Get professional assistance with your student visa extension and continue your studies abroad.
             </p>
             
             <div className="flex flex-row gap-4 justify-center">
               <a
-                href="/contact"
+                href="/lets-start-your-journey"
                 className="inline-flex items-center justify-center bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
               >
                 Start Extension Process
@@ -198,7 +169,7 @@ const VisaExtension: React.FC = () => {
               </a>
               
               <a
-                href="/services"
+                href="/comprehensive-education-solutions"
                 className="inline-flex items-center justify-center bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary-600 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
               >
                 View All Services

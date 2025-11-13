@@ -8,55 +8,28 @@ const WhatsAppButton: React.FC = () => {
     const path = location.pathname;
     const pageMessages: { [key: string]: string } = {
       '/': 'Hello! I would like to know more about your visa services.',
-      '/about': 'Hello! I would like to know more about GREAT Visa Network.',
+      '/about': 'Hello! I would like to know more about Acquire Overseas Education.',
       '/services': 'Hello! I would like to know more about your visa services.',
       '/contact': 'Hello! I would like to get in touch with your team.',
       
       // Study & Education
       '/study-visa': 'Hello! I am interested in Study Visa services.',
-      '/student-visa-consultants-in-hyderabad': 'Hello! I am interested in Student Visa consultation in Hyderabad.',
       
-      // Work Visas
-      '/work-visa': 'Hello! I am interested in Work Visa services.',
-      '/skilled-migration': 'Hello! I am interested in Skilled Migration services.',
-      '/albania-work-visa': 'Hello! I am interested in Albania Work Visa.',
-      
-      // UK Visas
-      '/uk-skilled-worker-visa-consultants-in-hyderabad': 'Hello! I am interested in UK Skilled Worker Visa consultation.',
-      '/uk-tier-2-visa-consultants-in-hyderabad': 'Hello! I am interested in UK Tier 2 Visa consultation.',
-      '/uk-visitor-visa-consultants': 'Hello! I am interested in UK Visitor Visa services.',
-      '/uk-healthcare-worker-visa-consultants': 'Hello! I am interested in UK Healthcare Worker Visa.',
-      '/uk-health-care-professionals-work-visa': 'Hello! I am interested in UK Healthcare Professionals Work Visa.',
-      '/uk-skilled-work-visa-consultancy': 'Hello! I am interested in UK Skilled Work Visa consultancy.',
-      '/uk-it-professionals-visa-consultancy': 'Hello! I am interested in UK IT Professionals Visa consultancy.',
-      '/tier-2-work-visa-for-uk': 'Hello! I am interested in Tier 2 Work Visa for UK.',
-      
-      // Ireland Visas
-      '/best-ireland-health-care-work-visa-consultancy': 'Hello! I am interested in Ireland Healthcare Work Visa consultancy.',
-      '/best-ireland-it-professional-work-visa-consultancy': 'Hello! I am interested in Ireland IT Professional Work Visa consultancy.',
-      
-      // Netherlands
-      '/netherlands-skilled-worker-visa': 'Hello! I am interested in Netherlands Skilled Worker Visa.',
-      
-      // Other Visa Types
-      '/tourist-visa': 'Hello! I am interested in Tourist Visa services.',
-      '/business-visa': 'Hello! I am interested in Business Visa services.',
-      '/family-visa': 'Hello! I am interested in Family Visa services.',
       
       // Other Services
       '/blog': 'Hello! I have a question about your blog content.',
       '/testimonials': 'Hello! I would like to know more about your success stories.',
       '/faq': 'Hello! I have some questions about your services.',
-      '/careers': 'Hello! I am interested in career opportunities at GREAT Visa Network.',
+      '/careers': 'Hello! I am interested in career opportunities at Acquire Overseas Education.',
     };
 
     return pageMessages[path] || 'Hello! I would like to know more about your visa services.';
   };
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = '919533974711'; // Remove + for WhatsApp URL
-    const message = getPageMessage();
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    const phoneNumber = '919515612909'; // WhatsApp number without + or spaces
+    const message = encodeURIComponent(getPageMessage());
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(whatsappUrl, '_blank');
   };
 

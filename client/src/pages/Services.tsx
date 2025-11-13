@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { 
   GraduationCap, 
   Briefcase, 
@@ -15,99 +16,59 @@ import {
   Globe,
   Users
 } from 'lucide-react';
-import { updatePageSEO } from '../utils/seo';
-
 const Services: React.FC = () => {
-  useEffect(() => {
-    updatePageSEO(
-      'Visa Services - Study, Work, Tourist & Immigration',
-      'Comprehensive visa services in Hyderabad including study visa, work visa, tourist visa, family visa, business visa, and immigration consultation for all countries.',
-      [
-        'visa services Hyderabad',
-        'study visa services',
-        'work visa services',
-        'tourist visa services',
-        'family visa services',
-        'business visa services',
-        'immigration consultation',
-        'visa processing services',
-        'all visa services',
-        'comprehensive visa solutions',
-        'student visa assistance',
-        'work permit services',
-        'PR visa services',
-        'skilled migration services',
-        'visa application services',
-        'overseas visa services',
-        'international visa services',
-        'visa documentation help',
-        'visa consultancy services Hyderabad'
-      ]
-    );
-  }, []);
 
   const services = [
     {
       icon: GraduationCap,
-      title: 'Study Visa',
-      description: 'Secure your place at top universities worldwide with our expert study visa assistance.',
-      features: ['University Selection', 'Visa Application', 'Documentation Support', 'Interview Preparation'],
+      title: 'Study Abroad Programs',
+      description: 'Secure your place at top universities worldwide with our expert study abroad guidance.',
+      features: ['University Selection', 'Application Support', 'Visa Processing'],
       image: '/services/study_visa.jpg',
-      link: '/study-visa',
+      link: '/study-abroad-programs',
       gradient: 'from-blue-500 to-cyan-500',
       iconBg: 'bg-gradient-to-br from-blue-500 to-cyan-500',
       successRate: '98%'
     },
     {
-      icon: Briefcase,
-      title: 'Work Visa',
-      description: 'Advance your career with international work opportunities and professional visa services.',
-      features: ['Job Placement', 'Visa Processing', 'Skill Assessment', 'Relocation Support'],
-      image: '/services/word_visa.jpg',
-      link: '/work-visa',
+      icon: Award,
+      title: 'University Selection',
+      description: 'Find the perfect university that matches your academic goals and career aspirations.',
+      features: ['Course Matching', 'Ranking Analysis', 'Admission Requirements', 'Career Guidance'],
+      image: '/services/study_visa.jpg',
+      link: '/university-selection',
       gradient: 'from-emerald-500 to-teal-500',
       iconBg: 'bg-gradient-to-br from-emerald-500 to-teal-500',
       successRate: '98%'
     },
     {
-      icon: Plane,
-      title: 'Tourist Visa',
-      description: 'Explore the world with our hassle-free tourist visa processing services.',
-      features: ['Quick Processing', 'Multiple Destinations', 'Travel Insurance', '24/7 Support'],
-      image: '/services/tourist_visa.jpeg',
-      link: '/tourist-visa',
-      gradient: 'from-orange-500 to-red-500',
-      iconBg: 'bg-gradient-to-br from-orange-500 to-red-500',
-      successRate: '99%'
-    },
-    {
-      icon: Heart,
-      title: 'Family Visa',
-      description: 'Reunite with your loved ones through our comprehensive family visa services.',
-      features: ['Family Reunification', 'Spouse Visa', 'Parent Visa', 'Child Visa'],
-      image: '/services/family_visa.jpg',
-      link: '/family-visa',
+      icon: Users,
+      title: 'Course Selection',
+      description: 'Get expert guidance on choosing the right course that aligns with your career goals.',
+      features: ['Career Assessment', 'Course Matching', 'Industry Trends', 'Future Prospects'],
+      image: '/services/study_visa.jpg',
+      link: '/course-selection',
       gradient: 'from-pink-500 to-rose-500',
       iconBg: 'bg-gradient-to-br from-pink-500 to-rose-500',
       successRate: '98%'
     },
     {
-      icon: Building2,
-      title: 'Business Visa',
-      description: 'Expand your business globally with our professional business visa solutions.',
-      features: ['Business Setup', 'Investment Visa', 'Entrepreneur Visa', 'Trade Visa'],
-      image: '/services/businessvisa.jpg',
-      link: '/business-visa',
+      icon: CheckCircle,
+      title: 'Application Support',
+      description: 'Complete end-to-end support for your university application process.',
+      features: ['Application Review', 'Essay Writing', 'Documentation', 'Submission Support'],
+      image: '/services/study_visa.jpg',
+      link: '/application-support',
       gradient: 'from-purple-500 to-indigo-500',
       iconBg: 'bg-gradient-to-br from-purple-500 to-indigo-500',
       successRate: '98%'
     },
     {
       icon: UserCheck,
-      title: 'Immigration Consultation',
-      description: 'Get expert advice on all immigration matters from our certified consultants.',
-      features: ['Free Consultation', 'Case Assessment', 'Strategy Planning', 'Ongoing Support'],
-      image: '/services/immigration.jpg',
+      title: 'Education Consultation',
+      description: 'Get expert advice on all study abroad matters from our certified education consultants.',
+      features: ['Free Consultation', 'Profile Assessment', 'Study Plan', 'Ongoing Support'],
+      image: '/services/study_visa.jpg',
       link: '/immigration-consultation',
       gradient: 'from-amber-500 to-yellow-500',
       iconBg: 'bg-gradient-to-br from-amber-500 to-yellow-500',
@@ -119,13 +80,13 @@ const Services: React.FC = () => {
     {
       icon: Shield,
       title: 'Secure & Reliable',
-      description: 'Your documents and personal information are protected with bank-level security.',
+      description: 'Your academic documents and personal information are protected with bank-level security.',
       color: 'text-green-500'
     },
     {
       icon: Award,
       title: '98% Success Rate',
-      description: 'Our proven track record speaks for itself with consistently high success rates.',
+      description: 'Our proven track record of successful university admissions speaks for itself.',
       color: 'text-amber-500'
     },
     {
@@ -137,7 +98,7 @@ const Services: React.FC = () => {
   ];
 
   const stats = [
-    { number: '5000+', label: 'Successful Applications', icon: CheckCircle, color: 'text-emerald-500' },
+    { number: '5000+', label: 'Successful Admissions', icon: CheckCircle, color: 'text-emerald-500' },
     { number: '98%', label: 'Success Rate', icon: Award, color: 'text-amber-500' },
     { number: '50+', label: 'Countries Covered', icon: Globe, color: 'text-blue-500' },
     { number: '24/7', label: 'Customer Support', icon: Users, color: 'text-purple-500' }
@@ -168,25 +129,25 @@ const Services: React.FC = () => {
               Our Services
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              Comprehensive <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Visa Solutions</span>
+              Comprehensive <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Education Solutions</span>
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto mb-8">
-              From study abroad dreams to career opportunities, we provide comprehensive visa services tailored to your unique needs.
+              From university selection to admission success, we provide comprehensive education consultancy services tailored to your academic goals.
             </p>
             <div className="flex flex-row gap-4 justify-center">
-              <a
-                href="/contact"
+              <Link
+                to="/lets-start-your-journey"
                 className="inline-flex items-center justify-center bg-white text-blue-600 hover:bg-gray-100 px-5 py-3 rounded-xl font-semibold text-sm transition-all duration-300 hover:scale-105 shadow-lg"
               >
                 <span>Get Free Consultation</span>
                 <ArrowRight size={16} className="ml-2" />
-              </a>
-              <a
-                href="/about"
+              </Link>
+              <Link
+                to="/your-trusted-education-partner"
                 className="inline-flex items-center justify-center bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-5 py-3 rounded-xl font-semibold text-sm transition-all duration-300 hover:scale-105"
               >
                 <span>Learn More About Us</span>
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -210,7 +171,7 @@ const Services: React.FC = () => {
               Excellence in Every <span className="text-blue-600">Service</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We combine expertise, technology, and personalized service to make your immigration journey smooth and successful.
+              We combine expertise, technology, and personalized service to make your study abroad journey smooth and successful.
             </p>
           </motion.div>
 
@@ -236,17 +197,11 @@ const Services: React.FC = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 relative overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-        </div>
-        
-        {/* Floating Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 left-10 w-20 h-20 bg-blue-400/20 rounded-full blur-xl animate-pulse"></div>
-          <div className="absolute top-40 right-20 w-32 h-32 bg-purple-400/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-          <div className="absolute bottom-20 left-1/4 w-24 h-24 bg-pink-400/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      <section className="py-12 relative overflow-hidden">
+        {/* Premium Matte Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.03),transparent_50%)]"></div>
+          <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.1),transparent)]"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -256,22 +211,22 @@ const Services: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-10"
           >
-            <div className="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm font-semibold mb-6 border border-white/30">
-              <Sparkles className="w-5 h-5 mr-2" />
+            <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm text-white rounded-full text-xs font-semibold mb-4 border border-white/20">
+              <Sparkles className="w-4 h-4 mr-2" />
               Our Premium Services
             </div>
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Visa Solutions That <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Work</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Education Solutions That <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Work</span>
             </h2>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              Professional visa and immigration services tailored to your needs with proven success rates.
+            <p className="text-base text-white/80 max-w-2xl mx-auto">
+              Professional education consultancy services tailored to your needs with proven admission success rates.
             </p>
           </motion.div>
 
           {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -281,12 +236,12 @@ const Services: React.FC = () => {
                 viewport={{ once: true }}
                 className="group"
               >
-                <div className="relative h-full bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2 border border-white/20 overflow-hidden">
+                <div className="relative h-full bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 border border-white/20 overflow-hidden">
                   {/* Gradient Border Effect */}
-                  <div className={`absolute inset-0 bg-gradient-to-r ${service.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-3xl`}></div>
+                  <div className={`absolute inset-0 bg-gradient-to-r ${service.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-2xl`}></div>
                   
                   {/* Image Container */}
-                  <div className="relative h-48 overflow-hidden">
+                  <div className="relative h-40 overflow-hidden">
                     <img
                       src={service.image}
                       alt={service.title}
@@ -311,16 +266,16 @@ const Services: React.FC = () => {
                   </div>
                   
                   {/* Content */}
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                  <div className="p-5">
+                    <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">
                       {service.title}
                     </h3>
-                    <p className="text-gray-600 mb-5 leading-relaxed">
+                    <p className="text-gray-600 mb-4 leading-relaxed text-sm">
                       {service.description}
                     </p>
                     
                     {/* Features List */}
-                    <div className="space-y-3 mb-6">
+                    <div className="space-y-2 mb-4">
                       {service.features.slice(0, 3).map((feature, idx) => (
                         <div key={idx} className="flex items-center text-sm text-gray-600">
                           <div className="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
@@ -422,25 +377,25 @@ const Services: React.FC = () => {
               Start Your <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Journey Today</span>
             </h2>
             <p className="text-xl text-blue-100 mb-10 max-w-3xl mx-auto">
-              Don't let bureaucracy stand in your way. Our expert team is ready to guide you through every step of your immigration journey.
+              Don't let the application process stand in your way. Our expert team is ready to guide you through every step of your study abroad journey.
             </p>
             
             <div className="flex flex-row gap-6 justify-center items-center">
-              <a
-                href="/contact"
+              <Link
+                to="/lets-start-your-journey"
                 className="inline-flex items-center justify-center bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 <Sparkles className="w-4 h-4 mr-2" />
                 Get Free Consultation
                 <ArrowRight size={16} className="ml-2" />
-              </a>
+              </Link>
               
-              <a
-                href="/about"
+              <Link
+                to="/your-trusted-education-partner"
                 className="inline-flex items-center justify-center bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 hover:scale-105"
               >
                 <span>Learn About Us</span>
-              </a>
+              </Link>
             </div>
             
             {/* Trust Indicators */}

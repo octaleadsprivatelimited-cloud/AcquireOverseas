@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   MapPin, 
   Phone, 
-  Mail, 
+  Mail,
   Clock, 
   Send,
   CheckCircle,
@@ -14,33 +14,7 @@ import {
   Users,
   MessageCircle,
 } from 'lucide-react';
-import { updatePageSEO } from '../utils/seo';
-
 const Contact: React.FC = () => {
-  useEffect(() => {
-    updatePageSEO(
-      'Contact Us - GREAT Visa Network Hyderabad',
-      'Get in touch with GREAT Visa Network for visa consultation and immigration services in Hyderabad. Contact our expert visa consultants for UK, Canada, Australia, USA, and Europe visa assistance.',
-      [
-        'contact visa consultants Hyderabad',
-        'visa consultation booking',
-        'immigration consultants contact',
-        'GREAT Visa Network contact',
-        'visa services Hyderabad contact',
-        'free visa consultation',
-        'visa consultation appointment',
-        'immigration office Hyderabad',
-        'visa consultant phone number',
-        'visa enquiry',
-        'immigration services contact',
-        'visa assistance Hyderabad',
-        'overseas consultancy contact',
-        'study visa consultation',
-        'work visa enquiry',
-        'visa application help'
-      ]
-    );
-  }, []);
 
   const [formData, setFormData] = useState({
     name: '',
@@ -55,24 +29,16 @@ const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://formspree.io/f/myznnzyo', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+      // Form submission disabled - contact form functionality removed
+      // You can implement your own form handling here
+      setIsSubmitted(true);
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        service: '',
+        message: ''
       });
-
-      if (response.ok) {
-        setIsSubmitted(true);
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          service: '',
-          message: ''
-        });
-      }
     } catch (error) {
       console.error('Error submitting form:', error);
     }
@@ -95,13 +61,14 @@ const Contact: React.FC = () => {
     {
       icon: Phone,
       title: 'Call Us',
-      details: ['+91 9533974711', '+91 7036295334', 'Available 24/7'],
-      color: 'text-green-500'
+      details: ['+91 95156 12909'],
+      color: 'text-green-500',
+      link: 'tel:+919515612909'
     },
     {
       icon: Mail,
       title: 'Email Us',
-      details: ['info@greatvisanetwork.com'],
+      details: ['info@acquireoverseas.in'],
       color: 'text-blue-500'
     },
     {
@@ -122,7 +89,7 @@ const Contact: React.FC = () => {
     {
       icon: Award,
       title: 'Expert Guidance',
-      description: 'Get advice from certified immigration consultants.',
+      description: 'Get advice from certified education consultants.',
       color: 'text-amber-500'
     },
     {
@@ -135,16 +102,16 @@ const Contact: React.FC = () => {
 
   const faqItems = [
     {
-      question: 'How long does the visa process take?',
-      answer: 'Processing times vary by visa type and country. Our consultants will provide you with accurate timelines based on your specific case.'
+      question: 'How long does the university application process take?',
+      answer: 'Processing times vary by university and country. Our consultants will provide you with accurate timelines based on your academic profile and chosen program.'
     },
     {
       question: 'What documents do I need?',
-      answer: 'Document requirements depend on the type of visa and destination country. We provide a comprehensive checklist during consultation.'
+      answer: 'Document requirements depend on the university and destination country. We provide a comprehensive checklist during consultation.'
     },
     {
-      question: 'Do you guarantee visa approval?',
-      answer: 'While we cannot guarantee approval, our 98% success rate reflects our expertise in preparing strong applications.'
+      question: 'Do you guarantee university admission?',
+      answer: 'While we cannot guarantee admission, our 98% success rate reflects our expertise in preparing strong applications and matching students with suitable universities.'
     },
     {
       question: 'How much do your services cost?',
@@ -155,9 +122,9 @@ const Contact: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50">
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600">
+      <section className="relative py-12 md:py-16 overflow-hidden bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600">
         {/* Background Image */}
-        <div className="absolute inset-0 opacity-30">
+        <div className="absolute inset-0 opacity-20">
           <img
             src="/home/slider-1.jpg"
             alt="Contact Background"
@@ -172,34 +139,16 @@ const Contact: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="text-center text-white"
           >
-            <div className="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold mb-6 border border-white/30">
-              <MessageCircle className="w-5 h-5 mr-2" />
+            <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-xs md:text-sm font-medium mb-4 border border-white/30">
+              <MessageCircle className="w-4 h-4 mr-2" />
               Get In Touch
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              Let's Start Your <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Journey</span>
+            <h1 className="text-3xl md:text-4xl font-bold mb-4">
+              Contact Us
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto mb-8">
-              Ready to take the first step towards your dream destination? Contact our expert team for a free consultation.
+            <p className="text-base md:text-lg text-blue-100 max-w-2xl mx-auto">
+              Get in touch with our expert team for a free consultation.
             </p>
-            <div className="flex flex-row gap-2 md:gap-4 justify-center">
-              <a
-                href="tel:+919533974711"
-                className="inline-flex items-center justify-center bg-white text-blue-600 hover:bg-gray-100 px-3 py-2.5 md:px-5 md:py-3 rounded-lg md:rounded-xl font-semibold text-xs md:text-sm transition-all duration-300 hover:scale-105 shadow-lg"
-              >
-                <Phone className="w-4 h-4 md:w-5 md:h-5 mr-1 md:mr-2" />
-                <span className="whitespace-nowrap">Call Now: +91 9533974711</span>
-              </a>
-              <a
-                href="https://wa.me/919533974711"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-3 py-2.5 md:px-5 md:py-3 rounded-lg md:rounded-xl font-semibold text-xs md:text-sm transition-all duration-300 hover:scale-105"
-              >
-                <MessageCircle className="w-4 h-4 md:w-5 md:h-5 mr-1 md:mr-2" />
-                WhatsApp Us
-              </a>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -222,7 +171,7 @@ const Contact: React.FC = () => {
               Get Expert <span className="text-blue-600">Guidance</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our certified consultants are here to help you navigate the complex world of immigration with confidence.
+              Our certified education consultants are here to help you navigate the complex world of study abroad with confidence.
             </p>
           </motion.div>
 
@@ -328,12 +277,11 @@ const Contact: React.FC = () => {
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
                       >
                         <option value="">Select a service</option>
-                        <option value="study-visa">Study Visa</option>
-                        <option value="work-visa">Work Visa</option>
-                        <option value="tourist-visa">Tourist Visa</option>
-                        <option value="family-visa">Family Visa</option>
-                        <option value="business-visa">Business Visa</option>
-                        <option value="immigration-consultation">Immigration Consultation</option>
+                        <option value="study-abroad">Study Abroad Programs</option>
+                        <option value="university-selection">University Selection</option>
+                        <option value="course-selection">Course Selection</option>
+                        <option value="application-support">Application Support</option>
+                        <option value="education-consultation">Education Consultation</option>
                       </select>
                     </div>
                   </div>
@@ -371,8 +319,8 @@ const Contact: React.FC = () => {
               className="space-y-8"
             >
               <div className="text-center lg:text-left">
-                <h3 className="text-3xl font-bold text-white mb-4">Get In Touch</h3>
-                <p className="text-white/90 text-lg">We're here to help you every step of the way.</p>
+                <h3 className="text-2xl font-bold text-white mb-3">Contact Information</h3>
+                <p className="text-white/90 text-base">We're here to help you every step of the way.</p>
               </div>
 
               <div className="space-y-6">
@@ -391,32 +339,19 @@ const Contact: React.FC = () => {
                     <div>
                       <h4 className="text-lg font-semibold text-white mb-2">{info.title}</h4>
                       {info.details.map((detail, idx) => (
-                        <p key={idx} className="text-white/80">{detail}</p>
+                        info.link ? (
+                          <a key={idx} href={info.link} className="text-white/80 hover:text-white transition-colors">
+                            {detail}
+                          </a>
+                        ) : (
+                          <p key={idx} className="text-white/80">{detail}</p>
+                        )
                       ))}
                     </div>
                   </motion.div>
                 ))}
               </div>
 
-              {/* WhatsApp Button */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <a
-                  href="https://wa.me/919533974711"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
-                >
-                  <MessageCircle className="w-5 h-5 mr-2" />
-                  Chat on WhatsApp
-                  <ArrowRight size={20} className="ml-2" />
-                </a>
-              </motion.div>
             </motion.div>
           </div>
         </div>
@@ -440,7 +375,7 @@ const Contact: React.FC = () => {
               Got <span className="text-blue-600">Questions?</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Find answers to common questions about our services and the immigration process.
+              Find answers to common questions about our services and the study abroad process.
             </p>
           </motion.div>
 
@@ -465,7 +400,7 @@ const Contact: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 relative overflow-hidden">
+      <section className="py-10 md:py-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600">
           <div className="absolute inset-0" style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M20 20c0-11.046-8.954-20-20-20v20h20z'/%3E%3C/g%3E%3C/svg%3E")`,
@@ -480,51 +415,31 @@ const Contact: React.FC = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm font-semibold mb-6 border border-white/30">
-              <Sparkles className="w-4 h-4 mr-2" />
+            <div className="inline-flex items-center px-3 py-1.5 bg-white/20 backdrop-blur-sm text-white rounded-full text-xs md:text-sm font-medium mb-3 border border-white/30">
+              <Sparkles className="w-3 h-3 md:w-4 md:h-4 mr-1.5" />
               Ready to Get Started?
             </div>
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
               Don't Wait, <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Start Today</span>
             </h2>
-            <p className="text-xl text-blue-100 mb-10 max-w-3xl mx-auto">
-              Every day you wait is a day lost. Contact us now and take the first step towards your dream destination.
+            <p className="text-base md:text-lg text-blue-100 mb-5 max-w-2xl mx-auto">
+              Contact us now and take the first step towards your dream destination.
             </p>
             
-            <div className="flex flex-row gap-2 md:gap-6 justify-center items-center">
-              <a
-                href="tel:+919533974711"
-                className="inline-flex items-center justify-center bg-white text-blue-600 hover:bg-gray-100 px-3 py-2.5 md:px-6 md:py-3 rounded-lg md:rounded-xl font-semibold text-xs md:text-sm transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
-              >
-                <Phone className="w-4 h-4 md:w-5 md:h-5 mr-1 md:mr-2" />
-                <span className="whitespace-nowrap">Call Now: +91 9533974711</span>
-                <ArrowRight size={16} className="ml-1 md:ml-2 md:w-5 md:h-5" />
-              </a>
-              
-              <a
-                href="https://wa.me/919533974711"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-3 py-2.5 md:px-6 md:py-3 rounded-lg md:rounded-xl font-semibold text-xs md:text-sm transition-all duration-300 hover:scale-105"
-              >
-                <MessageCircle className="w-4 h-4 md:w-5 md:h-5 mr-1 md:mr-2" />
-                WhatsApp Us
-              </a>
-            </div>
             
             {/* Trust Indicators */}
-            <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-8 text-white/80">
+            <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4 text-white/80">
               <div className="flex items-center">
-                <Shield className="w-5 h-5 mr-2" />
-                <span className="text-sm font-medium">SSL Secured</span>
+                <Shield className="w-4 h-4 mr-1.5" />
+                <span className="text-xs md:text-sm font-medium">SSL Secured</span>
               </div>
               <div className="flex items-center">
-                <Award className="w-5 h-5 mr-2" />
-                <span className="text-sm font-medium">98% Success Rate</span>
+                <Award className="w-4 h-4 mr-1.5" />
+                <span className="text-xs md:text-sm font-medium">98% Success Rate</span>
               </div>
               <div className="flex items-center">
-                <Users className="w-5 h-5 mr-2" />
-                <span className="text-sm font-medium">5000+ Happy Clients</span>
+                <Users className="w-4 h-4 mr-1.5" />
+                <span className="text-xs md:text-sm font-medium">5000+ Happy Clients</span>
               </div>
             </div>
           </motion.div>

@@ -1,32 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Globe, CheckCircle, Mail, Phone, ArrowRight, MessageCircle, Award, TrendingUp, Plane, FileText, ClipboardCheck, ShieldCheck, Target } from 'lucide-react';
-import { updatePageSEO } from '../utils/seo';
-
 const SkilledMigration = () => {
-  useEffect(() => {
-    updatePageSEO(
-      'Skilled Migration Consultants Hyderabad - PR Visa Services',
-      'Expert skilled migration consultants in Hyderabad for Australia, Canada, UK PR visas. Professional assistance for skilled worker migration, points-based immigration, and permanent residency.',
-      [
-        'skilled migration consultants Hyderabad',
-        'PR visa consultants',
-        'permanent residency consultants',
-        'skilled worker migration',
-        'Australia PR consultants Hyderabad',
-        'Canada PR consultants',
-        'UK PR visa services',
-        'skilled migration services',
-        'points-based immigration',
-        'permanent residency visa',
-        'skilled immigration consultants',
-        'PR application services',
-        'skilled migration Hyderabad',
-        'immigration PR services',
-        'best PR consultants Hyderabad'
-      ]
-    );
-  }, []);
 
   const [formData, setFormData] = useState({
     name: '',
@@ -44,8 +19,7 @@ const SkilledMigration = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const whatsappMessage = `Hi, I'm interested in Skilled Migration services. Name: ${formData.name}, Email: ${formData.email}, Phone: ${formData.phone}, Message: ${formData.message}`;
-    window.open(`https://wa.me/919533974711?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
+    // WhatsApp functionality removed
   };
 
   const countries = [
@@ -121,13 +95,6 @@ const SkilledMigration = () => {
                     <ClipboardCheck className="mr-1 md:mr-2" size={18} />
                     Free Assessment
                   </button>
-                  <a
-                    href="tel:+919533974711"
-                    className="glass-effect px-4 py-2.5 md:px-6 md:py-3 rounded-full font-semibold text-sm md:text-base hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
-                  >
-                    <Phone className="mr-1 md:mr-2" size={18} />
-                    Call Expert
-                  </a>
                 </div>
               </div>
               <div className="hidden md:block">
@@ -390,13 +357,6 @@ const SkilledMigration = () => {
                       alt="Migration Expert"
                       className="w-full h-40 rounded-xl object-cover ring-4 ring-indigo-50"
                     />
-                    <div className="absolute top-2 right-2 bg-white rounded-full p-3 shadow-lg">
-                      <img
-                        src="/logo.png"
-                        alt="GREAT Visa Network"
-                        className="w-20 h-auto"
-                      />
-                    </div>
                   </div>
                   <h3 className="text-xl font-bold mb-2">Talk to a Migration Expert</h3>
                   <p className="text-gray-600 mb-4">Get a free profile evaluation within 24 hours.</p>
@@ -405,14 +365,6 @@ const SkilledMigration = () => {
                       <ClipboardCheck size={18} className="mr-2" />
                       Free Assessment
                     </button>
-                    <a href="https://wa.me/919533974711" target="_blank" rel="noreferrer noopener" className="bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-400 transition flex items-center justify-center">
-                      <MessageCircle size={18} className="mr-2" />
-                      Chat on WhatsApp
-                    </a>
-                    <a href="tel:+919533974711" className="bg-white border border-gray-200 text-gray-800 py-3 rounded-lg font-semibold hover:border-gray-300 transition flex items-center justify-center">
-                      <Phone size={18} className="mr-2" />
-                      +91 9533974711
-                    </a>
                   </div>
                 </div>
 
@@ -516,12 +468,8 @@ const SkilledMigration = () => {
                 <div className="mt-6 pt-6 border-t border-gray-200">
                   <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-gray-600">
                     <div className="flex items-center">
-                      <Phone className="mr-2 text-indigo-600" size={20} />
-                      <span>+91 9533974711</span>
-                    </div>
-                    <div className="flex items-center">
                       <Mail className="mr-2 text-indigo-600" size={20} />
-                      <span>info@greatvisanetwork.com</span>
+                      <a href="mailto:info@acquireoverseas.in" className="hover:text-indigo-600 transition-colors">info@acquireoverseas.in</a>
                     </div>
                   </div>
                 </div>

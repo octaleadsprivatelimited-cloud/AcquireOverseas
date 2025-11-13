@@ -1,51 +1,22 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { FileText, CheckCircle, Users, Clock, Shield, ArrowRight } from 'lucide-react';
-import { updatePageSEO } from '../utils/seo';
-
 const DocumentAttestation: React.FC = () => {
-  useEffect(() => {
-    updatePageSEO(
-      'Document Attestation Services - Certificate Attestation Hyderabad',
-      'Professional document attestation and certificate attestation services in Hyderabad. Embassy attestation, MEA attestation, apostille services for all documents.',
-      [
-        'document attestation Hyderabad',
-        'certificate attestation services',
-        'MEA attestation Hyderabad',
-        'embassy attestation services',
-        'apostille services Hyderabad',
-        'HRD attestation',
-        'notary attestation',
-        'educational certificate attestation',
-        'marriage certificate attestation',
-        'birth certificate attestation',
-        'degree certificate attestation',
-        'document verification services',
-        'attestation services Hyderabad',
-        'document legalization',
-        'consulate attestation',
-        'PCC attestation',
-        'document apostille',
-        'certificate verification',
-        'embassy legalization services'
-      ]
-    );
-  }, []);
 
   const features = [
-    { icon: FileText, title: 'Document Verification', description: 'Professional verification and attestation of all documents' },
-    { icon: Shield, title: 'Embassy Services', description: 'Complete embassy and consulate services' },
-    { icon: Clock, title: 'Translation Services', description: 'Professional translation and notarization' },
-    { icon: Users, title: 'Express Processing', description: 'Fast-track processing for urgent requirements' }
+    { icon: FileText, title: 'Document Verification', description: 'Professional verification and attestation of academic documents' },
+    { icon: Shield, title: 'Embassy Services', description: 'Complete embassy and consulate attestation services' },
+    { icon: Clock, title: 'Translation Services', description: 'Professional translation of academic documents' },
+    { icon: Users, title: 'Express Processing', description: 'Fast-track processing for urgent application deadlines' }
   ];
 
   const services = [
-    'Document verification and attestation',
-    'Embassy and consulate services',
-    'Translation and notarization',
-    'Apostille and legalization',
-    'Express processing options',
-    'Document collection and delivery'
+    'Academic document verification and attestation',
+    'Embassy and consulate services for study visas',
+    'Translation and notarization of transcripts',
+    'Apostille and legalization for university applications',
+    'Express processing for application deadlines',
+    'Document collection and delivery services'
   ];
 
   return (
@@ -70,10 +41,10 @@ const DocumentAttestation: React.FC = () => {
                 <FileText size={40} />
               </div>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Document Attestation Services</h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">Document Preparation Services</h1>
             <p className="text-xl text-primary-100 leading-relaxed">
-              Ensure your documents are properly authenticated for international use. 
-              We provide comprehensive document attestation and legalization services.
+              Ensure your academic documents are properly prepared and authenticated for university applications. 
+              We provide comprehensive document preparation and attestation services.
             </p>
           </motion.div>
         </div>
@@ -88,9 +59,9 @@ const DocumentAttestation: React.FC = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Complete Document Attestation</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Complete Document Preparation</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We provide comprehensive document attestation services to ensure your documents are legally recognized internationally.
+              We provide comprehensive document preparation and attestation services to ensure your academic documents are ready for university applications.
             </p>
           </motion.div>
 
@@ -124,9 +95,9 @@ const DocumentAttestation: React.FC = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Attestation Services</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Document Preparation Services</h2>
               <p className="text-lg text-gray-600 mb-8">
-                We offer comprehensive document attestation services to help you authenticate your documents for international use.
+                We offer comprehensive document preparation and attestation services to help you prepare your academic documents for university applications.
               </p>
               
               <div className="space-y-4">
@@ -190,7 +161,7 @@ const DocumentAttestation: React.FC = () => {
             
             <div className="flex flex-row gap-4 justify-center">
               <a
-                href="/contact"
+                href="/lets-start-your-journey"
                 className="inline-flex items-center justify-center bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
               >
                 Start Attestation
@@ -198,7 +169,7 @@ const DocumentAttestation: React.FC = () => {
               </a>
               
               <a
-                href="/services"
+                href="/comprehensive-education-solutions"
                 className="inline-flex items-center justify-center bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary-600 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
               >
                 View All Services

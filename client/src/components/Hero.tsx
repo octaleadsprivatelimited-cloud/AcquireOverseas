@@ -23,9 +23,8 @@ const Hero: React.FC = () => {
 
   const sliderImages = [
     '/home/slider-1.jpg',
-    '/home/Silder-2.jpg',
-    '/home/slider-3.jpg'
-  ];
+    '/services/study_visa.jpg'
+  ] as const;
 
   useEffect(() => {
     const checkMobile = () => {
@@ -60,21 +59,11 @@ const Hero: React.FC = () => {
     setSubmitStatus('idle');
 
     try {
-      const response = await fetch('https://formspree.io/f/myznnzyo', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ ...formData, message: `Inquiry for ${formData.service}` }),
-      });
-
-      if (response.ok) {
-        setSubmitStatus('success');
-        setFormData({ name: '', email: '', phone: '', service: '' });
-        setTimeout(() => setSubmitStatus('idle'), 5000);
-      } else {
-        setSubmitStatus('error');
-      }
+      // Form submission disabled - contact form functionality removed
+      // You can implement your own form handling here
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', phone: '', service: '' });
+      setTimeout(() => setSubmitStatus('idle'), 5000);
     } catch (error) {
       setSubmitStatus('error');
     } finally {
@@ -83,45 +72,46 @@ const Hero: React.FC = () => {
   };
 
   const services = [
-    'Study Visa',
-    'Work Visa',
-    'Tourist Visa',
-    'Family Visa',
-    'Business Visa',
-    'Immigration Consultation'
+    'Study Abroad Programs',
+    'University Selection',
+    'Course Selection',
+    'Application Support',
+    'Education Consultation'
   ];
 
   const stats = [
-    { icon: Users, value: '5K+', label: 'Clients', color: 'from-blue-500 to-cyan-500' },
+    { icon: Users, value: '5K+', label: 'Students', color: 'from-blue-500 to-cyan-500' },
     { icon: Award, value: '98%', label: 'Success', color: 'from-purple-500 to-pink-500' },
     { icon: Globe, value: '50+', label: 'Countries', color: 'from-orange-500 to-red-500' }
   ];
 
   return (
-    <section className="relative min-h-screen overflow-hidden pt-24 pb-12 md:pb-16 lg:pb-20">
+    <section className="relative min-h-screen overflow-hidden pt-14 md:pt-20 lg:pt-24 pb-12 md:pb-16 lg:pb-20">
       {/* Background Image Slider */}
       <div className="absolute inset-0 bg-black">
         {sliderImages.map((image, index) => {
-          // Slider 1 (index 0): 70% right, Slider 2 (index 1): 50% left, Slider 3 (index 2): center
+          // Slider 1 (index 0): 70% right, Slider 2 (index 1): center top
           const getMobilePosition = () => {
             if (index === 0) return '70% center'; // slider-1.jpg - right
-            if (index === 1) return '50% center'; // Silder-2.jpg - left
-            return 'center'; // slider-3.jpg - center
+            return 'center top'; // study_visa.jpg - student image at top
           };
 
           return (
             <motion.div
-              key={index}
+              key={`${image}-${index}`}
               initial={{ opacity: 0 }}
               animate={{ opacity: currentSlide === index ? 1 : 0 }}
               transition={{ duration: 1.5, ease: "easeInOut" }}
               className="absolute inset-0"
             >
               <div 
+                key={image}
                 className="w-full h-full bg-cover"
                 style={{
                   backgroundImage: `url(${image})`,
-                  backgroundPosition: isMobile ? getMobilePosition() : 'center'
+                  backgroundPosition: isMobile ? getMobilePosition() : 'center',
+                  backgroundSize: 'cover',
+                  backgroundRepeat: 'no-repeat'
                 }}
               ></div>
               {/* Dark overlay for text readability */}
@@ -159,11 +149,11 @@ const Hero: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-base sm:text-lg md:text-xl text-white/95 mb-6 md:mb-8 lg:mb-10 leading-relaxed max-w-2xl mx-auto font-medium drop-shadow-lg"
             >
-              Transform your international dreams into reality with{' '}
+              Transform your education dreams into reality with{' '}
               <span className="font-bold text-yellow-300">
-                expert visa guidance
+                expert education guidance
               </span>{' '}
-              & immigration services
+              & study abroad services
             </motion.p>
 
             {/* CTA Buttons */}
@@ -174,14 +164,14 @@ const Hero: React.FC = () => {
               className="flex flex-row gap-2 md:gap-4 justify-center mb-8 md:mb-10 lg:mb-12"
             >
               <Link
-                to="/contact"
+                to="/lets-start-your-journey"
                 className="group inline-flex items-center justify-center px-4 md:px-6 py-2.5 md:py-3 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white rounded-lg md:rounded-xl font-semibold text-xs md:text-sm hover:shadow-2xl transition-all duration-300 hover:scale-105 shadow-xl"
               >
                 <span>Get Started</span>
                 <ArrowRight size={14} className="ml-1 md:ml-2 group-hover:translate-x-2 transition-transform md:w-4 md:h-4" />
               </Link>
               <Link
-                to="/services"
+                to="/comprehensive-education-solutions"
                 className="inline-flex items-center justify-center px-4 md:px-6 py-2.5 md:py-3 bg-white text-gray-900 rounded-lg md:rounded-xl font-semibold text-xs md:text-sm hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-indigo-200"
               >
                 <span>Explore Services</span>

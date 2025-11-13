@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Phone, 
-  Mail, 
   Menu, 
   X, 
   ChevronDown,
-  Sparkles,
-  ArrowRight
+  ArrowRight,
+  Mail,
+  Phone,
+  MapPin,
+  Clock
 } from 'lucide-react';
 
 const Header: React.FC = () => {
@@ -52,120 +53,53 @@ const Header: React.FC = () => {
   };
 
   const servicesCategories = {
-    visaServices: [
-      { name: 'Study Visa', path: '/study-visa', desc: 'Pursue education at top universities worldwide', icon: '🎓' },
-      { name: 'Work Visa', path: '/work-visa', desc: 'Advance your career with international opportunities', icon: '💼' },
-      { name: 'Tourist Visa', path: '/tourist-visa', desc: 'Explore new destinations hassle-free', icon: '✈️' },
-      { name: 'Family Visa', path: '/family-visa', desc: 'Reunite with your loved ones abroad', icon: '❤️' },
-      { name: 'Business Visa', path: '/business-visa', desc: 'Expand your business globally', icon: '🏢' },
-      { name: 'Visa Extension', path: '/visa-extension', desc: 'Extend your current visa status', icon: '🔄' }
+    educationServices: [
+      { name: 'Study Abroad Programs', path: '/study-abroad-programs', desc: 'Pursue education at top universities worldwide', icon: '🎓' },
+      { name: 'University Selection', path: '/university-selection', desc: 'Expert guidance on choosing the right university', icon: '🏫' },
+      { name: 'Course Selection', path: '/course-selection', desc: 'Find the perfect course for your career goals', icon: '📚' },
+      { name: 'Application Support', path: '/application-support', desc: 'Complete application process guidance', icon: '📝' },
+      { name: 'Student Visa Services', path: '/study-abroad-programs', desc: 'Expert student visa application assistance', icon: '🛂' }
     ],
     consultationServices: [
-      { name: 'Immigration Consultation', path: '/immigration-consultation', desc: 'Expert guidance from certified consultants', icon: '📋' },
-      { name: 'Job Placement', path: '/job-placement', desc: 'Connect with international employers', icon: '🎯' },
-      { name: 'Skill Assessment', path: '/skill-assessment', desc: 'Validate your professional qualifications', icon: '⭐' },
-      { name: 'Document Attestation', path: '/document-attestation', desc: 'Official document verification services', icon: '📄' }
+      { name: 'Education Consultation', path: '/education-consultation', desc: 'Expert guidance from certified education consultants', icon: '📋' },
+      { name: 'Career Counseling', path: '/career-counseling-services', desc: 'Career guidance and pathway planning', icon: '🎯' },
+      { name: 'Document Preparation', path: '/document-preparation-services', desc: 'Official document verification and preparation', icon: '📄' },
+      { name: 'Pre-Departure Support', path: '/comprehensive-education-solutions', desc: 'Comprehensive support before you leave', icon: '✈️' }
     ]
   };
 
-  const specializedCategories = {
-    internationalWorkVisas: [
-      { name: 'Skilled Migration', path: '/skilled-migration', desc: 'Migrate to top countries worldwide', icon: '🌍' },
-      { name: 'Albania Work Visa', path: '/albania-work-visa', desc: 'Work opportunities in Albania', icon: '🇦🇱' },
-      { name: 'UK Visitor Visa', path: '/uk-visitor-visa-consultants', desc: 'Expert UK visitor visa services', icon: '🇬🇧' },
-      { name: 'UK Healthcare Professionals', path: '/uk-health-care-professionals-work-visa', desc: 'Work in UK healthcare sector', icon: '🏥' },
-      { name: 'UK IT Professionals', path: '/uk-it-professionals-visa-consultancy', desc: 'Tech careers in the UK', icon: '💻' },
-      { name: 'UK Skilled Worker Visa', path: '/uk-skilled-work-visa-consultancy', desc: 'UK skilled worker visa services', icon: '🎯' },
-      { name: 'UK Tier 2 Work Visa', path: '/tier-2-work-visa-for-uk', desc: 'UK Tier 2 work visa guidance', icon: '📋' },
-      { name: 'UK Healthcare Worker', path: '/uk-healthcare-worker-visa-consultants', desc: 'UK health & care worker visa', icon: '🩺' },
-      { name: 'Ireland IT Professionals', path: '/best-ireland-it-professional-work-visa-consultancy', desc: 'Ireland tech opportunities', icon: '🇮🇪' },
-      { name: 'Ireland Healthcare', path: '/best-ireland-health-care-work-visa-consultancy', desc: 'Healthcare jobs in Ireland', icon: '⚕️' },
-      { name: 'Netherlands Skilled Worker', path: '/netherlands-skilled-worker-visa', desc: 'Skilled migration to Netherlands', icon: '🇳🇱' }
-    ],
-    hyderabadServices: [
-      { name: 'Student Visa Consultants', path: '/student-visa-consultants-in-hyderabad', desc: 'Study abroad from Hyderabad', icon: '🎓' },
-      { name: 'UK Skilled Worker', path: '/uk-skilled-worker-visa-consultants-in-hyderabad', desc: 'UK work visa from Hyderabad', icon: '🏢' },
-      { name: 'UK Tier 2 Consultants', path: '/uk-tier-2-visa-consultants-in-hyderabad', desc: 'Tier 2 consultants in Hyderabad', icon: '📝' }
-    ]
-  };
 
   const mainNavigation = [
     { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Services', path: '/services', hasDropdown: true, dropdownType: 'services' },
-    { name: 'Specialized', path: '#', hasDropdown: true, dropdownType: 'specialized' },
-    { name: 'Portfolio', path: '/portfolio' },
-    { name: 'Blog', path: '/blog' },
-    { name: 'Testimonials', path: '/testimonials' },
-    { name: 'FAQ', path: '/faq' },
-    { name: 'Careers', path: '/careers' },
-    { name: 'Contact', path: '/contact' }
+    { name: 'About', path: '/your-trusted-education-partner' },
+    { name: 'Services', path: '/comprehensive-education-solutions', hasDropdown: true, dropdownType: 'services' },
+    { name: 'Portfolio', path: '/our-portfolio' },
+    { name: 'Blog', path: '/blog-resources' },
+    { name: 'Testimonials', path: '/success-stories' },
+    { name: 'FAQ', path: '/frequently-asked-questions' },
+    { name: 'Careers', path: '/build-your-career-with-us' },
+    { name: 'Contact', path: '/lets-start-your-journey' }
   ];
 
   return (
     <>
-      {/* Top Bar - Compact */}
-      <div className="bg-orange-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-1.5 text-xs">
-            {/* Mobile: Phone + WhatsApp | Desktop: Phone + Email */}
-            <div className="flex items-center space-x-2 md:space-x-4">
-              <a href="tel:+919533974711" className="flex items-center space-x-1 md:space-x-1.5 hover:text-white/80 transition-colors group">
-                <div className="w-5 h-5 md:w-6 md:h-6 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors">
-                  <Phone size={10} className="md:w-3 md:h-3" strokeWidth={2.5} />
-              </div>
-                <span className="font-medium text-[10px] md:text-xs">+91 9533 974 711</span>
-              </a>
-              <a href="mailto:info@greatvisanetwork.com" className="hidden md:flex items-center space-x-1.5 hover:text-white/80 transition-colors group">
-                <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors">
-                  <Mail size={12} strokeWidth={2.5} />
-              </div>
-                <span className="font-medium">info@greatvisanetwork.com</span>
-              </a>
-            </div>
-            {/* Mobile: WhatsApp Button | Desktop: Consultation Button */}
-            <div className="flex items-center">
-              <a 
-                href="https://wa.me/919533974711" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="md:hidden group inline-flex items-center space-x-1 bg-white text-green-600 hover:bg-white/90 px-3 py-1 rounded-full text-[10px] font-bold transition-all duration-300 hover:scale-105 shadow-lg"
-              >
-                <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                </svg>
-                <span>WhatsApp</span>
-              </a>
-              <a 
-                href="/contact"
-                className="hidden md:inline-flex group items-center space-x-1.5 bg-yellow-400 text-gray-900 hover:bg-yellow-500 px-4 py-1.5 rounded-full text-xs font-bold transition-all duration-300 hover:scale-105 shadow-lg"
-              >
-                <Sparkles size={12} className="group-hover:rotate-12 transition-transform" />
-                <span>Free Consultation</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Main Header - Compact */}
       <motion.header 
         className={`sticky top-0 z-50 transition-all duration-300 relative ${
           isScrolled 
-            ? 'glass-card shadow-xl' 
-            : 'bg-white/95 backdrop-blur-sm shadow-md'
+            ? 'bg-black/95 backdrop-blur-sm shadow-xl' 
+            : 'bg-black shadow-md'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
+          <div className="flex justify-between items-center h-14 md:h-16 lg:h-20">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-3 group">
-              <div className="relative h-16 w-56 flex items-center">
-                <img
-                  src="/logo.png"
-                  alt="GREAT Visa Network"
-                  className="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-                  loading="eager"
+            <Link to="/" className="flex items-center space-x-2 md:space-x-3 group">
+              <div className="relative h-10 md:h-12 lg:h-16 flex items-center">
+                <img 
+                  src="/favicon.png" 
+                  alt="Acquire Overseas Education" 
+                  className="h-8 md:h-10 lg:h-12 w-auto object-contain"
                 />
               </div>
             </Link>
@@ -180,10 +114,9 @@ const Header: React.FC = () => {
                         onMouseEnter={() => setActiveDropdown(item.dropdownType || 'services')}
                         onClick={() => setActiveDropdown(activeDropdown === (item.dropdownType || 'services') ? null : (item.dropdownType || 'services'))}
                         className={`px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 flex items-center space-x-1 ${
-                          (item.dropdownType === 'services' && (location.pathname.includes('/services') || location.pathname.includes('visa') || location.pathname.includes('immigration') || location.pathname.includes('job') || location.pathname.includes('skill') || location.pathname.includes('document'))) ||
-                          (item.dropdownType === 'specialized' && (location.pathname.includes('/uk-') || location.pathname.includes('/ireland') || location.pathname.includes('/netherlands') || location.pathname.includes('/tier-2') || location.pathname.includes('/skilled-migration') || location.pathname.includes('-hyderabad')))
+                          (item.dropdownType === 'services' && (location.pathname.includes('/services') || location.pathname.includes('visa') || location.pathname.includes('education') || location.pathname.includes('study') || location.pathname.includes('university')))
                             ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg'
-                            : 'text-gray-700 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 hover:text-indigo-600'
+                            : 'text-white hover:bg-white/10 hover:text-white'
                         }`}
                       >
                         <span>{item.name}</span>
@@ -197,7 +130,7 @@ const Header: React.FC = () => {
                       className={`px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 ${
                         location.pathname === item.path
                           ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg'
-                          : 'text-gray-700 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 hover:text-indigo-600'
+                          : 'text-white hover:bg-white/10 hover:text-white'
                       }`}
                     >
                       {item.name}
@@ -210,10 +143,10 @@ const Header: React.FC = () => {
             {/* Mobile menu button */}
             <button
               onClick={toggleMobileMenu}
-              className="lg:hidden p-2 rounded-2xl text-gray-700 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 transition-all duration-300"
+              className="lg:hidden p-1.5 rounded-xl text-white hover:bg-white/10 transition-all duration-300"
               aria-label="Toggle menu"
             >
-              {isMobileMenuOpen ? <X size={24} strokeWidth={2.5} /> : <Menu size={24} strokeWidth={2.5} />}
+              {isMobileMenuOpen ? <X size={20} strokeWidth={2.5} /> : <Menu size={20} strokeWidth={2.5} />}
             </button>
           </div>
         </div>
@@ -229,7 +162,7 @@ const Header: React.FC = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className="hidden lg:block fixed top-[96px] left-0 right-0 bottom-0 z-40 bg-black/60 backdrop-blur-md"
+              className="hidden lg:block fixed top-[64px] md:top-[80px] lg:top-[96px] left-0 right-0 bottom-0 z-40 bg-black/60 backdrop-blur-md"
               onClick={() => setActiveDropdown(null)}
             />
             
@@ -239,28 +172,28 @@ const Header: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -30 }}
               transition={{ duration: 0.3, ease: "easeOut" }}
-              className="hidden lg:block fixed top-[96px] left-0 right-0 z-50 bg-gradient-to-br from-white via-slate-50 to-indigo-50/30 shadow-2xl border-b border-slate-200"
+              className="hidden lg:block fixed top-[64px] md:top-[80px] lg:top-[96px] left-0 right-0 z-50 bg-black/95 backdrop-blur-sm shadow-2xl border-b border-gray-800"
               onClick={(e) => e.stopPropagation()}
               onMouseLeave={() => setActiveDropdown(null)}
             >
               <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
                 {/* Header */}
                 <div className="mb-4 text-center">
-                  <h3 className="text-xl font-bold text-gray-900 mb-1">
+                  <h3 className="text-xl font-bold text-white mb-1">
                     Our Services
                   </h3>
-                  <p className="text-xs text-gray-600">Choose the service that fits your needs</p>
+                  <p className="text-xs text-gray-300">Choose the service that fits your needs</p>
                 </div>
                 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
-                  {/* Visa Services */}
+                  {/* Education Services */}
                   <div>
                     <div className="flex items-center mb-2">
                       <div className="w-1 h-4 bg-gradient-to-b from-indigo-600 to-purple-600 rounded-full mr-2"></div>
-                      <h4 className="text-xs font-bold text-gray-900">Visa Services</h4>
+                      <h4 className="text-xs font-bold text-white">Education Services</h4>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                      {servicesCategories.visaServices.map((service, index) => (
+                      {servicesCategories.educationServices.map((service, index) => (
                         <motion.div
                           key={service.name}
                           initial={{ opacity: 0, y: 20 }}
@@ -272,10 +205,10 @@ const Header: React.FC = () => {
                           <Link
                             to={service.path}
                             onClick={() => setActiveDropdown(null)}
-                            className="group relative overflow-hidden p-3 rounded-lg bg-white hover:bg-gradient-to-br hover:from-indigo-50 hover:to-purple-50 border border-slate-200 hover:border-indigo-300 transition-all duration-300 hover:shadow-md block h-full"
+                            className="group relative overflow-hidden p-3 rounded-lg bg-gray-900 hover:bg-gray-800 border border-gray-700 hover:border-indigo-500 transition-all duration-300 hover:shadow-md block h-full"
                           >
                             <div className="relative">
-                              <h5 className="text-base font-bold text-gray-900 group-hover:text-indigo-600 transition-colors" style={{ fontFamily: 'Arial, sans-serif' }}>
+                              <h5 className="text-base font-bold text-white group-hover:text-indigo-400 transition-colors" style={{ fontFamily: 'Arial, sans-serif' }}>
                                 {service.name}
                               </h5>
                             </div>
@@ -289,7 +222,7 @@ const Header: React.FC = () => {
                   <div>
                     <div className="flex items-center mb-2">
                       <div className="w-1 h-4 bg-gradient-to-b from-purple-600 to-pink-600 rounded-full mr-2"></div>
-                      <h4 className="text-xs font-bold text-gray-900">Consultation Services</h4>
+                      <h4 className="text-xs font-bold text-white">Consultation Services</h4>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {servicesCategories.consultationServices.map((service, index) => (
@@ -297,17 +230,17 @@ const Header: React.FC = () => {
                           key={service.name}
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
-                          transition={{ duration: 0.3, delay: (servicesCategories.visaServices.length + index) * 0.05 }}
+                          transition={{ duration: 0.3, delay: (servicesCategories.educationServices.length + index) * 0.05 }}
                           whileHover={{ scale: 1.02, y: -2 }}
                           whileTap={{ scale: 0.98 }}
                         >
                           <Link
                             to={service.path}
                             onClick={() => setActiveDropdown(null)}
-                            className="group relative overflow-hidden p-3 rounded-lg bg-white hover:bg-gradient-to-br hover:from-purple-50 hover:to-pink-50 border border-slate-200 hover:border-purple-300 transition-all duration-300 hover:shadow-md block h-full"
+                            className="group relative overflow-hidden p-3 rounded-lg bg-gray-900 hover:bg-gray-800 border border-gray-700 hover:border-purple-500 transition-all duration-300 hover:shadow-md block h-full"
                           >
                             <div className="relative">
-                              <h5 className="text-base font-bold text-gray-900 group-hover:text-purple-600 transition-colors" style={{ fontFamily: 'Arial, sans-serif' }}>
+                              <h5 className="text-base font-bold text-white group-hover:text-purple-400 transition-colors" style={{ fontFamily: 'Arial, sans-serif' }}>
                                 {service.name}
                               </h5>
                             </div>
@@ -318,12 +251,39 @@ const Header: React.FC = () => {
                   </div>
                 </div>
 
+                {/* Contact Information - Desktop */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 pt-4 border-t border-gray-700">
+                  <div className="space-y-2">
+                    <div className="flex items-center text-white">
+                      <Phone size={14} className="mr-2 text-green-400" />
+                      <a href="tel:+919515612909" className="text-sm hover:text-green-400 transition-colors">+91 95156 12909</a>
+                    </div>
+                    <div className="flex items-center text-white">
+                      <Mail size={14} className="mr-2 text-blue-400" />
+                      <a href="mailto:info@acquireoverseas.in" className="text-sm hover:text-blue-400 transition-colors">info@acquireoverseas.in</a>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex items-start text-white">
+                      <MapPin size={14} className="mr-2 mt-0.5 text-red-400 flex-shrink-0" />
+                      <span className="text-sm">Hyderabad, Telangana, India</span>
+                    </div>
+                    <div className="flex items-start text-white">
+                      <Clock size={14} className="mr-2 mt-0.5 text-purple-400 flex-shrink-0" />
+                      <div className="text-sm">
+                        <div>Mon - Fri: 9:00 AM - 6:00 PM</div>
+                        <div>Sat: 9:00 AM - 4:00 PM</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
                 {/* CTA Banner */}
                 <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-lg p-3 text-center text-white">
                   <h4 className="text-sm font-bold mb-1">Not Sure Which Service You Need?</h4>
                   <p className="text-white/90 mb-2 text-xs">Get a free consultation with our experts</p>
                   <Link
-                    to="/contact"
+                    to="/lets-start-your-journey"
                     onClick={() => setActiveDropdown(null)}
                     className="inline-flex items-center px-4 py-2 bg-white text-indigo-600 hover:bg-yellow-300 hover:text-purple-900 rounded-lg font-semibold text-xs transition-all duration-300 hover:scale-105 shadow-lg"
                   >
@@ -337,129 +297,6 @@ const Header: React.FC = () => {
         )}
       </AnimatePresence>
 
-      {/* Specialized Services Dropdown - Professional Mega Menu */}
-      <AnimatePresence>
-        {activeDropdown === 'specialized' && (
-          <>
-            {/* Overlay below header only - Desktop Only */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              className="hidden lg:block fixed top-[96px] left-0 right-0 bottom-0 z-40 bg-black/60 backdrop-blur-md"
-              onClick={() => setActiveDropdown(null)}
-            />
-            
-            {/* Dropdown content - Desktop Only */}
-            <motion.div
-              initial={{ opacity: 0, y: -30 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -30 }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
-              className="hidden lg:block fixed top-[96px] left-0 right-0 z-50 bg-gradient-to-br from-white via-slate-50 to-indigo-50/30 shadow-2xl border-b border-slate-200"
-              onClick={(e) => e.stopPropagation()}
-              onMouseLeave={() => setActiveDropdown(null)}
-            >
-              <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
-                {/* Header */}
-                <div className="mb-4 text-center">
-                  <h3 className="text-xl font-bold text-gray-900 mb-1">
-                    Specialized Services
-                  </h3>
-                  <p className="text-xs text-gray-600">Country-specific and professional visa services</p>
-                </div>
-                
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
-                  {/* International Work Visas */}
-                  <div>
-                    <div className="flex items-center mb-2">
-                      <div className="w-1 h-4 bg-gradient-to-b from-indigo-600 to-purple-600 rounded-full mr-2"></div>
-                      <h4 className="text-xs font-bold text-gray-900">International Work Visas</h4>
-                    </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                      {specializedCategories.internationalWorkVisas.map((service, index) => (
-                        <motion.div
-                          key={service.name}
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ duration: 0.3, delay: index * 0.05 }}
-                          whileHover={{ scale: 1.02, y: -2 }}
-                          whileTap={{ scale: 0.98 }}
-                        >
-                          <Link
-                            to={service.path}
-                            onClick={() => setActiveDropdown(null)}
-                            className="group relative overflow-hidden p-3 rounded-lg bg-white hover:bg-gradient-to-br hover:from-indigo-50 hover:to-purple-50 border border-slate-200 hover:border-indigo-300 transition-all duration-300 hover:shadow-md block h-full"
-                          >
-                            <div className="relative">
-                              <div className="flex items-center">
-                                <span className="text-base mr-2">{service.icon}</span>
-                                <h5 className="text-base font-bold text-gray-900 group-hover:text-indigo-600 transition-colors" style={{ fontFamily: 'Arial, sans-serif' }}>
-                                  {service.name}
-                                </h5>
-                              </div>
-                            </div>
-                          </Link>
-                        </motion.div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Hyderabad Services */}
-                  <div>
-                    <div className="flex items-center mb-2">
-                      <div className="w-1 h-4 bg-gradient-to-b from-purple-600 to-pink-600 rounded-full mr-2"></div>
-                      <h4 className="text-xs font-bold text-gray-900">Hyderabad Consultancy</h4>
-                    </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                      {specializedCategories.hyderabadServices.map((service, index) => (
-                        <motion.div
-                          key={service.name}
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ duration: 0.3, delay: (specializedCategories.internationalWorkVisas.length + index) * 0.05 }}
-                          whileHover={{ scale: 1.02, y: -2 }}
-                          whileTap={{ scale: 0.98 }}
-                        >
-                          <Link
-                            to={service.path}
-                            onClick={() => setActiveDropdown(null)}
-                            className="group relative overflow-hidden p-3 rounded-lg bg-white hover:bg-gradient-to-br hover:from-purple-50 hover:to-pink-50 border border-slate-200 hover:border-purple-300 transition-all duration-300 hover:shadow-md block h-full"
-                          >
-                            <div className="relative">
-                              <div className="flex items-center">
-                                <span className="text-base mr-2">{service.icon}</span>
-                                <h5 className="text-base font-bold text-gray-900 group-hover:text-purple-600 transition-colors" style={{ fontFamily: 'Arial, sans-serif' }}>
-                                  {service.name}
-                                </h5>
-                              </div>
-                            </div>
-                          </Link>
-                        </motion.div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                {/* CTA Banner */}
-                <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-lg p-3 text-center text-white">
-                  <h4 className="text-sm font-bold mb-1">Need Expert Guidance?</h4>
-                  <p className="text-white/90 mb-2 text-xs">Connect with our specialized visa consultants</p>
-                  <Link
-                    to="/contact"
-                    onClick={() => setActiveDropdown(null)}
-                    className="inline-flex items-center px-4 py-2 bg-white text-indigo-600 hover:bg-yellow-300 hover:text-purple-900 rounded-lg font-semibold text-xs transition-all duration-300 hover:scale-105 shadow-lg"
-                  >
-                    <span>Contact Us</span>
-                    <ArrowRight size={14} className="ml-1.5" />
-                  </Link>
-                </div>
-              </div>
-            </motion.div>
-          </>
-        )}
-      </AnimatePresence>
 
       {/* Mobile Menu - Simple Dropdown */}
       <AnimatePresence>
@@ -469,10 +306,10 @@ const Header: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden fixed inset-0 top-[116px] bg-white border-t border-gray-200 shadow-lg z-40 overflow-y-auto overscroll-contain"
+            className="lg:hidden fixed inset-x-0 top-14 md:top-16 bottom-0 bg-black border-t border-gray-800 shadow-lg z-40 overflow-y-auto overscroll-contain"
           >
-            <div className="px-3 py-2 pb-6">
-              <nav className="space-y-0.5">
+            <div className="px-2 py-1 pb-4">
+              <nav className="space-y-0">
                 {mainNavigation.map((item, index) => (
               <motion.div
                     key={item.name}
@@ -484,7 +321,7 @@ const Header: React.FC = () => {
                         <div>
                         <motion.button
                           onClick={() => toggleDropdown(item.dropdownType || 'services')}
-                          className="w-full flex items-center justify-between px-3 py-2 text-xs font-semibold text-gray-900 hover:bg-slate-50 rounded-lg transition-all duration-200"
+                          className="w-full flex items-center justify-between px-2.5 py-1.5 text-xs font-semibold text-white hover:bg-gray-800 rounded-md transition-all duration-200"
                           whileTap={{ scale: 0.95 }}
                         >
                           <span>{item.name}</span>
@@ -492,7 +329,7 @@ const Header: React.FC = () => {
                             animate={{ rotate: activeDropdown === (item.dropdownType || 'services') ? 180 : 0 }}
                             transition={{ duration: 0.3 }}
                           >
-                            <ChevronDown size={14} strokeWidth={2.5} />
+                            <ChevronDown size={12} strokeWidth={2.5} />
                           </motion.div>
                         </motion.button>
                           
@@ -503,10 +340,10 @@ const Header: React.FC = () => {
                               animate={{ opacity: 1, height: 'auto' }}
                               exit={{ opacity: 0, height: 0 }}
                               transition={{ duration: 0.3 }}
-                              className="mt-1 space-y-0.5 bg-slate-50 rounded-lg p-1.5"
+                              className="mt-0.5 space-y-0 bg-gray-900 rounded-md p-1"
                             >
-                              <div className="text-[10px] font-bold text-indigo-600 px-2 py-1 uppercase tracking-wider">Visa Services</div>
-                              {servicesCategories.visaServices.map((service, idx) => (
+                              <div className="text-[9px] font-bold text-indigo-400 px-1.5 py-0.5 uppercase tracking-wider">Education Services</div>
+                              {servicesCategories.educationServices.map((service, idx) => (
                               <motion.div
                                   key={service.name}
                                   initial={{ opacity: 0, x: -10 }}
@@ -519,19 +356,19 @@ const Header: React.FC = () => {
                                       setIsMobileMenuOpen(false);
                                       setActiveDropdown(null);
                                     }}
-                                    className="block px-2 py-1.5 text-[11px] text-gray-700 hover:bg-white hover:text-indigo-600 rounded transition-all duration-200 font-medium"
+                                    className="block px-1.5 py-1 text-[10px] text-gray-300 hover:bg-gray-800 hover:text-indigo-400 rounded transition-all duration-200 font-medium"
                                   >
                                     {service.name}
                                   </Link>
                                 </motion.div>
                               ))}
-                              <div className="text-[10px] font-bold text-purple-600 px-2 py-1 mt-1 uppercase tracking-wider">Consultation Services</div>
+                              <div className="text-[9px] font-bold text-purple-400 px-1.5 py-0.5 mt-0.5 uppercase tracking-wider">Consultation Services</div>
                               {servicesCategories.consultationServices.map((service, idx) => (
                                 <motion.div
                                   key={service.name}
                                   initial={{ opacity: 0, x: -10 }}
                                   animate={{ opacity: 1, x: 0 }}
-                                  transition={{ duration: 0.2, delay: (servicesCategories.visaServices.length + idx) * 0.03 }}
+                                  transition={{ duration: 0.2, delay: (servicesCategories.educationServices.length + idx) * 0.03 }}
                                 >
                                     <Link
                                     to={service.path}
@@ -539,59 +376,9 @@ const Header: React.FC = () => {
                                       setIsMobileMenuOpen(false);
                                       setActiveDropdown(null);
                                     }}
-                                    className="block px-2 py-1.5 text-[11px] text-gray-700 hover:bg-white hover:text-purple-600 rounded transition-all duration-200 font-medium"
+                                    className="block px-1.5 py-1 text-[10px] text-gray-300 hover:bg-gray-800 hover:text-purple-400 rounded transition-all duration-200 font-medium"
                                   >
                                     {service.name}
-                                    </Link>
-                                  </motion.div>
-                                ))}
-                              </motion.div>
-                            )}
-                          {activeDropdown === 'specialized' && item.dropdownType === 'specialized' && (
-                            <motion.div
-                              initial={{ opacity: 0, height: 0 }}
-                              animate={{ opacity: 1, height: 'auto' }}
-                              exit={{ opacity: 0, height: 0 }}
-                              transition={{ duration: 0.3 }}
-                              className="mt-1 space-y-0.5 bg-slate-50 rounded-lg p-1.5"
-                            >
-                              <div className="text-[10px] font-bold text-indigo-600 px-2 py-1 uppercase tracking-wider">International Work Visas</div>
-                              {specializedCategories.internationalWorkVisas.map((service, idx) => (
-                              <motion.div
-                                  key={service.name}
-                                  initial={{ opacity: 0, x: -10 }}
-                                  animate={{ opacity: 1, x: 0 }}
-                                  transition={{ duration: 0.2, delay: idx * 0.03 }}
-                                >
-                                  <Link
-                                    to={service.path}
-                                    onClick={() => {
-                                      setIsMobileMenuOpen(false);
-                                      setActiveDropdown(null);
-                                    }}
-                                    className="block px-2 py-1.5 text-[11px] text-gray-700 hover:bg-white hover:text-indigo-600 rounded transition-all duration-200 font-medium"
-                                  >
-                                    {service.icon} {service.name}
-                                  </Link>
-                                </motion.div>
-                              ))}
-                              <div className="text-[10px] font-bold text-purple-600 px-2 py-1 mt-1 uppercase tracking-wider">Hyderabad Consultancy</div>
-                              {specializedCategories.hyderabadServices.map((service, idx) => (
-                                <motion.div
-                                  key={service.name}
-                                  initial={{ opacity: 0, x: -10 }}
-                                  animate={{ opacity: 1, x: 0 }}
-                                  transition={{ duration: 0.2, delay: (specializedCategories.internationalWorkVisas.length + idx) * 0.03 }}
-                                >
-                                    <Link
-                                    to={service.path}
-                                    onClick={() => {
-                                      setIsMobileMenuOpen(false);
-                                      setActiveDropdown(null);
-                                    }}
-                                    className="block px-2 py-1.5 text-[11px] text-gray-700 hover:bg-white hover:text-purple-600 rounded transition-all duration-200 font-medium"
-                                  >
-                                    {service.icon} {service.name}
                                     </Link>
                                   </motion.div>
                                 ))}
@@ -604,10 +391,10 @@ const Header: React.FC = () => {
                           <Link
                             to={item.path}
                           onClick={() => setIsMobileMenuOpen(false)}
-                          className={`block px-3 py-2 text-xs font-semibold rounded-lg transition-all duration-200 ${
+                          className={`block px-2.5 py-1.5 text-xs font-semibold rounded-md transition-all duration-200 ${
                             location.pathname === item.path
                               ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white'
-                              : 'text-gray-900 hover:bg-slate-50'
+                              : 'text-white hover:bg-gray-800'
                           }`}
                         >
                           {item.name}
@@ -617,6 +404,54 @@ const Header: React.FC = () => {
                     </motion.div>
                   ))}
                 </nav>
+
+                {/* Contact Information Section - Mobile */}
+                <div className="mt-4 pt-4 border-t border-gray-800">
+                  <div className="text-[9px] font-bold text-white px-2.5 py-1.5 uppercase tracking-wider mb-2">Contact Us</div>
+                  <div className="space-y-1.5">
+                    <motion.a
+                      href="tel:+919515612909"
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: mainNavigation.length * 0.05 }}
+                      className="flex items-center px-2.5 py-1.5 text-[10px] text-gray-300 hover:bg-gray-800 hover:text-green-400 rounded transition-all duration-200"
+                    >
+                      <Phone size={12} className="mr-2 flex-shrink-0" />
+                      <span>+91 95156 12909</span>
+                    </motion.a>
+                    <motion.a
+                      href="mailto:info@acquireoverseas.in"
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: mainNavigation.length * 0.05 + 0.05 }}
+                      className="flex items-center px-2.5 py-1.5 text-[10px] text-gray-300 hover:bg-gray-800 hover:text-blue-400 rounded transition-all duration-200"
+                    >
+                      <Mail size={12} className="mr-2 flex-shrink-0" />
+                      <span className="truncate">info@acquireoverseas.in</span>
+                    </motion.a>
+                    <motion.div
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: mainNavigation.length * 0.05 + 0.1 }}
+                      className="flex items-start px-2.5 py-1.5 text-[10px] text-gray-300 rounded"
+                    >
+                      <MapPin size={12} className="mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Hyderabad, Telangana, India</span>
+                    </motion.div>
+                    <motion.div
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: mainNavigation.length * 0.05 + 0.15 }}
+                      className="flex items-start px-2.5 py-1.5 text-[10px] text-gray-300 rounded"
+                    >
+                      <Clock size={12} className="mr-2 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <div>Mon - Fri: 9:00 AM - 6:00 PM</div>
+                        <div>Sat: 9:00 AM - 4:00 PM</div>
+                      </div>
+                    </motion.div>
+                  </div>
+                </div>
               </div>
             </motion.div>
           )}

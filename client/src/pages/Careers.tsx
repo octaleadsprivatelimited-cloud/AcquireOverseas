@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Briefcase, 
@@ -12,49 +12,24 @@ import {
   Globe,
   Award
 } from 'lucide-react';
-import { updatePageSEO } from '../utils/seo';
-
 const Careers: React.FC = () => {
-  useEffect(() => {
-    updatePageSEO(
-      'Careers at GREAT Visa Network Hyderabad',
-      'Join GREAT Visa Network team in Hyderabad. Exciting career opportunities in immigration consulting, visa services, and international education consultancy.',
-      [
-        'careers GREAT Visa Network',
-        'visa consultant jobs Hyderabad',
-        'immigration consultant careers',
-        'visa consultancy jobs',
-        'immigration jobs Hyderabad',
-        'visa services jobs',
-        'overseas consultancy careers',
-        'immigration consultant vacancies',
-        'visa consultant recruitment',
-        'jobs in immigration sector',
-        'visa consultancy careers Hyderabad',
-        'immigration industry jobs',
-        'international education jobs',
-        'visa processing jobs',
-        'careers in immigration'
-      ]
-    );
-  }, []);
 
   const jobOpenings = [
     {
-      title: 'Senior Immigration Consultant',
+      title: 'Senior Education Consultant',
       location: 'Hyderabad, India',
       type: 'Full-time',
       experience: '3-5 years',
-      description: 'Lead immigration cases and provide expert consultation to clients.',
-      requirements: ['Law degree preferred', '3+ years immigration experience', 'Strong communication skills'],
+      description: 'Lead education consultancy cases and provide expert guidance to students.',
+      requirements: ['Education degree preferred', '3+ years education consultancy experience', 'Strong communication skills'],
       benefits: ['Competitive salary', 'Health insurance', 'Professional development']
     },
     {
-      title: 'Visa Processing Specialist',
+      title: 'University Application Specialist',
       location: 'Hyderabad, India',
       type: 'Full-time',
       experience: '1-3 years',
-      description: 'Handle visa applications and documentation for various countries.',
+      description: 'Handle university applications and documentation for various countries.',
       requirements: ['Bachelor\'s degree', 'Attention to detail', 'Multilingual preferred'],
       benefits: ['Flexible hours', 'Performance bonus', 'Career growth']
     },
@@ -83,7 +58,7 @@ const Careers: React.FC = () => {
     {
       icon: Globe,
       title: 'Global Impact',
-      description: 'Help people achieve their dreams of living and working abroad.'
+      description: 'Help students achieve their dreams of studying at top universities abroad.'
     },
     {
       icon: Award,
@@ -97,7 +72,7 @@ const Careers: React.FC = () => {
     'Commitment to client success and satisfaction',
     'Continuous learning and professional development',
     'Teamwork and collaborative work environment',
-    'Innovation in immigration solutions'
+    'Innovation in education consultancy solutions'
   ];
 
   return (
@@ -127,7 +102,7 @@ const Careers: React.FC = () => {
               Build Your Career <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">With Us</span>
             </h1>
             <p className="text-xl text-blue-100 mb-10 max-w-3xl mx-auto">
-              Join our dynamic team and help people achieve their immigration dreams while building your own successful career.
+              Join our dynamic team and help students achieve their study abroad dreams while building your own successful career.
             </p>
           </motion.div>
         </div>
@@ -327,18 +302,11 @@ const Careers: React.FC = () => {
             
             <div className="flex flex-row gap-2 md:gap-4 justify-center">
               <a
-                href="/contact"
+                href="/lets-start-your-journey"
                 className="inline-flex items-center justify-center bg-white text-blue-600 hover:bg-gray-100 px-4 py-3 md:px-8 md:py-4 rounded-lg md:rounded-xl font-semibold text-sm md:text-base transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 <span>Send Your Resume</span>
                 <ArrowRight size={16} className="ml-1 md:ml-2 md:w-[18px] md:h-[18px]" />
-              </a>
-              
-              <a
-                href="mailto:info@greatvisanetwork.com"
-                className="inline-flex items-center justify-center bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-4 py-3 md:px-8 md:py-4 rounded-lg md:rounded-xl font-semibold text-sm md:text-base transition-all duration-300 hover:scale-105"
-              >
-                <span>Email Us</span>
               </a>
             </div>
           </motion.div>

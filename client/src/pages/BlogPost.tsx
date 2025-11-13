@@ -11,31 +11,6 @@ const BlogPost: React.FC = () => {
 
   useEffect(() => {
     if (post) {
-      // Update page title and meta tags for SEO
-      document.title = `${post.title} | GREAT Visa Network Blog`;
-      
-      // Update meta description
-      const metaDescription = document.querySelector('meta[name="description"]');
-      if (metaDescription) {
-        metaDescription.setAttribute('content', post.metaDescription);
-      } else {
-        const meta = document.createElement('meta');
-        meta.name = 'description';
-        meta.content = post.metaDescription;
-        document.head.appendChild(meta);
-      }
-
-      // Update meta keywords
-      const metaKeywords = document.querySelector('meta[name="keywords"]');
-      if (metaKeywords) {
-        metaKeywords.setAttribute('content', post.metaKeywords.join(', '));
-      } else {
-        const meta = document.createElement('meta');
-        meta.name = 'keywords';
-        meta.content = post.metaKeywords.join(', ');
-        document.head.appendChild(meta);
-      }
-
       // Scroll to top
       window.scrollTo(0, 0);
     }
@@ -210,10 +185,10 @@ const BlogPost: React.FC = () => {
                   >
                     <h3 className="text-xl font-bold mb-3">Need Expert Guidance?</h3>
                     <p className="text-white/90 mb-4 text-sm">
-                      Get personalized consultation for your visa application.
+                      Get personalized consultation for your study abroad journey.
                     </p>
                     <Link
-                      to="/contact"
+                      to="/lets-start-your-journey"
                       className="block w-full bg-white text-indigo-600 py-3 rounded-lg font-semibold hover:bg-yellow-400 hover:text-gray-900 transition text-center"
                     >
                       Contact Us
@@ -229,7 +204,7 @@ const BlogPost: React.FC = () => {
                   >
                     <h3 className="text-lg font-bold text-gray-900 mb-4">Categories</h3>
                     <div className="space-y-2">
-                      {['Study Visa', 'Work Visa', 'Skilled Migration', 'Visa Tips', 'Immigration'].map((cat, idx) => (
+                      {['Study Abroad', 'Study Visa', 'University Selection', 'Application Tips'].map((cat, idx) => (
                         <Link
                           key={idx}
                           to="/blog"

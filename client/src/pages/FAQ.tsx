@@ -1,32 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Minus, ArrowRight, HelpCircle } from 'lucide-react';
-import { updatePageSEO } from '../utils/seo';
-
 const FAQ: React.FC = () => {
-  useEffect(() => {
-    updatePageSEO(
-      'Visa FAQs - Frequently Asked Questions',
-      'Find answers to frequently asked questions about visa applications, immigration services, study abroad, work permits, and visa processing at GREAT Visa Network.',
-      [
-        'visa FAQs',
-        'visa questions and answers',
-        'immigration FAQs',
-        'visa application questions',
-        'study visa FAQs',
-        'work visa questions',
-        'visa processing FAQs',
-        'visa consultants FAQs',
-        'immigration questions',
-        'visa help',
-        'visa information',
-        'visa guidance',
-        'common visa questions',
-        'visa requirements FAQs',
-        'visa application help'
-      ]
-    );
-  }, []);
 
   const [openItems, setOpenItems] = useState<{ [key: string]: boolean }>({});
 
@@ -43,23 +18,23 @@ const FAQ: React.FC = () => {
       items: [
         {
           id: 'general-1',
-          question: 'What services does GREAT Visa Network provide?',
-          answer: 'We provide comprehensive visa and immigration services including study visas, work visas, family visas, business visas, tourist visas, and immigration consultation. We also offer document attestation, skill assessment, and job placement services.'
+          question: 'What services does Acquire Overseas Education provide?',
+          answer: 'We provide comprehensive overseas education consultancy services including study abroad programs, university selection, course selection, scholarship assistance, application support, student visa services, and education consultation. We also offer document preparation, career counseling, and pre-departure support.'
         },
         {
           id: 'general-2',
-          question: 'How long has GREAT Visa Network been in business?',
-          answer: 'GREAT Visa Network has been providing immigration services for over 15 years. We have helped thousands of clients achieve their dreams of studying, working, and living abroad.'
+          question: 'How long has Acquire Overseas Education been in business?',
+          answer: 'Acquire Overseas Education has been providing overseas education consultancy services for over 15 years. We have helped thousands of students achieve their dreams of studying at top universities worldwide.'
         },
         {
           id: 'general-3',
           question: 'What is your success rate?',
-          answer: 'We maintain a 98% success rate across all visa types. Our experienced team ensures your application meets all requirements for approval.'
+          answer: 'We maintain a 98% success rate for university admissions. Our experienced team ensures your application meets all requirements and maximizes your chances of acceptance.'
         },
         {
           id: 'general-4',
           question: 'Do you offer free consultations?',
-          answer: 'Yes! We offer free initial consultations to assess your case and provide guidance on the best immigration pathway for your situation.'
+          answer: 'Yes! We offer free initial consultations to assess your profile and provide guidance on the best study abroad pathway for your academic goals.'
         }
       ]
     },
@@ -297,7 +272,7 @@ const FAQ: React.FC = () => {
                 Get a free consultation with our immigration experts to discuss your specific case.
               </p>
               <a
-                href="/contact"
+                href="/lets-start-your-journey"
                 className="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold"
               >
                 Schedule Consultation
@@ -320,7 +295,7 @@ const FAQ: React.FC = () => {
                 Chat with our support team in real-time for immediate assistance with your questions.
               </p>
               <a
-                href="/contact"
+                href="/lets-start-your-journey"
                 className="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold"
               >
                 Start Chat
@@ -343,10 +318,10 @@ const FAQ: React.FC = () => {
                 Send us your questions via email and we'll get back to you within 24 hours.
               </p>
               <a
-                href="/contact"
+                href="mailto:info@acquireoverseas.in"
                 className="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold"
               >
-                Send Email
+                info@acquireoverseas.in
                 <ArrowRight size={16} className="ml-1" />
               </a>
             </motion.div>
@@ -371,7 +346,7 @@ const FAQ: React.FC = () => {
             
             <div className="flex flex-row gap-4 justify-center">
               <a
-                href="/contact"
+                href="/lets-start-your-journey"
                 className="inline-flex items-center justify-center bg-white text-primary-600 hover:bg-gray-100 px-5 py-3 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105"
               >
                 Contact Us
@@ -379,7 +354,7 @@ const FAQ: React.FC = () => {
               </a>
               
               <a
-                href="/services"
+                href="/comprehensive-education-solutions"
                 className="inline-flex items-center justify-center bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary-600 px-5 py-3 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105"
               >
                 View Our Services

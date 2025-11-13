@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Hero from '../components/Hero';
 import { 
   Users, 
@@ -7,105 +7,74 @@ import {
   Star,
   Sparkles,
   Zap,
-  Shield,
-  Phone
+  Shield
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { updatePageSEO } from '../utils/seo';
 
 const Home: React.FC = () => {
-  useEffect(() => {
-    updatePageSEO(
-      'Best Visa Consultants in Hyderabad',
-      'GREAT Visa Network - Leading visa consultants in Hyderabad offering study visa, work visa, PR visa, tourist visa, and immigration services for UK, Canada, Australia, USA, Europe, and more.',
-      [
-        'visa consultants in Hyderabad',
-        'best visa consultants Hyderabad',
-        'study visa consultants Hyderabad',
-        'work visa consultants Hyderabad',
-        'immigration consultants Hyderabad',
-        'UK visa consultants Hyderabad',
-        'Canada visa consultants',
-        'Australia PR consultants',
-        'USA visa services',
-        'Europe visa consultants',
-        'skilled migration consultants',
-        'tourist visa Hyderabad',
-        'student visa Hyderabad',
-        'PR visa consultants',
-        'overseas education consultants',
-        'visa processing services',
-        'GREAT Visa Network',
-        'Hyderabad visa services',
-        'best immigration consultants India',
-        'visa application assistance'
-      ]
-    );
-  }, []);
+
+  const handleCountryClick = (countryName: string) => {
+    const phoneNumber = '919515612909'; // WhatsApp number without + or spaces
+    const message = encodeURIComponent(`Hello! I am interested in studying in ${countryName}. Can you please provide more information about study abroad programs and university admissions for ${countryName}?`);
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+    window.open(whatsappUrl, '_blank');
+  };
 
   const services = [
     { 
-      title: 'Study Visa', 
+      title: 'Study Abroad Programs', 
       desc: 'Top universities worldwide', 
-      link: '/study-visa', 
+      link: '/study-abroad-programs', 
       gradient: 'from-blue-500 to-cyan-500', 
       size: 'large',
       image: '/services/study_visa.jpg'
     },
     { 
-      title: 'Work Visa', 
-      desc: 'Career opportunities', 
-      link: '/work-visa', 
+      title: 'University Selection', 
+      desc: 'Find the perfect fit', 
+      link: '/university-selection', 
       gradient: 'from-emerald-500 to-teal-500', 
       size: 'small',
+      image: '/services/immigration.jpg'
+    },
+    { 
+      title: 'Course Selection', 
+      desc: 'Career-focused guidance', 
+      link: '/course-selection', 
+      gradient: 'from-pink-500 to-rose-500', 
+      size: 'medium',
+      image: '/services/benfits.jpeg'
+    },
+    { 
+      title: 'Application Support', 
+      desc: 'Complete application help', 
+      link: '/application-support', 
+      gradient: 'from-purple-500 to-indigo-500', 
+      size: 'medium',
       image: '/services/word_visa.jpg'
     },
     { 
-      title: 'Tourist Visa', 
-      desc: 'Explore the world', 
-      link: '/tourist-visa', 
-      gradient: 'from-orange-500 to-red-500', 
-      size: 'small',
-      image: '/services/tourist_visa.jpeg'
-    },
-    { 
-      title: 'Family Visa', 
-      desc: 'Reunite with loved ones', 
-      link: '/family-visa', 
-      gradient: 'from-pink-500 to-rose-500', 
-      size: 'medium',
-      image: '/services/family_visa.jpg'
-    },
-    { 
-      title: 'Business Visa', 
-      desc: 'Expand globally', 
-      link: '/business-visa', 
-      gradient: 'from-purple-500 to-indigo-500', 
-      size: 'medium',
-      image: '/services/businessvisa.jpg'
-    },
-    { 
-      title: 'Immigration', 
-      desc: 'Expert consultation', 
-      link: '/immigration-consultation', 
+      title: 'Student Visa Services', 
+      desc: 'Expert visa guidance', 
+      link: '/study-abroad-programs', 
       gradient: 'from-amber-500 to-yellow-500', 
       size: 'medium',
-      image: '/services/immigration.jpg'
+      image: '/services/tourist_visa.jpeg'
     }
   ];
 
   const features = [
-    { icon: Shield, title: 'Trusted', desc: 'Bank-level security', color: 'from-green-500 to-emerald-500' },
-    { icon: Zap, title: 'Fast', desc: 'Quick processing', color: 'from-yellow-500 to-orange-500' },
-    { icon: Award, title: '98% Success', desc: 'Proven track record', color: 'from-purple-500 to-pink-500' },
-    { icon: Users, title: '5K+ Clients', desc: 'Happy customers', color: 'from-blue-500 to-cyan-500' }
+    { icon: Shield, title: 'Trusted', desc: 'Certified education consultants', color: 'from-green-500 to-emerald-500' },
+    { icon: Zap, title: 'Fast', desc: 'Quick application processing', color: 'from-yellow-500 to-orange-500' },
+    { icon: Award, title: '98% Success', desc: 'Proven admission success', color: 'from-purple-500 to-pink-500' },
+    { icon: Users, title: '5K+ Students', desc: 'Successful placements', color: 'from-blue-500 to-cyan-500' }
   ];
 
   const testimonials = [
-    { name: 'Priya S.', role: 'Student', country: 'Canada', text: 'Amazing service! Got my study visa in 2 months.', rating: 5 },
-    { name: 'Rahul K.', role: 'Engineer', country: 'Australia', text: 'Professional team, smooth process throughout.', rating: 5 },
-    { name: 'Sunita P.', role: 'Business Owner', country: 'United Kingdom', text: 'Family reunited thanks to GREAT Visa Network!', rating: 5 }
+    { name: 'Priya S.', role: 'Student', country: 'Canada', text: 'Amazing service! Got admission to my dream university in Canada.', rating: 5 },
+    { name: 'Rahul K.', role: 'Student', country: 'Australia', text: 'Professional team helped me secure scholarship and admission.', rating: 5 },
+    { name: 'Sunita P.', role: 'Student', country: 'United Kingdom', text: 'Got into top UK university thanks to Acquire Overseas Education!', rating: 5 }
   ];
 
   return (
@@ -164,21 +133,21 @@ const Home: React.FC = () => {
       </section>
 
       {/* Services - Bento Box Layout */}
-      <section className="py-20 bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
+      <section className="py-8 md:py-10 bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-12"
+            className="text-center mb-6"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
               Our Services
             </h2>
           </motion.div>
 
           {/* Bento Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -186,7 +155,7 @@ const Home: React.FC = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`group relative overflow-hidden rounded-3xl ${
+                className={`group relative overflow-hidden rounded-xl ${
                   service.size === 'large' ? 'md:col-span-2 md:row-span-2' : 
                   service.size === 'medium' ? 'md:col-span-1 md:row-span-2' : 
                   'md:col-span-1'
@@ -194,7 +163,7 @@ const Home: React.FC = () => {
               >
                 <Link
                   to={service.link}
-                  className={`block h-full min-h-[250px] relative overflow-hidden hover:scale-[1.02] transition-all duration-500`}
+                  className={`block h-full min-h-[140px] relative overflow-hidden hover:scale-[1.02] transition-all duration-500`}
                 >
                   {/* Background Image */}
                   <div className="absolute inset-0">
@@ -207,16 +176,16 @@ const Home: React.FC = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-black/40 group-hover:from-black/70 transition-all duration-500"></div>
                   </div>
                   
-                  <div className="relative z-10 h-full flex flex-col justify-between p-6 md:p-8">
+                  <div className="relative z-10 h-full flex flex-col justify-between p-3 md:p-4">
                     <div>
-                      <div className="inline-block bg-white/10 backdrop-blur-sm px-4 py-2 rounded-xl mb-3 border border-white/20">
-                        <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white">{service.title}</h3>
+                      <div className="inline-block bg-white/10 backdrop-blur-sm px-2.5 py-1 rounded-lg mb-1.5 border border-white/20">
+                        <h3 className="text-base md:text-lg font-bold text-white">{service.title}</h3>
                       </div>
-                      <p className="text-white font-semibold text-base md:text-lg drop-shadow-xl">{service.desc}</p>
+                      <p className="text-white font-semibold text-xs md:text-sm drop-shadow-xl">{service.desc}</p>
                     </div>
-                    <div className="flex items-center text-white font-bold group-hover:translate-x-2 transition-transform duration-300">
+                    <div className="flex items-center text-white font-semibold text-xs md:text-sm group-hover:translate-x-2 transition-transform duration-300">
                       <span>Learn More</span>
-                      <ArrowRight size={20} className="ml-2" />
+                      <ArrowRight size={14} className="ml-1.5" />
                     </div>
                   </div>
                 </Link>
@@ -228,14 +197,14 @@ const Home: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mt-12"
+            className="text-center mt-6"
           >
             <Link
-              to="/services"
-              className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white rounded-2xl font-bold text-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              to="/comprehensive-education-solutions"
+              className="inline-flex items-center px-5 py-2.5 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white rounded-lg font-semibold text-sm hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               <span>View All Services</span>
-              <ArrowRight size={24} className="ml-2" />
+              <ArrowRight size={16} className="ml-2" />
             </Link>
           </motion.div>
         </div>
@@ -254,7 +223,7 @@ const Home: React.FC = () => {
               Countries We Serve
             </h2>
             <p className="text-xl text-gray-600">
-              We Provide Study Visa To All Countries
+              Study Abroad Opportunities in Top Universities Worldwide
             </p>
           </motion.div>
 
@@ -263,42 +232,42 @@ const Home: React.FC = () => {
               {
                 country: 'USA',
                 title: 'USA',
-                visas: ['Student Visa', 'Visitor/Tourist Visa', 'Business Visa'],
+                services: ['Top Universities', 'Scholarship Opportunities', 'Career Prospects'],
                 image: '/country/usa.jpg',
                 gradient: 'from-blue-600 to-blue-800'
               },
               {
                 country: 'Canada',
                 title: 'Canada',
-                visas: ['Student Visa', 'Permanent Resident Visa', 'Visitor/Tourist Visa', 'Business Visa'],
+                services: ['World-Class Education', 'Post-Graduation Work', 'Permanent Residency Pathway'],
                 image: '/country/canada.jpg',
                 gradient: 'from-red-600 to-red-800'
               },
               {
                 country: 'Australia',
                 title: 'Australia',
-                visas: ['Student Visa', 'Permanent Resident Visa', 'Visitor/Tourist Visa', 'Business Visa'],
+                services: ['Quality Universities', 'Work While Studying', 'Post-Study Work Rights'],
                 image: '/country/australia.jpg',
                 gradient: 'from-green-600 to-green-800'
               },
               {
                 country: 'UK',
                 title: 'UK',
-                visas: ['Student Visa', 'Visitor/Tourist Visa', 'Business Visa'],
+                services: ['Prestigious Institutions', 'Research Opportunities', 'Global Recognition'],
                 image: '/country/uk.jpg',
                 gradient: 'from-indigo-600 to-indigo-800'
               },
               {
                 country: 'Germany',
                 title: 'Germany',
-                visas: ['Student Visa', 'Visitor/Tourist Visa', 'Business Visa'],
+                services: ['Tuition-Free Education', 'Engineering Excellence', 'Strong Economy'],
                 image: '/country/Germany.jpg',
                 gradient: 'from-gray-700 to-gray-900'
               },
               {
                 country: 'Europe',
                 title: 'Europe',
-                visas: ['Student Visa', 'Visitor/Tourist Visa', 'Business Visa'],
+                services: ['Diverse Programs', 'Cultural Experience', 'Affordable Education'],
                 image: '/country/Europe.jpeg',
                 gradient: 'from-purple-600 to-purple-800'
               }
@@ -309,7 +278,8 @@ const Home: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500"
+                onClick={() => handleCountryClick(country.title)}
+                className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer"
               >
                 <div className="flex flex-col h-[500px]">
                   {/* Image - 70% */}
@@ -326,29 +296,28 @@ const Home: React.FC = () => {
                     <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full">
                       <h3 className="text-lg font-bold text-gray-900">{country.title}</h3>
                     </div>
-                    <div className="absolute top-4 right-4 bg-white rounded-full p-3 shadow-lg">
-                      <img
-                        src="/logo.png"
-                        alt="GREAT Visa Network"
-                        className="w-16 h-auto"
-                      />
-                    </div>
                   </div>
 
                   {/* Content - 30% */}
                   <div className="h-[30%] bg-gradient-to-br from-slate-50 to-white p-4 flex flex-col justify-between">
                     <div className="flex-1 overflow-y-auto">
                       <ul className="space-y-1">
-                        {country.visas.map((visa, idx) => (
+                        {country.services.map((service, idx) => (
                           <li key={idx} className="flex items-center text-xs md:text-sm text-gray-700">
                             <div className="w-1.5 h-1.5 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full mr-2 flex-shrink-0"></div>
-                            <span className="font-medium">{visa}</span>
+                            <span className="font-medium">{service}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
-                    <button className={`mt-2 w-full bg-gradient-to-r ${country.gradient} text-white py-2.5 px-4 rounded-lg font-bold text-sm hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center justify-center shadow-lg`}>
-                      <span>Learn More</span>
+                    <button 
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleCountryClick(country.title);
+                      }}
+                      className={`mt-2 w-full bg-gradient-to-r ${country.gradient} text-white py-2.5 px-4 rounded-lg font-bold text-sm hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center justify-center shadow-lg cursor-pointer`}
+                    >
+                      <span>Contact on WhatsApp</span>
                       <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
                     </button>
                   </div>
@@ -360,7 +329,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Stats Section - Bold & Modern */}
-      <section className="py-12 md:py-20 relative overflow-hidden">
+      <section className="py-6 md:py-10 relative overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
@@ -377,17 +346,17 @@ const Home: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-8 md:mb-16"
+            className="text-center mb-4 md:mb-8"
           >
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-2 md:mb-4">
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-1 md:mb-2">
               Trusted by Thousands
             </h2>
-            <p className="text-lg md:text-2xl text-white/90 font-semibold">
+            <p className="text-base md:text-xl text-white/90 font-semibold">
               Join the success stories
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
             {[
               { icon: Users, value: '5,000+', label: 'Happy Clients' },
               { icon: Award, value: '98%', label: 'Success Rate' },
@@ -400,13 +369,13 @@ const Home: React.FC = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center glass-effect p-4 md:p-8 rounded-2xl md:rounded-3xl hover:scale-110 transition-all duration-300"
+                className="text-center glass-effect p-3 md:p-4 rounded-xl md:rounded-2xl hover:scale-110 transition-all duration-300"
               >
-                <div className="w-10 h-10 md:w-16 md:h-16 bg-white/20 rounded-xl md:rounded-2xl flex items-center justify-center mx-auto mb-2 md:mb-4">
-                  <stat.icon size={20} className="md:w-8 md:h-8 text-white" />
+                <div className="w-8 h-8 md:w-10 md:h-10 bg-white/20 rounded-lg md:rounded-xl flex items-center justify-center mx-auto mb-1 md:mb-2">
+                  <stat.icon size={16} className="md:w-5 md:h-5 text-white" />
                 </div>
-                <div className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-1 md:mb-2">{stat.value}</div>
-                <div className="text-xs md:text-lg text-white/90 font-bold">{stat.label}</div>
+                <div className="text-2xl md:text-3xl lg:text-4xl font-black text-white mb-0.5 md:mb-1">{stat.value}</div>
+                <div className="text-xs md:text-base text-white/90 font-bold">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -556,7 +525,7 @@ const Home: React.FC = () => {
             
             <div className="flex flex-row gap-2 md:gap-4 justify-center">
               <Link
-                to="/contact"
+                to="/lets-start-your-journey"
                 className="group inline-flex items-center justify-center bg-yellow-400 text-gray-900 hover:bg-yellow-500 hover:text-black px-3 py-2.5 md:px-8 md:py-4 rounded-lg md:rounded-xl font-bold text-xs md:text-base transition-all duration-300 hover:scale-105 shadow-xl"
               >
                 <Sparkles size={14} className="md:w-5 md:h-5 mr-1 md:mr-2 group-hover:rotate-12 transition-transform" />
@@ -564,13 +533,6 @@ const Home: React.FC = () => {
                 <ArrowRight size={14} className="md:w-5 md:h-5 ml-1 md:ml-2 group-hover:translate-x-2 transition-transform" />
               </Link>
               
-              <a
-                href="tel:+919533974711"
-                className="inline-flex items-center justify-center bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-3 py-2.5 md:px-8 md:py-4 rounded-lg md:rounded-xl font-bold text-xs md:text-base transition-all duration-300 hover:scale-105"
-              >
-                <Phone size={14} className="md:w-5 md:h-5 mr-1 md:mr-2" />
-                <span>Call Us Now</span>
-              </a>
             </div>
           </motion.div>
         </div>
