@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 import { 
   Users, 
   Globe, 
@@ -103,6 +104,12 @@ const About: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50">
+      <SEO
+        title="About Us - Your Trusted Education Partner in Hyderabad"
+        description="Learn about Acquire Overseas Education - Leading study abroad consultancy in Hyderabad. Founded by Mettumedi Sandeep, we've helped 5000+ students achieve their study abroad dreams. 98% success rate, 15+ years experience."
+        keywords="about acquire overseas education, study abroad consultancy Hyderabad, education partner Hyderabad, best study abroad consultants Hyderabad, overseas education about, education consultancy about us"
+        canonicalUrl="https://acquireoverseas.in/your-trusted-education-partner"
+      />
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600">
         {/* Background Image */}
