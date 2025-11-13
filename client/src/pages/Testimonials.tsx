@@ -145,7 +145,7 @@ const Testimonials: React.FC = () => {
       {/* Testimonials Grid */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex flex-nowrap md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 overflow-x-auto pb-2 scrollbar-hide md:overflow-x-visible">
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={testimonial.name}
@@ -153,42 +153,42 @@ const Testimonials: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group"
+                className="group flex-shrink-0 w-[85vw] md:w-auto"
               >
-                <div className="relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+                <div className="relative bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 h-full">
                   {/* Quote Icon */}
-                  <div className="absolute -top-4 left-8 w-8 h-8 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-full flex items-center justify-center">
-                    <Quote size={16} className="text-white" />
+                  <div className="absolute -top-3 md:-top-4 left-6 md:left-8 w-6 h-6 md:w-8 md:h-8 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-full flex items-center justify-center">
+                    <Quote size={12} className="md:w-4 md:h-4 text-white" />
                   </div>
                   
                   {/* Rating */}
-                  <div className="flex items-center mb-4">
+                  <div className="flex items-center mb-3 md:mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} size={20} className="text-amber-400 fill-current" />
+                      <Star key={i} size={16} className="md:w-5 md:h-5 text-amber-400 fill-current" />
                     ))}
                   </div>
                   
                   {/* Testimonial Text */}
-                  <p className="text-gray-600 mb-6 italic leading-relaxed">"{testimonial.text}"</p>
+                  <p className="text-gray-600 mb-4 md:mb-6 italic leading-relaxed text-sm md:text-base">"{testimonial.text}"</p>
                   
                   {/* Service Badge */}
-                  <div className="inline-block bg-blue-100 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">
+                  <div className="inline-block bg-blue-100 text-blue-700 text-[10px] md:text-xs font-semibold px-2 py-0.5 md:px-3 md:py-1 rounded-full mb-3 md:mb-4">
                     {testimonial.service}
                   </div>
                   
                   {/* Client Info */}
                   <div className="flex items-center">
                     <div className="flex items-center">
-                      <div className="text-2xl mr-3">{testimonial.country}</div>
+                      <div className="text-xl md:text-2xl mr-2 md:mr-3">{testimonial.country}</div>
                       <div>
-                        <div className="font-bold text-gray-900">{testimonial.name}</div>
-                        <div className="text-sm text-gray-600">{testimonial.location}</div>
+                        <div className="font-bold text-gray-900 text-sm md:text-base">{testimonial.name}</div>
+                        <div className="text-xs md:text-sm text-gray-600">{testimonial.location}</div>
                       </div>
                     </div>
                   </div>
                   
                   {/* Hover Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-indigo-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-indigo-500/5 rounded-2xl md:rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               </motion.div>
             ))}

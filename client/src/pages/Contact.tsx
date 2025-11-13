@@ -73,7 +73,8 @@ const Contact: React.FC = () => {
       icon: MapPin,
       title: 'Visit Our Office',
       details: ['Hyderabad, Telangana, India'],
-      color: 'text-red-500'
+      color: 'text-red-500',
+      link: 'https://share.google/R9nhR2vue7afL2ki1'
     },
     {
       icon: Phone,
@@ -357,8 +358,15 @@ const Contact: React.FC = () => {
                       <h4 className="text-lg font-semibold text-white mb-2">{info.title}</h4>
                       {info.details.map((detail, idx) => (
                         info.link ? (
-                          <a key={idx} href={info.link} className="text-white/80 hover:text-white transition-colors">
-                            {detail}
+                          <a 
+                            key={idx} 
+                            href={info.link} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-white/80 hover:text-white transition-colors inline-flex items-center group"
+                          >
+                            <span>{detail}</span>
+                            <MapPin className="w-4 h-4 ml-2 group-hover:text-red-400 transition-colors" />
                           </a>
                         ) : (
                           <p key={idx} className="text-white/80">{detail}</p>
@@ -371,6 +379,67 @@ const Contact: React.FC = () => {
 
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Google Maps Section */}
+      <section className="py-12 md:py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="max-w-6xl mx-auto"
+          >
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Find Us on Google Maps
+              </h2>
+              <p className="text-lg text-gray-600">
+                Visit our office or get directions
+              </p>
+            </div>
+            <div className="rounded-xl overflow-hidden shadow-2xl border border-gray-200">
+              {/* Google Maps Embed - Update embed URL by visiting https://share.google/R9nhR2vue7afL2ki1 and clicking Share > Embed a map */}
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15226.8818!2d78.486813!3d17.4489!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDI2JzU2LjAiTiA3OMKwMjknMTIuNSJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                width="100%"
+                height="450"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full"
+                title="Acquire Overseas Education Location"
+              ></iframe>
+              <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-4 text-center">
+                <a
+                  href="https://share.google/R9nhR2vue7afL2ki1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-white hover:text-yellow-300 transition-colors font-semibold"
+                >
+                  <MapPin className="w-5 h-5 mr-2" />
+                  <span>Open in Google Maps</span>
+                </a>
+              </div>
+            </div>
+            <div className="mt-4 text-center text-sm text-gray-500">
+              <p>
+                To get the embed URL, visit the{' '}
+                <a 
+                  href="https://share.google/R9nhR2vue7afL2ki1" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:underline"
+                >
+                  Google Maps location
+                </a>
+                {' '}and click "Share" → "Embed a map" to copy the iframe code.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
 

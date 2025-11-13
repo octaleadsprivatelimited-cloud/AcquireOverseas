@@ -186,10 +186,10 @@ const Header: React.FC = () => {
             >
               <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
                 <div className="mb-2 text-center">
-                  <h3 className="text-base font-bold text-white mb-0.5">
+                  <h3 className="text-lg font-bold text-white mb-0.5">
                     Study Abroad Resources
                   </h3>
-                  <p className="text-[10px] text-gray-300">Comprehensive guides and information</p>
+                  <p className="text-sm text-gray-300">Comprehensive guides and information</p>
                 </div>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1.5">
@@ -207,7 +207,7 @@ const Header: React.FC = () => {
                         onClick={() => setActiveDropdown(null)}
                         className="group relative overflow-hidden p-2 rounded-md bg-gray-900 hover:bg-gray-800 border border-gray-700 hover:border-indigo-500 transition-all duration-300 hover:shadow-md block h-full"
                       >
-                        <h5 className="text-xs font-bold text-white group-hover:text-indigo-400 transition-colors leading-tight">
+                        <h5 className="text-sm font-bold text-white group-hover:text-indigo-400 transition-colors leading-tight">
                           {item.name}
                         </h5>
                       </Link>
@@ -247,10 +247,10 @@ const Header: React.FC = () => {
               <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
                 {/* Header */}
                 <div className="mb-2 text-center">
-                  <h3 className="text-base font-bold text-white mb-0.5">
+                  <h3 className="text-lg font-bold text-white mb-0.5">
                     Our Services
                   </h3>
-                  <p className="text-[10px] text-gray-300">Choose the service that fits your needs</p>
+                  <p className="text-sm text-gray-300">Choose the service that fits your needs</p>
                 </div>
                 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 mb-2">
@@ -258,7 +258,7 @@ const Header: React.FC = () => {
                   <div>
                     <div className="flex items-center mb-1.5">
                       <div className="w-1 h-3 bg-gradient-to-b from-indigo-600 to-purple-600 rounded-full mr-2"></div>
-                      <h4 className="text-[10px] font-bold text-white">Education Services</h4>
+                      <h4 className="text-xs font-bold text-white">Education Services</h4>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
                       {servicesCategories.educationServices.map((service, index) => (
@@ -276,7 +276,7 @@ const Header: React.FC = () => {
                             className="group relative overflow-hidden p-2 rounded-md bg-gray-900 hover:bg-gray-800 border border-gray-700 hover:border-indigo-500 transition-all duration-300 hover:shadow-md block h-full"
                           >
                             <div className="relative">
-                              <h5 className="text-sm font-bold text-white group-hover:text-indigo-400 transition-colors leading-tight" style={{ fontFamily: 'Arial, sans-serif' }}>
+                              <h5 className="text-base font-bold text-white group-hover:text-indigo-400 transition-colors leading-tight" style={{ fontFamily: 'Arial, sans-serif' }}>
                                 {service.name}
                               </h5>
                             </div>
@@ -290,7 +290,7 @@ const Header: React.FC = () => {
                   <div>
                     <div className="flex items-center mb-1.5">
                       <div className="w-1 h-3 bg-gradient-to-b from-purple-600 to-pink-600 rounded-full mr-2"></div>
-                      <h4 className="text-[10px] font-bold text-white">Consultation Services</h4>
+                      <h4 className="text-xs font-bold text-white">Consultation Services</h4>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
                       {servicesCategories.consultationServices.map((service, index) => (
@@ -308,7 +308,7 @@ const Header: React.FC = () => {
                             className="group relative overflow-hidden p-2 rounded-md bg-gray-900 hover:bg-gray-800 border border-gray-700 hover:border-purple-500 transition-all duration-300 hover:shadow-md block h-full"
                           >
                             <div className="relative">
-                              <h5 className="text-sm font-bold text-white group-hover:text-purple-400 transition-colors leading-tight" style={{ fontFamily: 'Arial, sans-serif' }}>
+                              <h5 className="text-base font-bold text-white group-hover:text-purple-400 transition-colors leading-tight" style={{ fontFamily: 'Arial, sans-serif' }}>
                                 {service.name}
                               </h5>
                             </div>
@@ -323,22 +323,22 @@ const Header: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-2 pt-2 border-t border-gray-700">
                   <div className="space-y-2">
                     <div className="flex items-center text-white">
-                      <Phone size={14} className="mr-2 text-green-400" />
-                      <a href="tel:+919515612909" className="text-sm hover:text-green-400 transition-colors">+91 95156 12909</a>
+                      <Phone size={16} className="mr-2 text-green-400" />
+                      <a href="tel:+919515612909" className="text-base hover:text-green-400 transition-colors">+91 95156 12909</a>
                     </div>
                     <div className="flex items-center text-white">
-                      <Mail size={14} className="mr-2 text-blue-400" />
-                      <a href="mailto:info@acquireoverseas.in" className="text-sm hover:text-blue-400 transition-colors">info@acquireoverseas.in</a>
+                      <Mail size={16} className="mr-2 text-blue-400" />
+                      <a href="mailto:info@acquireoverseas.in" className="text-base hover:text-blue-400 transition-colors">info@acquireoverseas.in</a>
                     </div>
                   </div>
                   <div className="space-y-2">
                     <div className="flex items-start text-white">
-                      <MapPin size={14} className="mr-2 mt-0.5 text-red-400 flex-shrink-0" />
-                      <span className="text-sm">Hyderabad, Telangana, India</span>
+                      <MapPin size={16} className="mr-2 mt-0.5 text-red-400 flex-shrink-0" />
+                      <span className="text-base">Hyderabad, Telangana, India</span>
                     </div>
                     <div className="flex items-start text-white">
-                      <Clock size={14} className="mr-2 mt-0.5 text-purple-400 flex-shrink-0" />
-                      <div className="text-sm">
+                      <Clock size={16} className="mr-2 mt-0.5 text-purple-400 flex-shrink-0" />
+                      <div className="text-base">
                         <div>Mon - Fri: 9:00 AM - 6:00 PM</div>
                         <div>Sat: 9:00 AM - 4:00 PM</div>
                       </div>
@@ -348,15 +348,15 @@ const Header: React.FC = () => {
 
                 {/* CTA Banner */}
                 <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-md p-2 text-center text-white">
-                  <h4 className="text-[10px] font-bold mb-0.5">Not Sure Which Service You Need?</h4>
-                  <p className="text-white/90 mb-1 text-[9px]">Get a free consultation with our experts</p>
+                  <h4 className="text-sm font-bold mb-0.5">Not Sure Which Service You Need?</h4>
+                  <p className="text-white/90 mb-1 text-xs">Get a free consultation with our experts</p>
                   <Link
                     to="/lets-start-your-journey"
                     onClick={() => setActiveDropdown(null)}
-                    className="inline-flex items-center px-3 py-1.5 bg-white text-indigo-600 hover:bg-yellow-300 hover:text-purple-900 rounded-md font-semibold text-[10px] transition-all duration-300 hover:scale-105 shadow-lg"
+                    className="inline-flex items-center px-3 py-1.5 bg-white text-indigo-600 hover:bg-yellow-300 hover:text-purple-900 rounded-md font-semibold text-sm transition-all duration-300 hover:scale-105 shadow-lg"
                   >
                     <span>Get Free Consultation</span>
-                    <ArrowRight size={14} className="ml-1.5" />
+                    <ArrowRight size={16} className="ml-1.5" />
                   </Link>
                 </div>
               </div>
@@ -389,7 +389,7 @@ const Header: React.FC = () => {
                         <div>
                         <motion.button
                           onClick={() => toggleDropdown(item.dropdownType || 'services')}
-                          className="w-full flex items-center justify-between px-2.5 py-1.5 text-xs font-semibold text-white hover:bg-gray-800 rounded-md transition-all duration-200"
+                          className="w-full flex items-center justify-between px-2.5 py-1.5 text-sm font-semibold text-white hover:bg-gray-800 rounded-md transition-all duration-200"
                           whileTap={{ scale: 0.95 }}
                         >
                           <span>{item.name}</span>
@@ -397,7 +397,7 @@ const Header: React.FC = () => {
                             animate={{ rotate: activeDropdown === (item.dropdownType || 'services') ? 180 : 0 }}
                             transition={{ duration: 0.3 }}
                           >
-                            <ChevronDown size={12} strokeWidth={2.5} />
+                            <ChevronDown size={14} strokeWidth={2.5} />
                           </motion.div>
                         </motion.button>
                           
@@ -423,7 +423,7 @@ const Header: React.FC = () => {
                                       setIsMobileMenuOpen(false);
                                       setActiveDropdown(null);
                                     }}
-                                    className="block px-1.5 py-1 text-[10px] text-gray-300 hover:bg-gray-800 hover:text-indigo-400 rounded transition-all duration-200 font-medium"
+                                    className="block px-1.5 py-1 text-xs text-gray-300 hover:bg-gray-800 hover:text-indigo-400 rounded transition-all duration-200 font-medium"
                                   >
                                     {item.name}
                                   </Link>
@@ -439,7 +439,7 @@ const Header: React.FC = () => {
                               transition={{ duration: 0.3 }}
                               className="mt-0.5 space-y-0 bg-gray-900 rounded-md p-1"
                             >
-                              <div className="text-[9px] font-bold text-indigo-400 px-1.5 py-0.5 uppercase tracking-wider">Education Services</div>
+                              <div className="text-xs font-bold text-indigo-400 px-1.5 py-0.5 uppercase tracking-wider">Education Services</div>
                               {servicesCategories.educationServices.map((service, idx) => (
                               <motion.div
                                   key={service.name}
@@ -453,13 +453,13 @@ const Header: React.FC = () => {
                                       setIsMobileMenuOpen(false);
                                       setActiveDropdown(null);
                                     }}
-                                    className="block px-1.5 py-1 text-[10px] text-gray-300 hover:bg-gray-800 hover:text-indigo-400 rounded transition-all duration-200 font-medium"
+                                    className="block px-1.5 py-1 text-xs text-gray-300 hover:bg-gray-800 hover:text-indigo-400 rounded transition-all duration-200 font-medium"
                                   >
                                     {service.name}
                                   </Link>
                                 </motion.div>
                               ))}
-                              <div className="text-[9px] font-bold text-purple-400 px-1.5 py-0.5 mt-0.5 uppercase tracking-wider">Consultation Services</div>
+                              <div className="text-xs font-bold text-purple-400 px-1.5 py-0.5 mt-0.5 uppercase tracking-wider">Consultation Services</div>
                               {servicesCategories.consultationServices.map((service, idx) => (
                                 <motion.div
                                   key={service.name}
@@ -473,7 +473,7 @@ const Header: React.FC = () => {
                                       setIsMobileMenuOpen(false);
                                       setActiveDropdown(null);
                                     }}
-                                    className="block px-1.5 py-1 text-[10px] text-gray-300 hover:bg-gray-800 hover:text-purple-400 rounded transition-all duration-200 font-medium"
+                                    className="block px-1.5 py-1 text-xs text-gray-300 hover:bg-gray-800 hover:text-purple-400 rounded transition-all duration-200 font-medium"
                                   >
                                     {service.name}
                                     </Link>
@@ -488,7 +488,7 @@ const Header: React.FC = () => {
                           <Link
                             to={item.path}
                           onClick={() => setIsMobileMenuOpen(false)}
-                          className={`block px-2.5 py-1.5 text-xs font-semibold rounded-md transition-all duration-200 ${
+                          className={`block px-2.5 py-1.5 text-sm font-semibold rounded-md transition-all duration-200 ${
                             location.pathname === item.path
                               ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white'
                               : 'text-white hover:bg-gray-800'
@@ -504,16 +504,16 @@ const Header: React.FC = () => {
 
                 {/* Contact Information Section - Mobile */}
                 <div className="mt-4 pt-4 border-t border-gray-800">
-                  <div className="text-[9px] font-bold text-white px-2.5 py-1.5 uppercase tracking-wider mb-2">Contact Us</div>
+                  <div className="text-xs font-bold text-white px-2.5 py-1.5 uppercase tracking-wider mb-2">Contact Us</div>
                   <div className="space-y-1.5">
                     <motion.a
                       href="tel:+919515612909"
                       initial={{ opacity: 0, x: -10 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: mainNavigation.length * 0.05 }}
-                      className="flex items-center px-2.5 py-1.5 text-[10px] text-gray-300 hover:bg-gray-800 hover:text-green-400 rounded transition-all duration-200"
+                      className="flex items-center px-2.5 py-1.5 text-sm text-gray-300 hover:bg-gray-800 hover:text-green-400 rounded transition-all duration-200"
                     >
-                      <Phone size={12} className="mr-2 flex-shrink-0" />
+                      <Phone size={14} className="mr-2 flex-shrink-0" />
                       <span>+91 95156 12909</span>
                     </motion.a>
                     <motion.a
@@ -521,27 +521,27 @@ const Header: React.FC = () => {
                       initial={{ opacity: 0, x: -10 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: mainNavigation.length * 0.05 + 0.05 }}
-                      className="flex items-center px-2.5 py-1.5 text-[10px] text-gray-300 hover:bg-gray-800 hover:text-blue-400 rounded transition-all duration-200"
+                      className="flex items-center px-2.5 py-1.5 text-sm text-gray-300 hover:bg-gray-800 hover:text-blue-400 rounded transition-all duration-200"
                     >
-                      <Mail size={12} className="mr-2 flex-shrink-0" />
+                      <Mail size={14} className="mr-2 flex-shrink-0" />
                       <span className="truncate">info@acquireoverseas.in</span>
                     </motion.a>
                     <motion.div
                       initial={{ opacity: 0, x: -10 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: mainNavigation.length * 0.05 + 0.1 }}
-                      className="flex items-start px-2.5 py-1.5 text-[10px] text-gray-300 rounded"
+                      className="flex items-start px-2.5 py-1.5 text-sm text-gray-300 rounded"
                     >
-                      <MapPin size={12} className="mr-2 mt-0.5 flex-shrink-0" />
+                      <MapPin size={14} className="mr-2 mt-0.5 flex-shrink-0" />
                       <span>Hyderabad, Telangana, India</span>
                     </motion.div>
                     <motion.div
                       initial={{ opacity: 0, x: -10 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: mainNavigation.length * 0.05 + 0.15 }}
-                      className="flex items-start px-2.5 py-1.5 text-[10px] text-gray-300 rounded"
+                      className="flex items-start px-2.5 py-1.5 text-sm text-gray-300 rounded"
                     >
-                      <Clock size={12} className="mr-2 mt-0.5 flex-shrink-0" />
+                      <Clock size={14} className="mr-2 mt-0.5 flex-shrink-0" />
                       <div>
                         <div>Mon - Fri: 9:00 AM - 6:00 PM</div>
                         <div>Sat: 9:00 AM - 4:00 PM</div>

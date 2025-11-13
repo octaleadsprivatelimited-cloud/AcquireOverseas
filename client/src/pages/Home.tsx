@@ -222,7 +222,7 @@ const Home: React.FC = () => {
             </p>
           </div>
 
-          <div className="flex flex-nowrap gap-3 overflow-x-auto pb-2 scrollbar-hide justify-center md:justify-center">
+          <div className="flex flex-nowrap gap-1 md:gap-3 overflow-x-auto pb-2 scrollbar-hide px-1">
             {[
               {
                 country: 'USA',
@@ -264,9 +264,9 @@ const Home: React.FC = () => {
               <div
                 key={country.country}
                 onClick={() => handleCountryClick(country.title)}
-                className="relative overflow-hidden rounded-lg shadow-md hover:shadow-lg cursor-pointer flex-shrink-0 w-32 md:w-40"
+                className="relative overflow-hidden rounded shadow-md hover:shadow-lg cursor-pointer flex-shrink-0 w-16 md:w-40"
               >
-                <div className="relative h-24 md:h-32 overflow-hidden">
+                <div className="relative h-14 md:h-32 overflow-hidden">
                   <img
                     src={country.image}
                     alt={country.title}
@@ -276,8 +276,8 @@ const Home: React.FC = () => {
                     }}
                   />
                   <div className={`absolute inset-0 bg-gradient-to-t ${country.gradient} opacity-30`}></div>
-                  <div className="absolute bottom-0 left-0 right-0 bg-black/50 backdrop-blur-sm px-2 py-1.5">
-                    <h3 className="text-xs md:text-sm font-bold text-white text-center">{country.title}</h3>
+                  <div className="absolute bottom-0 left-0 right-0 bg-black/50 backdrop-blur-sm px-0.5 py-0.5 md:px-2 md:py-1.5">
+                    <h3 className="text-[9px] md:text-sm font-bold text-white text-center leading-tight">{country.title}</h3>
                   </div>
                 </div>
               </div>
@@ -314,7 +314,7 @@ const Home: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
+          <div className="flex flex-nowrap md:grid md:grid-cols-4 gap-2 md:gap-4 overflow-x-auto pb-2 scrollbar-hide md:overflow-x-visible">
             {[
               { icon: Users, value: '5,000+', label: 'Happy Clients' },
               { icon: Award, value: '98%', label: 'Success Rate' },
@@ -327,13 +327,13 @@ const Home: React.FC = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center glass-effect p-3 md:p-4 rounded-xl md:rounded-2xl hover:scale-110 transition-all duration-300"
+                className="text-center glass-effect p-3 md:p-4 rounded-xl md:rounded-2xl hover:scale-110 transition-all duration-300 flex-shrink-0 w-[22vw] min-w-[100px] md:w-auto"
               >
                 <div className="w-8 h-8 md:w-10 md:h-10 bg-white/20 rounded-lg md:rounded-xl flex items-center justify-center mx-auto mb-1 md:mb-2">
                   <stat.icon size={16} className="md:w-5 md:h-5 text-white" />
                 </div>
-                <div className="text-2xl md:text-3xl lg:text-4xl font-black text-white mb-0.5 md:mb-1">{stat.value}</div>
-                <div className="text-xs md:text-base text-white/90 font-bold">{stat.label}</div>
+                <div className="text-xl md:text-3xl lg:text-4xl font-black text-white mb-0.5 md:mb-1">{stat.value}</div>
+                <div className="text-[10px] md:text-base text-white/90 font-bold leading-tight">{stat.label}</div>
               </motion.div>
             ))}
           </div>
