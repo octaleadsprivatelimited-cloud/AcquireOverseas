@@ -104,11 +104,11 @@ const Header: React.FC = () => {
           <div className="flex justify-between items-center h-14 md:h-16 lg:h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2 md:space-x-3 group">
-              <div className="relative h-10 md:h-12 lg:h-16 flex items-center">
+              <div className="relative h-14 md:h-14 lg:h-18 flex items-center">
                 <img 
                   src="/favicon.png" 
                   alt="Acquire Overseas Education" 
-                  className="h-8 md:h-10 lg:h-12 w-auto object-contain"
+                  className="h-12 md:h-12 lg:h-16 w-auto object-contain"
                 />
               </div>
             </Link>
