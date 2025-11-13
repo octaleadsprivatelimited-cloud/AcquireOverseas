@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Building2, CheckCircle, Users, Target, ArrowRight, Award, Globe, TrendingUp, MapPin, Star } from 'lucide-react';
+import { Building2, CheckCircle, Users, Target, ArrowRight, Award, TrendingUp, Star } from 'lucide-react';
 
 const UniversitySelection: React.FC = () => {
 

@@ -7,7 +7,6 @@ import {
   Clock, 
   Send,
   CheckCircle,
-  ArrowRight,
   Sparkles,
   Shield,
   Award,
@@ -154,28 +153,28 @@ const Contact: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-white/80 backdrop-blur-sm">
+      <section className="py-8 md:py-10 bg-white/80 backdrop-blur-sm">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-6"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-700 rounded-full text-sm font-semibold mb-4">
-              <Sparkles className="w-4 h-4 mr-2" />
+            <div className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-700 rounded-full text-xs font-medium mb-2">
+              <Sparkles className="w-3 h-3 mr-1.5" />
               Why Contact Us
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-indigo-800 bg-clip-text text-transparent mb-6">
-              Get Expert <span className="text-blue-600">Guidance</span>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+              Get Expert Guidance
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-sm md:text-base text-gray-600 max-w-2xl mx-auto">
               Our certified education consultants are here to help you navigate the complex world of study abroad with confidence.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
@@ -183,13 +182,13 @@ const Contact: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group text-center p-8 rounded-2xl bg-white/60 backdrop-blur-sm border border-white/50 hover:bg-white/80 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className="group text-center p-4 rounded-xl bg-white/60 backdrop-blur-sm border border-white/50 hover:bg-white/80 hover:shadow-lg transition-all duration-300"
               >
-                <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className={`w-8 h-8 ${feature.color}`} />
+                <div className="w-12 h-12 mx-auto mb-3 rounded-xl bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className={`w-6 h-6 ${feature.color}`} />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                <h3 className="text-base font-bold text-gray-900 mb-2">{feature.title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{feature.description}</p>
               </motion.div>
             ))}
           </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FileText, CheckCircle, Users, Clock, Shield, ArrowRight, BookOpen, PenTool, Upload, Award } from 'lucide-react';
+import { FileText, CheckCircle, ArrowRight, BookOpen, PenTool, Upload, Award } from 'lucide-react';
 
 const ApplicationSupport: React.FC = () => {
 

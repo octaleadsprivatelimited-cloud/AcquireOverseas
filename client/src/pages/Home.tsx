@@ -211,23 +211,23 @@ const Home: React.FC = () => {
       </section>
 
       {/* Countries We Serve Section */}
-      <section className="py-20 bg-white">
+      <section className="py-4 md:py-6 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-4"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-1">
               Countries We Serve
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xs md:text-sm text-gray-600">
               Study Abroad Opportunities in Top Universities Worldwide
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex flex-nowrap gap-3 overflow-x-auto pb-2 scrollbar-hide">
             {[
               {
                 country: 'USA',
@@ -274,51 +274,41 @@ const Home: React.FC = () => {
             ].map((country, index) => (
               <motion.div
                 key={country.country}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
                 viewport={{ once: true }}
                 onClick={() => handleCountryClick(country.title)}
-                className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer"
+                className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer flex-shrink-0 w-40"
               >
-                <div className="flex flex-col h-[500px]">
-                  {/* Image - 70% */}
-                  <div className="relative h-[70%] overflow-hidden">
+                <div className="flex flex-col h-32">
+                  {/* Image */}
+                  <div className="relative h-20 overflow-hidden">
                     <img
                       src={country.image}
                       alt={country.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       onError={(e) => {
                         e.currentTarget.src = 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80';
                       }}
                     />
-                    <div className={`absolute inset-0 bg-gradient-to-t ${country.gradient} opacity-40 group-hover:opacity-30 transition-opacity duration-500`}></div>
-                    <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full">
-                      <h3 className="text-lg font-bold text-gray-900">{country.title}</h3>
+                    <div className={`absolute inset-0 bg-gradient-to-t ${country.gradient} opacity-30 group-hover:opacity-20 transition-opacity duration-300`}></div>
+                    <div className="absolute top-1 left-1 bg-white/90 backdrop-blur-sm px-1.5 py-0.5 rounded">
+                      <h3 className="text-xs font-bold text-gray-900">{country.title}</h3>
                     </div>
                   </div>
 
-                  {/* Content - 30% */}
-                  <div className="h-[30%] bg-gradient-to-br from-slate-50 to-white p-4 flex flex-col justify-between">
-                    <div className="flex-1 overflow-y-auto">
-                      <ul className="space-y-1">
-                        {country.services.map((service, idx) => (
-                          <li key={idx} className="flex items-center text-xs md:text-sm text-gray-700">
-                            <div className="w-1.5 h-1.5 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full mr-2 flex-shrink-0"></div>
-                            <span className="font-medium">{service}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                  {/* Content */}
+                  <div className="h-12 bg-gradient-to-br from-slate-50 to-white p-1.5 flex items-center justify-center">
                     <button 
                       onClick={(e) => {
                         e.stopPropagation();
                         handleCountryClick(country.title);
                       }}
-                      className={`mt-2 w-full bg-gradient-to-r ${country.gradient} text-white py-2.5 px-4 rounded-lg font-bold text-sm hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center justify-center shadow-lg cursor-pointer`}
+                      className={`w-full bg-gradient-to-r ${country.gradient} text-white py-1 px-2 rounded font-medium text-[10px] hover:shadow-md transition-all duration-300 hover:scale-105 flex items-center justify-center cursor-pointer`}
                     >
-                      <span>Contact on WhatsApp</span>
-                      <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                      <span>Contact</span>
+                      <ArrowRight size={10} className="ml-1 group-hover:translate-x-0.5 transition-transform" />
                     </button>
                   </div>
                 </div>

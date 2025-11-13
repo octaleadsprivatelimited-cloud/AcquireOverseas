@@ -54,18 +54,18 @@ const Footer: React.FC = () => {
     { name: 'Student Visa Extension', path: '/student-visa-extension-services' }
   ];
 
-  // Resources & Support
-  const resources = [
-    { name: 'Blog & Resources', path: '/blog-resources' },
-    { name: 'Our Portfolio', path: '/our-portfolio' },
-    { name: 'Success Stories', path: '/success-stories' },
-    { name: 'Careers', path: '/build-your-career-with-us' },
-    { name: 'Privacy Policy', path: '/privacy-policy' },
-    { name: 'Terms of Service', path: '/terms-of-service' },
-    { name: 'Sitemap', path: '/sitemap' }
-  ];
+  // Resources & Support (commented out - not currently used)
+  // const resources = [
+  //   { name: 'Blog & Resources', path: '/blog-resources' },
+  //   { name: 'Our Portfolio', path: '/our-portfolio' },
+  //   { name: 'Success Stories', path: '/success-stories' },
+  //   { name: 'Careers', path: '/build-your-career-with-us' },
+  //   { name: 'Privacy Policy', path: '/privacy-policy' },
+  //   { name: 'Terms of Service', path: '/terms-of-service' },
+  //   { name: 'Sitemap', path: '/sitemap' }
+  // ];
 
-  const socialLinks: any[] = [];
+  // const socialLinks: any[] = [];
 
   const trustBadges = [
     { icon: Award, text: '98% Success Rate' },

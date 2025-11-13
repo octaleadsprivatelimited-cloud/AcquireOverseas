@@ -177,6 +177,8 @@ For personalized assistance with your UK study application, contact our expert e
     title: 'Student Visa Requirements for Top Study Destinations 2025',
     slug: 'student-visa-requirements-top-destinations-2025',
     excerpt: 'Comprehensive overview of student visa requirements for USA, UK, Canada, Australia, and Europe. Learn what documents you need and how to prepare.',
+    author: 'Acquire Overseas Education',
+    date: 'October 7, 2025',
     category: 'Study Visa',
     image: '/services/study_visa.jpg',
     tags: ['Student Visa', 'Study Abroad', 'USA', 'UK', 'Canada', 'Australia'],
