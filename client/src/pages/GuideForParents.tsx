@@ -7,8 +7,7 @@ import {
   ArrowRight,
   Users,
   BookOpen,
-  Phone,
-  Mail
+  Phone
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 

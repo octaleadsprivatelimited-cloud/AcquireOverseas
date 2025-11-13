@@ -3,8 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   HelpCircle, 
   ChevronDown,
-  ArrowRight,
-  CheckCircle
+  ArrowRight
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
