@@ -28,7 +28,7 @@ const Home: React.FC = () => {
       link: '/study-abroad-programs', 
       gradient: 'from-blue-500 to-cyan-500', 
       size: 'large',
-      image: '/services/study_visa.jpg'
+      image: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1200&h=800&fit=crop&q=80'
     },
     { 
       title: 'University Selection', 
@@ -36,7 +36,7 @@ const Home: React.FC = () => {
       link: '/university-selection', 
       gradient: 'from-emerald-500 to-teal-500', 
       size: 'small',
-      image: '/services/immigration.jpg'
+      image: 'https://images.unsplash.com/photo-1562774053-701939374585?w=800&h=600&fit=crop&q=80'
     },
     { 
       title: 'Course Selection', 
@@ -44,7 +44,7 @@ const Home: React.FC = () => {
       link: '/course-selection', 
       gradient: 'from-pink-500 to-rose-500', 
       size: 'medium',
-      image: '/services/benfits.jpeg'
+      image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=600&fit=crop&q=80'
     },
     { 
       title: 'Application Support', 
@@ -52,7 +52,7 @@ const Home: React.FC = () => {
       link: '/application-support', 
       gradient: 'from-purple-500 to-indigo-500', 
       size: 'medium',
-      image: '/services/word_visa.jpg'
+      image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=600&fit=crop&q=80'
     },
     { 
       title: 'Student Visa Services', 
@@ -60,7 +60,7 @@ const Home: React.FC = () => {
       link: '/study-abroad-programs', 
       gradient: 'from-amber-500 to-yellow-500', 
       size: 'medium',
-      image: '/services/tourist_visa.jpeg'
+      image: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&h=600&fit=crop&q=80'
     }
   ];
 
@@ -133,7 +133,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Services - Bento Box Layout */}
-      <section className="py-8 md:py-10 bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
+      <section className="py-8 md:py-10 bg-sky-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -157,13 +157,13 @@ const Home: React.FC = () => {
                 viewport={{ once: true }}
                 className={`group relative overflow-hidden rounded-xl ${
                   service.size === 'large' ? 'md:col-span-2 md:row-span-2' : 
-                  service.size === 'medium' ? 'md:col-span-1 md:row-span-2' : 
+                  service.size === 'medium' ? (service.title === 'Course Selection' ? 'md:col-span-1 md:row-span-2 min-h-[160px] md:min-h-[456px]' : 'md:col-span-1 md:row-span-2') : 
                   'md:col-span-1'
                 }`}
               >
                 <Link
                   to={service.link}
-                  className={`block h-full min-h-[140px] relative overflow-hidden hover:scale-[1.02] transition-all duration-500`}
+                  className={`block h-full ${service.title === 'Course Selection' ? 'min-h-[160px]' : 'min-h-[140px]'} relative overflow-hidden hover:scale-[1.02] transition-all duration-500`}
                 >
                   {/* Background Image */}
                   <div className="absolute inset-0">
@@ -171,6 +171,9 @@ const Home: React.FC = () => {
                       src={service.image} 
                       alt={service.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      onError={(e) => {
+                        e.currentTarget.src = 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=800&fit=crop&q=80';
+                      }}
                     />
                     {/* Dark Overlay for Text Readability */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-black/40 group-hover:from-black/70 transition-all duration-500"></div>
