@@ -20,9 +20,25 @@ const Sitemap: React.FC = () => {
       ]
     },
     {
+      category: 'Study Abroad',
+      links: [
+        { name: 'Guide to Study Abroad', path: '/guide-to-study-abroad' },
+        { name: 'Study Abroad Benefits', path: '/study-abroad-benefits' },
+        { name: 'Guide for Parents', path: '/guide-for-parents' },
+        { name: 'Cost to Study Abroad', path: '/cost-to-study-abroad' },
+        { name: 'Scholarships to Study Abroad', path: '/scholarships-to-study-abroad' },
+        { name: 'Studying Abroad FAQs', path: '/studying-abroad-faqs' }
+      ]
+    },
+    {
       category: 'Education Services',
       links: [
-        { name: 'Study Abroad Programs', path: '/study-abroad-programs' }
+        { name: 'Study Abroad Programs', path: '/study-abroad-programs' },
+        { name: 'University Selection', path: '/university-selection' },
+        { name: 'Course Selection', path: '/course-selection' },
+        { name: 'Application Support', path: '/application-support' },
+        { name: 'Student Visa Services', path: '/study-abroad-programs' },
+        { name: 'Student Visa Extension Services', path: '/student-visa-extension-services' }
       ]
     },
     {
@@ -32,10 +48,7 @@ const Sitemap: React.FC = () => {
         { name: 'Career Counseling Services', path: '/career-counseling-services' },
         { name: 'Academic Profile Assessment', path: '/academic-profile-assessment' },
         { name: 'Document Preparation Services', path: '/document-preparation-services' },
-        { name: 'Application Support', path: '/application-support' },
-        { name: 'Course Selection', path: '/course-selection' },
-        { name: 'University Selection', path: '/university-selection' },
-        { name: 'Student Visa Extension Services', path: '/student-visa-extension-services' }
+        { name: 'Pre-Departure Support', path: '/comprehensive-education-solutions' }
       ]
     },
     {
