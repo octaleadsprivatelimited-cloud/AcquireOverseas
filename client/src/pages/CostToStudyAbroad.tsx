@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  DollarSign, 
+  IndianRupee, 
   Calculator, 
   CheckCircle,
   ArrowRight,
@@ -16,45 +16,45 @@ const CostToStudyAbroad: React.FC = () => {
   const countries = [
     {
       name: 'USA',
-      tuition: '$20,000 - $50,000',
-      living: '$12,000 - $18,000',
-      total: '$32,000 - $68,000',
-      currency: 'USD per year'
+      tuition: '₹16.5 Lakhs - ₹41.5 Lakhs',
+      living: '₹10 Lakhs - ₹15 Lakhs',
+      total: '₹26.5 Lakhs - ₹56.5 Lakhs',
+      currency: 'INR per year'
     },
     {
       name: 'UK',
-      tuition: '£10,000 - £30,000',
-      living: '£10,000 - £15,000',
-      total: '£20,000 - £45,000',
-      currency: 'GBP per year'
+      tuition: '₹10.5 Lakhs - ₹31.5 Lakhs',
+      living: '₹10.5 Lakhs - ₹15.75 Lakhs',
+      total: '₹21 Lakhs - ₹47.25 Lakhs',
+      currency: 'INR per year'
     },
     {
       name: 'Canada',
-      tuition: 'C$15,000 - C$30,000',
-      living: 'C$12,000 - C$15,000',
-      total: 'C$27,000 - C$45,000',
-      currency: 'CAD per year'
+      tuition: '₹9.3 Lakhs - ₹18.6 Lakhs',
+      living: '₹7.4 Lakhs - ₹9.3 Lakhs',
+      total: '₹16.7 Lakhs - ₹27.9 Lakhs',
+      currency: 'INR per year'
     },
     {
       name: 'Australia',
-      tuition: 'A$20,000 - A$45,000',
-      living: 'A$15,000 - A$20,000',
-      total: 'A$35,000 - A$65,000',
-      currency: 'AUD per year'
+      tuition: '₹11 Lakhs - ₹24.75 Lakhs',
+      living: '₹8.25 Lakhs - ₹11 Lakhs',
+      total: '₹19.25 Lakhs - ₹35.75 Lakhs',
+      currency: 'INR per year'
     },
     {
       name: 'Germany',
-      tuition: '€0 - €20,000',
-      living: '€8,000 - €12,000',
-      total: '€8,000 - €32,000',
-      currency: 'EUR per year'
+      tuition: '₹0 - ₹18 Lakhs',
+      living: '₹7.2 Lakhs - ₹10.8 Lakhs',
+      total: '₹7.2 Lakhs - ₹28.8 Lakhs',
+      currency: 'INR per year'
     },
     {
       name: 'Europe (Other)',
-      tuition: '€5,000 - €25,000',
-      living: '€8,000 - €15,000',
-      total: '€13,000 - €40,000',
-      currency: 'EUR per year'
+      tuition: '₹4.5 Lakhs - ₹22.5 Lakhs',
+      living: '₹7.2 Lakhs - ₹13.5 Lakhs',
+      total: '₹11.7 Lakhs - ₹36 Lakhs',
+      currency: 'INR per year'
     }
   ];
 
@@ -144,7 +144,7 @@ const CostToStudyAbroad: React.FC = () => {
               >
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-2xl font-bold text-gray-900">{country.name}</h3>
-                  <DollarSign className="w-8 h-8 text-green-600" />
+                  <IndianRupee className="w-8 h-8 text-green-600" />
                 </div>
                 <div className="space-y-3 mb-4">
                   <div className="flex justify-between items-center py-2 border-b border-gray-200">

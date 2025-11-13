@@ -10,7 +10,10 @@ import {
   Sparkles,
   Shield,
   Award,
-  Star
+  Star,
+  UserCircle,
+  Lightbulb,
+  Rocket
 } from 'lucide-react';
 
 const About: React.FC = () => {
@@ -306,6 +309,132 @@ const About: React.FC = () => {
                 <div className="text-sm text-blue-300">{achievement.description}</div>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About the Founder Section */}
+      <section className="py-20 relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-20" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          backgroundRepeat: 'repeat'
+        }}></div>
+        
+        {/* Floating Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 left-10 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-20 w-40 h-40 bg-indigo-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+              About the <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Founder</span>
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-400 mx-auto rounded-full"></div>
+          </motion.div>
+
+          <div className="max-w-5xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-white/10 backdrop-blur-md rounded-2xl shadow-2xl border border-white/20 p-8 md:p-12"
+            >
+              <div className="text-center mb-10">
+                <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-cyan-500 via-blue-500 to-indigo-600 rounded-full mb-6 shadow-xl">
+                  <UserCircle className="w-14 h-14 text-white" />
+                </div>
+                <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+                  Mettumedi Sandeep
+                </h3>
+                <p className="text-xl text-cyan-300 font-semibold mb-8">
+                  Founder & CEO
+                </p>
+                <div className="w-32 h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent mx-auto"></div>
+              </div>
+
+              <div className="space-y-6 text-white/90 leading-relaxed">
+                <p className="text-lg md:text-xl">
+                  With a deep-rooted passion for education and a vision to transform lives through global learning opportunities, <strong className="text-white">Mettumedi Sandeep</strong> founded Acquire Overseas Education to bridge the gap between ambitious students and their dream universities worldwide.
+                </p>
+
+                <p className="text-lg md:text-xl">
+                  Driven by the belief that quality education should be accessible to all, Sandeep envisioned a consultancy that goes beyond traditional services. Our mission is to empower students with the knowledge, resources, and support they need to navigate the complex journey of studying abroad successfully.
+                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+                  <div className="flex items-start space-x-4 p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300">
+                    <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-lg">
+                      <Lightbulb className="w-7 h-7 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-white text-xl mb-3">Vision</h4>
+                      <p className="text-white/80 leading-relaxed">
+                        To be the most trusted and innovative education consultancy, helping thousands of students achieve their academic and career aspirations through quality education abroad.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4 p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300">
+                    <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center shadow-lg">
+                      <Target className="w-7 h-7 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-white text-xl mb-3">Mission</h4>
+                      <p className="text-white/80 leading-relaxed">
+                        To provide comprehensive, transparent, and personalized education consultancy services that empower students to make informed decisions and succeed in their global education journey.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-10 p-8 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-xl flex items-center justify-center shadow-lg">
+                      <Rocket className="w-7 h-7 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="font-bold text-white text-xl mb-4">Our Goals</h4>
+                      <ul className="space-y-3 text-white/80">
+                        <li className="flex items-start">
+                          <CheckCircle className="w-6 h-6 text-cyan-400 mr-3 mt-0.5 flex-shrink-0" />
+                          <span className="text-lg">Expand our reach to serve more students across India and beyond</span>
+                        </li>
+                        <li className="flex items-start">
+                          <CheckCircle className="w-6 h-6 text-cyan-400 mr-3 mt-0.5 flex-shrink-0" />
+                          <span className="text-lg">Maintain our 98% success rate while continuously improving our services</span>
+                        </li>
+                        <li className="flex items-start">
+                          <CheckCircle className="w-6 h-6 text-cyan-400 mr-3 mt-0.5 flex-shrink-0" />
+                          <span className="text-lg">Build partnerships with top universities and institutions worldwide</span>
+                        </li>
+                        <li className="flex items-start">
+                          <CheckCircle className="w-6 h-6 text-cyan-400 mr-3 mt-0.5 flex-shrink-0" />
+                          <span className="text-lg">Provide innovative solutions that simplify the study abroad process</span>
+                        </li>
+                        <li className="flex items-start">
+                          <CheckCircle className="w-6 h-6 text-cyan-400 mr-3 mt-0.5 flex-shrink-0" />
+                          <span className="text-lg">Create a supportive community of successful international students</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <p className="text-lg md:text-xl mt-10 pt-8 border-t border-white/20 text-white/90">
+                  Under Sandeep's leadership, Acquire Overseas Education has grown from a vision into a trusted brand that has successfully guided over 5,000 students to top universities worldwide. Our commitment to excellence, integrity, and student success continues to drive us forward as we help shape the future of global education.
+                </p>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
