@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 import { Clock, CheckCircle, Users, Shield, ArrowRight } from 'lucide-react';
 const VisaExtension: React.FC = () => {
 
@@ -21,6 +22,12 @@ const VisaExtension: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Student Visa Extension Services - Extend Your Study Visa"
+        description="Professional student visa extension services including visa renewal, program extension, compliance guidance, and renewal support. Expert visa extension services from Acquire Overseas Education in Hyderabad."
+        keywords="student visa extension, visa extension services, study visa renewal, visa extension Hyderabad, student visa renewal services, extend student visa abroad"
+        canonicalUrl="https://acquireoverseas.in/student-visa-extension-services"
+      />
       <section className="relative py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"

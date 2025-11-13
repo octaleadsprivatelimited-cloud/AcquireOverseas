@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 import { Globe, CheckCircle, Mail, ArrowRight, Award, TrendingUp, Plane, FileText, ClipboardCheck, ShieldCheck, Target } from 'lucide-react';
 const SkilledMigration = () => {
 
@@ -88,6 +89,12 @@ const SkilledMigration = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+      <SEO
+        title="Skilled Migration Services - Skilled Worker Immigration Services"
+        description="Professional skilled migration services including work visas, permanent residency, skilled worker programs, and immigration consultation. Expert skilled migration services from Acquire Overseas Education."
+        keywords="skilled migration, skilled worker visa, skilled migration services, work visa abroad, permanent residency, skilled migration Hyderabad"
+        canonicalUrl="https://acquireoverseas.in/skilled-migration"
+      />
       {/* Hero Section */}
       <section className="relative h-[520px] flex items-center overflow-hidden">
         <div className="absolute inset-0 bg-[url('/home/slider-3.jpg')] bg-cover bg-center" />

@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 import { Star, Quote, CheckCircle, ArrowRight } from 'lucide-react';
 const Testimonials: React.FC = () => {
 
@@ -87,6 +88,12 @@ const Testimonials: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50">
+      <SEO
+        title="Success Stories - Student Testimonials and Reviews"
+        description="Read success stories and testimonials from our students who have successfully studied abroad. Real experiences from students who got admission to top universities worldwide with Acquire Overseas Education."
+        keywords="study abroad testimonials, student success stories, study abroad reviews, overseas education testimonials, study abroad feedback, student reviews study abroad"
+        canonicalUrl="https://acquireoverseas.in/success-stories"
+      />
       {/* Hero Section */}
       <section className="py-20 relative overflow-hidden bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600">
         <div className="absolute inset-0 opacity-30">

@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 import { Users, CheckCircle, Clock, Shield, ArrowRight, Award } from 'lucide-react';
 const ImmigrationConsultation: React.FC = () => {
 
@@ -21,6 +22,12 @@ const ImmigrationConsultation: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Education Consultation - Free Study Abroad Consultation Services"
+        description="Free education consultation for studying abroad including profile assessment, study plan creation, university selection, and ongoing support. Expert education consultation from Acquire Overseas Education in Hyderabad."
+        keywords="education consultation Hyderabad, study abroad consultation, free education consultation, profile assessment study abroad, education consultancy free consultation"
+        canonicalUrl="https://acquireoverseas.in/education-consultation"
+      />
       <section className="relative py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white overflow-hidden">
         <div className="absolute inset-0">
           <img

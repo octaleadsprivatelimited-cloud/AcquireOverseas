@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 import { 
   BookOpen, 
   CheckCircle, 
@@ -57,6 +58,12 @@ const GuideToStudyAbroad: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Complete Guide to Study Abroad - Step by Step Guide"
+        description="Comprehensive guide to studying abroad. Learn about study abroad process, requirements, visa application, university selection, and everything you need to know. Expert guidance from Acquire Overseas Education in Hyderabad."
+        keywords="study abroad guide, how to study abroad, study abroad process, study abroad steps, complete guide study abroad, study abroad requirements, study abroad preparation, study abroad tips"
+        canonicalUrl="https://acquireoverseas.in/guide-to-study-abroad"
+      />
       {/* Hero Section */}
       <section className="relative py-12 md:py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/30"></div>

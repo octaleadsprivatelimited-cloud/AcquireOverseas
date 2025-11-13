@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 import { 
   IndianRupee, 
   Calculator, 
@@ -96,6 +97,12 @@ const CostToStudyAbroad: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Cost to Study Abroad - Study Abroad Expenses in India"
+        description="Complete guide to study abroad costs including tuition fees, living expenses, accommodation costs for USA, UK, Canada, Australia, Germany. Get detailed cost breakdown and budget planning tips from Acquire Overseas Education in Hyderabad."
+        keywords="study abroad cost, study abroad expenses, cost to study abroad, study in USA cost, study in UK cost, study in Canada cost, study in Australia cost, study abroad fees Hyderabad, overseas education cost India"
+        canonicalUrl="https://acquireoverseas.in/cost-to-study-abroad"
+      />
       {/* Hero Section */}
       <section className="relative py-12 md:py-20 bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/30"></div>

@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 interface SEOProps {
   title?: string;
@@ -14,7 +14,7 @@ const SEO: React.FC<SEOProps> = ({
   title,
   description,
   keywords,
-  ogImage = 'https://acquireoverseas.in/favicon.png',
+  ogImage = 'https://acquireoverseas.in/logo.png',
   ogType = 'website',
   canonicalUrl,
   noindex = false
@@ -31,8 +31,13 @@ const SEO: React.FC<SEOProps> = ({
 
     // Update or create meta tags
     const updateMetaTag = (property: string, content: string, isProperty = false) => {
-      const selector = isProperty ? `property="${property}"` : `name="${property}"`;
-      let element = document.querySelector(`meta[${selector}]`) as HTMLMetaElement;
+      let element: HTMLMetaElement | null = null;
+      
+      if (isProperty) {
+        element = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement;
+      } else {
+        element = document.querySelector(`meta[name="${property}"]`) as HTMLMetaElement;
+      }
       
       if (!element) {
         element = document.createElement('meta');
@@ -46,10 +51,21 @@ const SEO: React.FC<SEOProps> = ({
       element.setAttribute('content', content);
     };
 
-    // Update description
-    updateMetaTag('description', description || baseDescription);
-    updateMetaTag('og:description', description || baseDescription, true);
-    updateMetaTag('twitter:description', description || baseDescription, true);
+    // Update description - always update even if it exists
+    const finalDescription = description || baseDescription;
+    
+    // Ensure description meta tag exists and is updated
+    let descMeta = document.querySelector('meta[name="description"]') as HTMLMetaElement;
+    if (!descMeta) {
+      descMeta = document.createElement('meta');
+      descMeta.setAttribute('name', 'description');
+      document.head.appendChild(descMeta);
+    }
+    descMeta.setAttribute('content', finalDescription);
+    
+    // Update Open Graph and Twitter descriptions
+    updateMetaTag('og:description', finalDescription, true);
+    updateMetaTag('twitter:description', finalDescription, true);
 
     // Update keywords
     if (keywords) {

@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 import { FileText, CheckCircle, Users, Clock, Shield, ArrowRight } from 'lucide-react';
 const DocumentAttestation: React.FC = () => {
 
@@ -21,6 +22,12 @@ const DocumentAttestation: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Document Attestation Services - Document Verification for Study Abroad"
+        description="Professional document attestation services for study abroad including academic document verification, embassy attestation, translation services, and express processing. Expert document attestation from Acquire Overseas Education."
+        keywords="document attestation study abroad, document verification abroad, embassy attestation, document attestation services Hyderabad, academic document attestation, study abroad document attestation"
+        canonicalUrl="https://acquireoverseas.in/document-preparation-services"
+      />
       <section className="relative py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"

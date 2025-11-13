@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 import { ArrowLeft, Calendar, Clock, User, Tag, Share2, Facebook, Twitter, Linkedin } from 'lucide-react';
 import { getBlogPostBySlug, getRelatedPosts } from '../data/blogPosts';
 import ReactMarkdown from 'react-markdown';
@@ -35,6 +36,12 @@ const BlogPost: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title={post.title}
+        description={post.excerpt || post.content.substring(0, 160)}
+        keywords={post.tags.join(', ')}
+        canonicalUrl={`https://acquireoverseas.in/blog/${post.slug}`}
+      />
       {/* Hero Section */}
       <section className="relative py-16 bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 text-white">
         <div className="container mx-auto px-4">

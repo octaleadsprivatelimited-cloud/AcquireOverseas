@@ -1,10 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 import { FileText } from 'lucide-react';
 const TermsOfService: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Terms of Service - Terms and Conditions"
+        description="Terms of service for Acquire Overseas Education. Read our terms and conditions for using our study abroad consultancy services."
+        keywords="terms of service, terms and conditions, study abroad consultancy terms"
+        canonicalUrl="https://acquireoverseas.in/terms-of-service"
+        noindex={true}
+      />
       <section className="relative py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"

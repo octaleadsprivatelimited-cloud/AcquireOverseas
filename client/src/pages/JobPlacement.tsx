@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 import { Briefcase, CheckCircle, Users, Clock, Shield, ArrowRight } from 'lucide-react';
 const JobPlacement: React.FC = () => {
 
@@ -21,6 +22,12 @@ const JobPlacement: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Career Counseling Services - Career Guidance for Study Abroad"
+        description="Professional career counseling services including career assessment, career guidance, course matching, and future planning. Expert career counseling from Acquire Overseas Education in Hyderabad."
+        keywords="career counseling study abroad, career guidance abroad, career counseling services Hyderabad, study abroad career guidance, career assessment study abroad"
+        canonicalUrl="https://acquireoverseas.in/career-counseling-services"
+      />
       <section className="relative py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
