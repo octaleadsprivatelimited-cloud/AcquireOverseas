@@ -225,7 +225,7 @@ const Home: React.FC = () => {
             </p>
           </div>
 
-          <div className="flex flex-nowrap gap-1 md:gap-3 overflow-x-auto pb-2 scrollbar-hide px-1">
+          <div className="flex flex-nowrap gap-1 md:gap-3 overflow-x-auto md:overflow-x-visible pb-2 scrollbar-hide px-1 md:justify-center">
             {[
               {
                 country: 'USA',
@@ -278,7 +278,6 @@ const Home: React.FC = () => {
                       e.currentTarget.src = 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80';
                     }}
                   />
-                  <div className={`absolute inset-0 bg-gradient-to-t ${country.gradient} opacity-30`}></div>
                   <div className="absolute bottom-0 left-0 right-0 bg-black/50 backdrop-blur-sm px-0.5 py-0.5 md:px-2 md:py-1.5">
                     <h3 className="text-[9px] md:text-sm font-bold text-white text-center leading-tight">{country.title}</h3>
                   </div>
