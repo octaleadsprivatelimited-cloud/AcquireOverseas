@@ -213,106 +213,74 @@ const Home: React.FC = () => {
       {/* Countries We Serve Section */}
       <section className="py-4 md:py-6 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-4"
-          >
+          <div className="text-center mb-4">
             <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-1">
               Countries We Serve
             </h2>
             <p className="text-xs md:text-sm text-gray-600">
               Study Abroad Opportunities in Top Universities Worldwide
             </p>
-          </motion.div>
+          </div>
 
-          <div className="flex flex-nowrap gap-3 overflow-x-auto pb-2 scrollbar-hide">
+          <div className="flex flex-nowrap gap-3 overflow-x-auto pb-2 scrollbar-hide justify-center md:justify-center">
             {[
               {
                 country: 'USA',
                 title: 'USA',
-                services: ['Top Universities', 'Scholarship Opportunities', 'Career Prospects'],
                 image: '/country/usa.jpg',
                 gradient: 'from-blue-600 to-blue-800'
               },
               {
                 country: 'Canada',
                 title: 'Canada',
-                services: ['World-Class Education', 'Post-Graduation Work', 'Permanent Residency Pathway'],
                 image: '/country/canada.jpg',
                 gradient: 'from-red-600 to-red-800'
               },
               {
                 country: 'Australia',
                 title: 'Australia',
-                services: ['Quality Universities', 'Work While Studying', 'Post-Study Work Rights'],
                 image: '/country/australia.jpg',
                 gradient: 'from-green-600 to-green-800'
               },
               {
                 country: 'UK',
                 title: 'UK',
-                services: ['Prestigious Institutions', 'Research Opportunities', 'Global Recognition'],
                 image: '/country/uk.jpg',
                 gradient: 'from-indigo-600 to-indigo-800'
               },
               {
                 country: 'Germany',
                 title: 'Germany',
-                services: ['Tuition-Free Education', 'Engineering Excellence', 'Strong Economy'],
                 image: '/country/Germany.jpg',
                 gradient: 'from-gray-700 to-gray-900'
               },
               {
                 country: 'Europe',
                 title: 'Europe',
-                services: ['Diverse Programs', 'Cultural Experience', 'Affordable Education'],
                 image: '/country/Europe.jpeg',
                 gradient: 'from-purple-600 to-purple-800'
               }
-            ].map((country, index) => (
-              <motion.div
+            ].map((country) => (
+              <div
                 key={country.country}
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                viewport={{ once: true }}
                 onClick={() => handleCountryClick(country.title)}
-                className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer flex-shrink-0 w-40"
+                className="relative overflow-hidden rounded-lg shadow-md hover:shadow-lg cursor-pointer flex-shrink-0 w-32 md:w-40"
               >
-                <div className="flex flex-col h-32">
-                  {/* Image */}
-                  <div className="relative h-20 overflow-hidden">
-                    <img
-                      src={country.image}
-                      alt={country.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      onError={(e) => {
-                        e.currentTarget.src = 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80';
-                      }}
-                    />
-                    <div className={`absolute inset-0 bg-gradient-to-t ${country.gradient} opacity-30 group-hover:opacity-20 transition-opacity duration-300`}></div>
-                    <div className="absolute top-1 left-1 bg-white/90 backdrop-blur-sm px-1.5 py-0.5 rounded">
-                      <h3 className="text-xs font-bold text-gray-900">{country.title}</h3>
-                    </div>
-                  </div>
-
-                  {/* Content */}
-                  <div className="h-12 bg-gradient-to-br from-slate-50 to-white p-1.5 flex items-center justify-center">
-                    <button 
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        handleCountryClick(country.title);
-                      }}
-                      className={`w-full bg-gradient-to-r ${country.gradient} text-white py-1 px-2 rounded font-medium text-[10px] hover:shadow-md transition-all duration-300 hover:scale-105 flex items-center justify-center cursor-pointer`}
-                    >
-                      <span>Contact</span>
-                      <ArrowRight size={10} className="ml-1 group-hover:translate-x-0.5 transition-transform" />
-                    </button>
+                <div className="relative h-24 md:h-32 overflow-hidden">
+                  <img
+                    src={country.image}
+                    alt={country.title}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.currentTarget.src = 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80';
+                    }}
+                  />
+                  <div className={`absolute inset-0 bg-gradient-to-t ${country.gradient} opacity-30`}></div>
+                  <div className="absolute bottom-0 left-0 right-0 bg-black/50 backdrop-blur-sm px-2 py-1.5">
+                    <h3 className="text-xs md:text-sm font-bold text-white text-center">{country.title}</h3>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
