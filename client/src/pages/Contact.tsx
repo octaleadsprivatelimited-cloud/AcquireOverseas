@@ -28,18 +28,36 @@ const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      // Form submission disabled - contact form functionality removed
-      // You can implement your own form handling here
-      setIsSubmitted(true);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        service: '',
-        message: ''
+      const response = await fetch('https://formspree.io/f/mwpaproy', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          service: formData.service,
+          message: formData.message,
+          _subject: `Contact Form Submission - ${formData.service || 'General Inquiry'}`,
+        }),
       });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          service: '',
+          message: ''
+        });
+      } else {
+        throw new Error('Form submission failed');
+      }
     } catch (error) {
       console.error('Error submitting form:', error);
+      alert('There was an error submitting the form. Please try again.');
     }
   };
 

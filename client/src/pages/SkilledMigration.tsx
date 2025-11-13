@@ -9,6 +9,8 @@ const SkilledMigration = () => {
     phone: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
@@ -17,9 +19,38 @@ const SkilledMigration = () => {
     if (node) node.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // WhatsApp functionality removed
+    setIsSubmitting(true);
+    try {
+      const response = await fetch('https://formspree.io/f/mwpaproy', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+          _subject: 'Skilled Migration Inquiry',
+          _source: 'Skilled Migration Page',
+        }),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormData({ name: '', email: '', phone: '', message: '' });
+        setTimeout(() => setIsSubmitted(false), 5000);
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('There was an error submitting the form. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const countries = [
@@ -458,10 +489,22 @@ const SkilledMigration = () => {
 
                   <button
                     type="submit"
-                    className="w-full bg-yellow-400 text-gray-900 py-3.5 rounded-lg font-semibold text-base hover:bg-yellow-300 transition-all duration-300 hover:scale-[1.02] shadow-md flex items-center justify-center"
+                    disabled={isSubmitting || isSubmitted}
+                    className={`w-full ${isSubmitted ? 'bg-green-500' : 'bg-yellow-400'} text-gray-900 py-3.5 rounded-lg font-semibold text-base hover:bg-yellow-300 transition-all duration-300 hover:scale-[1.02] shadow-md flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed`}
                   >
-                    <span>Get Free Assessment</span>
-                    <ArrowRight className="ml-2" size={18} />
+                    {isSubmitting ? (
+                      <span>Submitting...</span>
+                    ) : isSubmitted ? (
+                      <>
+                        <CheckCircle className="mr-2" size={18} />
+                        <span>Submitted Successfully!</span>
+                      </>
+                    ) : (
+                      <>
+                        <span>Get Free Assessment</span>
+                        <ArrowRight className="ml-2" size={18} />
+                      </>
+                    )}
                   </button>
                 </form>
 

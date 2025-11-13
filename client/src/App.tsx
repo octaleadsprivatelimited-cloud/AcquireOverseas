@@ -25,6 +25,12 @@ import BlogPost from './pages/BlogPost';
 import ApplicationSupport from './pages/ApplicationSupport';
 import CourseSelection from './pages/CourseSelection';
 import UniversitySelection from './pages/UniversitySelection';
+import GuideToStudyAbroad from './pages/GuideToStudyAbroad';
+import StudyAbroadBenefits from './pages/StudyAbroadBenefits';
+import GuideForParents from './pages/GuideForParents';
+import CostToStudyAbroad from './pages/CostToStudyAbroad';
+import ScholarshipsToStudyAbroad from './pages/ScholarshipsToStudyAbroad';
+import StudyingAbroadFAQs from './pages/StudyingAbroadFAQs';
 
 function App() {
   return (
@@ -53,6 +59,15 @@ function App() {
             <Route path="/application-support" element={<ApplicationSupport />} />
             <Route path="/course-selection" element={<CourseSelection />} />
             <Route path="/university-selection" element={<UniversitySelection />} />
+            
+            {/* Study Abroad Pages */}
+            <Route path="/guide-to-study-abroad" element={<GuideToStudyAbroad />} />
+            <Route path="/study-abroad-benefits" element={<StudyAbroadBenefits />} />
+            <Route path="/guide-for-parents" element={<GuideForParents />} />
+            <Route path="/cost-to-study-abroad" element={<CostToStudyAbroad />} />
+            <Route path="/scholarships-to-study-abroad" element={<ScholarshipsToStudyAbroad />} />
+            <Route path="/studying-abroad-faqs" element={<StudyingAbroadFAQs />} />
+            
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
             <Route path="/sitemap" element={<Sitemap />} />
