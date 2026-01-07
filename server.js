@@ -171,6 +171,12 @@ app.use((err, req, res, next) => {
   });
 });
 
+// Sitemap.xml route - serve with correct content type
+app.get('/sitemap.xml', (req, res) => {
+  res.type('application/xml');
+  res.sendFile(path.join(__dirname, 'client/build', 'sitemap.xml'));
+});
+
 // 404 handler for API routes
 app.use('/api/*', (req, res) => {
   res.status(404).json({

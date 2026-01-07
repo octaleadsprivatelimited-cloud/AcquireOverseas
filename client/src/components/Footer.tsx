@@ -61,8 +61,7 @@ const Footer: React.FC = () => {
     { name: 'Success Stories', path: '/success-stories' },
     { name: 'Careers', path: '/build-your-career-with-us' },
     { name: 'Privacy Policy', path: '/privacy-policy' },
-    { name: 'Terms of Service', path: '/terms-of-service' },
-    { name: 'Sitemap', path: '/sitemap' }
+    { name: 'Terms of Service', path: '/terms-of-service' }
   ];
 
   const socialLinks: any[] = [];
@@ -254,9 +253,9 @@ const Footer: React.FC = () => {
               <Link to="/terms-of-service" className="text-slate-500 hover:text-white transition-colors">
                 Terms
               </Link>
-              <Link to="/sitemap" className="text-slate-500 hover:text-white transition-colors">
+              <a href="/sitemap.xml" className="text-slate-500 hover:text-white transition-colors">
                 Sitemap
-              </Link>
+              </a>
             </div>
           </div>
         </div>

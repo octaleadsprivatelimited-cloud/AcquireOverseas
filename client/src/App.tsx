@@ -16,7 +16,6 @@ import DocumentAttestation from './pages/DocumentAttestation';
 import VisaExtension from './pages/VisaExtension';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
-import Sitemap from './pages/Sitemap';
 import Portfolio from './pages/Portfolio';
 import Blog from './pages/Blog';
 import Testimonials from './pages/Testimonials';
@@ -55,7 +54,6 @@ function App() {
             <Route path="/university-selection" element={<UniversitySelection />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
-            <Route path="/sitemap" element={<Sitemap />} />
             
             {/* Legacy routes for backward compatibility */}
             <Route path="/about" element={<About />} />
