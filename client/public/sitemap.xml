@@ -2,248 +2,174 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Main Pages -->
   <url>
-    <loc>https://acquireoverseas.in/</loc>
+    <loc>https://your-domain.com/</loc>
+    <lastmod>2025-01-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <lastmod>2025-01-15</lastmod>
   </url>
   <url>
-    <loc>https://acquireoverseas.in/your-trusted-education-partner</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <lastmod>2025-01-15</lastmod>
-  </url>
-  <url>
-    <loc>https://acquireoverseas.in/comprehensive-education-solutions</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <lastmod>2025-01-15</lastmod>
-  </url>
-  <url>
-    <loc>https://acquireoverseas.in/our-portfolio</loc>
+    <loc>https://your-domain.com/your-trusted-education-partner</loc>
+    <lastmod>2025-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2025-01-15</lastmod>
   </url>
   <url>
-    <loc>https://acquireoverseas.in/blog-resources</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://your-domain.com/comprehensive-education-solutions</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2025-01-15</lastmod>
   </url>
   <url>
-    <loc>https://acquireoverseas.in/success-stories</loc>
+    <loc>https://your-domain.com/lets-start-your-journey</loc>
+    <lastmod>2025-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2025-01-15</lastmod>
   </url>
   <url>
-    <loc>https://acquireoverseas.in/build-your-career-with-us</loc>
+    <loc>https://your-domain.com/our-portfolio</loc>
+    <lastmod>2025-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-01-15</lastmod>
   </url>
   <url>
-    <loc>https://acquireoverseas.in/lets-start-your-journey</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://your-domain.com/blog-resources</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2025-01-15</lastmod>
   </url>
   <url>
-    <loc>https://acquireoverseas.in/frequently-asked-questions</loc>
+    <loc>https://your-domain.com/success-stories</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://your-domain.com/frequently-asked-questions</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://your-domain.com/build-your-career-with-us</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Study Abroad Pages -->
+  <url>
+    <loc>https://your-domain.com/guide-to-study-abroad</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://your-domain.com/study-abroad-benefits</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://your-domain.com/guide-for-parents</loc>
+    <lastmod>2025-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2025-01-15</lastmod>
+  </url>
+  <url>
+    <loc>https://your-domain.com/cost-to-study-abroad</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://your-domain.com/scholarships-to-study-abroad</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://your-domain.com/studying-abroad-faqs</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   
   <!-- Education Services -->
   <url>
-    <loc>https://acquireoverseas.in/study-abroad-programs</loc>
+    <loc>https://your-domain.com/study-abroad-programs</loc>
+    <lastmod>2025-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2025-01-15</lastmod>
   </url>
   <url>
-    <loc>https://acquireoverseas.in/university-selection</loc>
+    <loc>https://your-domain.com/university-selection</loc>
+    <lastmod>2025-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2025-01-15</lastmod>
   </url>
   <url>
-    <loc>https://acquireoverseas.in/course-selection</loc>
+    <loc>https://your-domain.com/course-selection</loc>
+    <lastmod>2025-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2025-01-15</lastmod>
   </url>
   <url>
-    <loc>https://acquireoverseas.in/application-support</loc>
+    <loc>https://your-domain.com/application-support</loc>
+    <lastmod>2025-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2025-01-15</lastmod>
+  </url>
+  <url>
+    <loc>https://your-domain.com/student-visa-extension-services</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   
   <!-- Consultation Services -->
   <url>
-    <loc>https://acquireoverseas.in/education-consultation</loc>
+    <loc>https://your-domain.com/education-consultation</loc>
+    <lastmod>2025-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2025-01-15</lastmod>
   </url>
   <url>
-    <loc>https://acquireoverseas.in/career-counseling-services</loc>
+    <loc>https://your-domain.com/career-counseling-services</loc>
+    <lastmod>2025-01-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://acquireoverseas.in/academic-profile-assessment</loc>
+    <loc>https://your-domain.com/academic-profile-assessment</loc>
+    <lastmod>2025-01-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://acquireoverseas.in/document-preparation-services</loc>
+    <loc>https://your-domain.com/document-preparation-services</loc>
+    <lastmod>2025-01-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-01-15</lastmod>
-  </url>
-  <url>
-    <loc>https://acquireoverseas.in/student-visa-extension-services</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
   </url>
   
   <!-- Legal Pages -->
   <url>
-    <loc>https://acquireoverseas.in/privacy-policy</loc>
+    <loc>https://your-domain.com/privacy-policy</loc>
+    <lastmod>2025-01-01</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-    <lastmod>2025-01-15</lastmod>
+    <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://acquireoverseas.in/terms-of-service</loc>
+    <loc>https://your-domain.com/terms-of-service</loc>
+    <lastmod>2025-01-01</lastmod>
     <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://your-domain.com/sitemap</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-    <lastmod>2025-01-15</lastmod>
-  </url>
-  
-  <!-- Legacy Routes for Backward Compatibility -->
-  <url>
-    <loc>https://acquireoverseas.in/about</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-01-15</lastmod>
-  </url>
-  <url>
-    <loc>https://acquireoverseas.in/services</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-01-15</lastmod>
-  </url>
-  <url>
-    <loc>https://acquireoverseas.in/portfolio</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-01-15</lastmod>
-  </url>
-  <url>
-    <loc>https://acquireoverseas.in/blog</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-01-15</lastmod>
-  </url>
-  <url>
-    <loc>https://acquireoverseas.in/testimonials</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-01-15</lastmod>
-  </url>
-  <url>
-    <loc>https://acquireoverseas.in/careers</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-01-15</lastmod>
-  </url>
-  <url>
-    <loc>https://acquireoverseas.in/contact</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-01-15</lastmod>
-  </url>
-  <url>
-    <loc>https://acquireoverseas.in/faq</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-01-15</lastmod>
-  </url>
-  <url>
-    <loc>https://acquireoverseas.in/study-visa</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-01-15</lastmod>
-  </url>
-  <url>
-    <loc>https://acquireoverseas.in/immigration-consultation</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-01-15</lastmod>
-  </url>
-  <url>
-    <loc>https://acquireoverseas.in/job-placement</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-01-15</lastmod>
-  </url>
-  <url>
-    <loc>https://acquireoverseas.in/skill-assessment</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-01-15</lastmod>
-  </url>
-  <url>
-    <loc>https://acquireoverseas.in/document-attestation</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-01-15</lastmod>
-  </url>
-  <url>
-    <loc>https://acquireoverseas.in/visa-extension</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-01-15</lastmod>
-  </url>
-  
-  <!-- Blog Posts -->
-  <url>
-    <loc>https://acquireoverseas.in/blog/complete-guide-studying-uk-2025</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-10-08</lastmod>
-  </url>
-  <url>
-    <loc>https://acquireoverseas.in/blog/student-visa-requirements-top-destinations-2025</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-10-08</lastmod>
-  </url>
-  <url>
-    <loc>https://acquireoverseas.in/blog/top-10-universities-international-students-2025</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-10-09</lastmod>
-  </url>
-  <url>
-    <loc>https://acquireoverseas.in/blog/winning-personal-statement-university-applications</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-10-06</lastmod>
-  </url>
-  <url>
-    <loc>https://acquireoverseas.in/blog/top-5-study-abroad-destinations-2025-comparison</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-10-05</lastmod>
   </url>
 </urlset>
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import Hero from '../components/Hero';
+import SEO from '../components/SEO';
 import { 
   Users, 
   Award, 
@@ -28,7 +29,7 @@ const Home: React.FC = () => {
       link: '/study-abroad-programs', 
       gradient: 'from-blue-500 to-cyan-500', 
       size: 'large',
-      image: '/services/study_visa.jpg'
+      image: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1200&h=800&fit=crop&q=80'
     },
     { 
       title: 'University Selection', 
@@ -36,7 +37,7 @@ const Home: React.FC = () => {
       link: '/university-selection', 
       gradient: 'from-emerald-500 to-teal-500', 
       size: 'small',
-      image: '/services/immigration.jpg'
+      image: 'https://images.unsplash.com/photo-1562774053-701939374585?w=800&h=600&fit=crop&q=80'
     },
     { 
       title: 'Course Selection', 
@@ -44,7 +45,7 @@ const Home: React.FC = () => {
       link: '/course-selection', 
       gradient: 'from-pink-500 to-rose-500', 
       size: 'medium',
-      image: '/services/benfits.jpeg'
+      image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=600&fit=crop&q=80'
     },
     { 
       title: 'Application Support', 
@@ -52,7 +53,7 @@ const Home: React.FC = () => {
       link: '/application-support', 
       gradient: 'from-purple-500 to-indigo-500', 
       size: 'medium',
-      image: '/services/word_visa.jpg'
+      image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=600&fit=crop&q=80'
     },
     { 
       title: 'Student Visa Services', 
@@ -60,7 +61,7 @@ const Home: React.FC = () => {
       link: '/study-abroad-programs', 
       gradient: 'from-amber-500 to-yellow-500', 
       size: 'medium',
-      image: '/services/tourist_visa.jpeg'
+      image: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&h=600&fit=crop&q=80'
     }
   ];
 
@@ -79,6 +80,12 @@ const Home: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Best Study Abroad & Visa Consultancy in Hyderabad, India"
+        description="Acquire Overseas Education - Leading study abroad consultancy in Hyderabad, India. Expert guidance for study in USA, UK, Canada, Australia, Germany. 98% success rate, 5000+ students helped. Free consultation for study abroad programs, visa services, university selection & more."
+        keywords="study abroad consultancy Hyderabad, visa consultancy Hyderabad, education consultancy India, study in USA from India, study in UK from India, study in Canada from India, study in Australia from India, study in Germany from India, student visa services Hyderabad, overseas education consultant Hyderabad, best visa consultancy Hyderabad, study visa consultant Telangana"
+        canonicalUrl="https://acquireoverseas.in/"
+      />
       <Hero />
 
       {/* Features Section - Creative Grid */}
@@ -133,7 +140,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Services - Bento Box Layout */}
-      <section className="py-8 md:py-10 bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
+      <section className="py-8 md:py-10 bg-sky-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -157,13 +164,13 @@ const Home: React.FC = () => {
                 viewport={{ once: true }}
                 className={`group relative overflow-hidden rounded-xl ${
                   service.size === 'large' ? 'md:col-span-2 md:row-span-2' : 
-                  service.size === 'medium' ? 'md:col-span-1 md:row-span-2' : 
+                  service.size === 'medium' ? (service.title === 'Course Selection' ? 'md:col-span-1 md:row-span-2 min-h-[160px] md:min-h-[456px]' : 'md:col-span-1 md:row-span-2') : 
                   'md:col-span-1'
                 }`}
               >
                 <Link
                   to={service.link}
-                  className={`block h-full min-h-[140px] relative overflow-hidden hover:scale-[1.02] transition-all duration-500`}
+                  className={`block h-full ${service.title === 'Course Selection' ? 'min-h-[160px]' : 'min-h-[140px]'} relative overflow-hidden hover:scale-[1.02] transition-all duration-500`}
                 >
                   {/* Background Image */}
                   <div className="absolute inset-0">
@@ -171,6 +178,9 @@ const Home: React.FC = () => {
                       src={service.image} 
                       alt={service.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      onError={(e) => {
+                        e.currentTarget.src = 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=800&fit=crop&q=80';
+                      }}
                     />
                     {/* Dark Overlay for Text Readability */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-black/40 group-hover:from-black/70 transition-all duration-500"></div>
@@ -211,118 +221,75 @@ const Home: React.FC = () => {
       </section>
 
       {/* Countries We Serve Section */}
-      <section className="py-20 bg-white">
+      <section className="py-4 md:py-6 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-4">
+            <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-1">
               Countries We Serve
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xs md:text-sm text-gray-600">
               Study Abroad Opportunities in Top Universities Worldwide
             </p>
-          </motion.div>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex flex-nowrap gap-1 md:gap-3 overflow-x-auto md:overflow-x-visible pb-2 scrollbar-hide px-1 md:justify-center">
             {[
               {
                 country: 'USA',
                 title: 'USA',
-                services: ['Top Universities', 'Scholarship Opportunities', 'Career Prospects'],
                 image: '/country/usa.jpg',
                 gradient: 'from-blue-600 to-blue-800'
               },
               {
                 country: 'Canada',
                 title: 'Canada',
-                services: ['World-Class Education', 'Post-Graduation Work', 'Permanent Residency Pathway'],
                 image: '/country/canada.jpg',
                 gradient: 'from-red-600 to-red-800'
               },
               {
                 country: 'Australia',
                 title: 'Australia',
-                services: ['Quality Universities', 'Work While Studying', 'Post-Study Work Rights'],
                 image: '/country/australia.jpg',
                 gradient: 'from-green-600 to-green-800'
               },
               {
                 country: 'UK',
                 title: 'UK',
-                services: ['Prestigious Institutions', 'Research Opportunities', 'Global Recognition'],
                 image: '/country/uk.jpg',
                 gradient: 'from-indigo-600 to-indigo-800'
               },
               {
                 country: 'Germany',
                 title: 'Germany',
-                services: ['Tuition-Free Education', 'Engineering Excellence', 'Strong Economy'],
                 image: '/country/Germany.jpg',
                 gradient: 'from-gray-700 to-gray-900'
               },
               {
                 country: 'Europe',
                 title: 'Europe',
-                services: ['Diverse Programs', 'Cultural Experience', 'Affordable Education'],
                 image: '/country/Europe.jpeg',
                 gradient: 'from-purple-600 to-purple-800'
               }
-            ].map((country, index) => (
-              <motion.div
+            ].map((country) => (
+              <div
                 key={country.country}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
                 onClick={() => handleCountryClick(country.title)}
-                className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer"
+                className="relative overflow-hidden rounded shadow-md hover:shadow-lg cursor-pointer flex-shrink-0 w-16 md:w-40"
               >
-                <div className="flex flex-col h-[500px]">
-                  {/* Image - 70% */}
-                  <div className="relative h-[70%] overflow-hidden">
-                    <img
-                      src={country.image}
-                      alt={country.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                      onError={(e) => {
-                        e.currentTarget.src = 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80';
-                      }}
-                    />
-                    <div className={`absolute inset-0 bg-gradient-to-t ${country.gradient} opacity-40 group-hover:opacity-30 transition-opacity duration-500`}></div>
-                    <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full">
-                      <h3 className="text-lg font-bold text-gray-900">{country.title}</h3>
-                    </div>
-                  </div>
-
-                  {/* Content - 30% */}
-                  <div className="h-[30%] bg-gradient-to-br from-slate-50 to-white p-4 flex flex-col justify-between">
-                    <div className="flex-1 overflow-y-auto">
-                      <ul className="space-y-1">
-                        {country.services.map((service, idx) => (
-                          <li key={idx} className="flex items-center text-xs md:text-sm text-gray-700">
-                            <div className="w-1.5 h-1.5 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full mr-2 flex-shrink-0"></div>
-                            <span className="font-medium">{service}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <button 
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        handleCountryClick(country.title);
-                      }}
-                      className={`mt-2 w-full bg-gradient-to-r ${country.gradient} text-white py-2.5 px-4 rounded-lg font-bold text-sm hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center justify-center shadow-lg cursor-pointer`}
-                    >
-                      <span>Contact on WhatsApp</span>
-                      <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
-                    </button>
+                <div className="relative h-14 md:h-32 overflow-hidden">
+                  <img
+                    src={country.image}
+                    alt={country.title}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.currentTarget.src = 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80';
+                    }}
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-black/50 backdrop-blur-sm px-0.5 py-0.5 md:px-2 md:py-1.5">
+                    <h3 className="text-[9px] md:text-sm font-bold text-white text-center leading-tight">{country.title}</h3>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -356,7 +323,7 @@ const Home: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
+          <div className="flex flex-nowrap md:grid md:grid-cols-4 gap-2 md:gap-4 overflow-x-auto pb-2 scrollbar-hide md:overflow-x-visible">
             {[
               { icon: Users, value: '5,000+', label: 'Happy Clients' },
               { icon: Award, value: '98%', label: 'Success Rate' },
@@ -369,13 +336,13 @@ const Home: React.FC = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center glass-effect p-3 md:p-4 rounded-xl md:rounded-2xl hover:scale-110 transition-all duration-300"
+                className="text-center glass-effect p-3 md:p-4 rounded-xl md:rounded-2xl hover:scale-110 transition-all duration-300 flex-shrink-0 w-[22vw] min-w-[100px] md:w-auto"
               >
                 <div className="w-8 h-8 md:w-10 md:h-10 bg-white/20 rounded-lg md:rounded-xl flex items-center justify-center mx-auto mb-1 md:mb-2">
                   <stat.icon size={16} className="md:w-5 md:h-5 text-white" />
                 </div>
-                <div className="text-2xl md:text-3xl lg:text-4xl font-black text-white mb-0.5 md:mb-1">{stat.value}</div>
-                <div className="text-xs md:text-base text-white/90 font-bold">{stat.label}</div>
+                <div className="text-xl md:text-3xl lg:text-4xl font-black text-white mb-0.5 md:mb-1">{stat.value}</div>
+                <div className="text-[10px] md:text-base text-white/90 font-bold leading-tight">{stat.label}</div>
               </motion.div>
             ))}
           </div>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 import { 
   MapPin, 
   Phone, 
@@ -7,7 +8,6 @@ import {
   Clock, 
   Send,
   CheckCircle,
-  ArrowRight,
   Sparkles,
   Shield,
   Award,
@@ -29,18 +29,36 @@ const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      // Form submission disabled - contact form functionality removed
-      // You can implement your own form handling here
-      setIsSubmitted(true);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        service: '',
-        message: ''
+      const response = await fetch('https://formspree.io/f/mwpaproy', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          service: formData.service,
+          message: formData.message,
+          _subject: `Contact Form Submission - ${formData.service || 'General Inquiry'}`,
+        }),
       });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          service: '',
+          message: ''
+        });
+      } else {
+        throw new Error('Form submission failed');
+      }
     } catch (error) {
       console.error('Error submitting form:', error);
+      alert('There was an error submitting the form. Please try again.');
     }
   };
 
@@ -56,7 +74,8 @@ const Contact: React.FC = () => {
       icon: MapPin,
       title: 'Visit Our Office',
       details: ['Hyderabad, Telangana, India'],
-      color: 'text-red-500'
+      color: 'text-red-500',
+      link: 'https://share.google/R9nhR2vue7afL2ki1'
     },
     {
       icon: Phone,
@@ -121,6 +140,12 @@ const Contact: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50">
+      <SEO
+        title="Contact Us - Get Free Study Abroad Consultation in Hyderabad"
+        description="Contact Acquire Overseas Education in Hyderabad for free study abroad consultation. Call +91-95156-12909 or email info@acquireoverseas.in. Expert guidance for study in USA, UK, Canada, Australia, Germany."
+        keywords="contact study abroad consultancy Hyderabad, study abroad consultation Hyderabad, acquire overseas education contact, visa consultancy contact Hyderabad, education consultant Hyderabad phone number"
+        canonicalUrl="https://acquireoverseas.in/lets-start-your-journey"
+      />
       {/* Hero Section */}
       <section className="relative py-12 md:py-16 overflow-hidden bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600">
         {/* Background Image */}
@@ -154,28 +179,28 @@ const Contact: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-white/80 backdrop-blur-sm">
+      <section className="py-8 md:py-10 bg-white/80 backdrop-blur-sm">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-6"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-700 rounded-full text-sm font-semibold mb-4">
-              <Sparkles className="w-4 h-4 mr-2" />
+            <div className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-700 rounded-full text-xs font-medium mb-2">
+              <Sparkles className="w-3 h-3 mr-1.5" />
               Why Contact Us
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-indigo-800 bg-clip-text text-transparent mb-6">
-              Get Expert <span className="text-blue-600">Guidance</span>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+              Get Expert Guidance
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-sm md:text-base text-gray-600 max-w-2xl mx-auto">
               Our certified education consultants are here to help you navigate the complex world of study abroad with confidence.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
@@ -183,13 +208,13 @@ const Contact: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group text-center p-8 rounded-2xl bg-white/60 backdrop-blur-sm border border-white/50 hover:bg-white/80 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className="group text-center p-4 rounded-xl bg-white/60 backdrop-blur-sm border border-white/50 hover:bg-white/80 hover:shadow-lg transition-all duration-300"
               >
-                <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className={`w-8 h-8 ${feature.color}`} />
+                <div className="w-12 h-12 mx-auto mb-3 rounded-xl bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className={`w-6 h-6 ${feature.color}`} />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                <h3 className="text-base font-bold text-gray-900 mb-2">{feature.title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -340,8 +365,15 @@ const Contact: React.FC = () => {
                       <h4 className="text-lg font-semibold text-white mb-2">{info.title}</h4>
                       {info.details.map((detail, idx) => (
                         info.link ? (
-                          <a key={idx} href={info.link} className="text-white/80 hover:text-white transition-colors">
-                            {detail}
+                          <a 
+                            key={idx} 
+                            href={info.link} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-white/80 hover:text-white transition-colors inline-flex items-center group"
+                          >
+                            <span>{detail}</span>
+                            <MapPin className="w-4 h-4 ml-2 group-hover:text-red-400 transition-colors" />
                           </a>
                         ) : (
                           <p key={idx} className="text-white/80">{detail}</p>
@@ -354,6 +386,67 @@ const Contact: React.FC = () => {
 
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Google Maps Section */}
+      <section className="py-12 md:py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="max-w-6xl mx-auto"
+          >
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Find Us on Google Maps
+              </h2>
+              <p className="text-lg text-gray-600">
+                Visit our office or get directions
+              </p>
+            </div>
+            <div className="rounded-xl overflow-hidden shadow-2xl border border-gray-200">
+              {/* Google Maps Embed - Update embed URL by visiting https://share.google/R9nhR2vue7afL2ki1 and clicking Share > Embed a map */}
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15226.8818!2d78.486813!3d17.4489!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDI2JzU2LjAiTiA3OMKwMjknMTIuNSJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                width="100%"
+                height="450"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full"
+                title="Acquire Overseas Education Location"
+              ></iframe>
+              <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-4 text-center">
+                <a
+                  href="https://share.google/R9nhR2vue7afL2ki1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-white hover:text-yellow-300 transition-colors font-semibold"
+                >
+                  <MapPin className="w-5 h-5 mr-2" />
+                  <span>Open in Google Maps</span>
+                </a>
+              </div>
+            </div>
+            <div className="mt-4 text-center text-sm text-gray-500">
+              <p>
+                To get the embed URL, visit the{' '}
+                <a 
+                  href="https://share.google/R9nhR2vue7afL2ki1" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:underline"
+                >
+                  Google Maps location
+                </a>
+                {' '}and click "Share" → "Embed a map" to copy the iframe code.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
 

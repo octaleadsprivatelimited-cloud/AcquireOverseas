@@ -59,11 +59,28 @@ const Hero: React.FC = () => {
     setSubmitStatus('idle');
 
     try {
-      // Form submission disabled - contact form functionality removed
-      // You can implement your own form handling here
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', phone: '', service: '' });
-      setTimeout(() => setSubmitStatus('idle'), 5000);
+      const response = await fetch('https://formspree.io/f/mwpaproy', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          service: formData.service,
+          _subject: `Hero Form Submission - ${formData.service || 'General Inquiry'}`,
+          _source: 'Hero Section',
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', phone: '', service: '' });
+        setTimeout(() => setSubmitStatus('idle'), 5000);
+      } else {
+        throw new Error('Form submission failed');
+      }
     } catch (error) {
       setSubmitStatus('error');
     } finally {

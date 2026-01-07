@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 import { Award, CheckCircle, Users, Clock, Shield, ArrowRight } from 'lucide-react';
 const SkillAssessment: React.FC = () => {
 
@@ -21,6 +22,12 @@ const SkillAssessment: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Academic Profile Assessment - Profile Evaluation for Study Abroad"
+        description="Comprehensive academic profile assessment including academic evaluation, eligibility assessment, profile matching, and improvement guidance. Expert profile assessment from Acquire Overseas Education."
+        keywords="academic profile assessment, profile evaluation study abroad, academic assessment abroad, eligibility assessment study abroad, profile matching study abroad"
+        canonicalUrl="https://acquireoverseas.in/academic-profile-assessment"
+      />
       <section className="relative py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
