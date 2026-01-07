@@ -54,19 +54,6 @@ const Footer: React.FC = () => {
     { name: 'Student Visa Extension', path: '/student-visa-extension-services' }
   ];
 
-  // Resources & Support (commented out - not currently used)
-  // const resources = [
-  //   { name: 'Blog & Resources', path: '/blog-resources' },
-  //   { name: 'Our Portfolio', path: '/our-portfolio' },
-  //   { name: 'Success Stories', path: '/success-stories' },
-  //   { name: 'Careers', path: '/build-your-career-with-us' },
-  //   { name: 'Privacy Policy', path: '/privacy-policy' },
-  //   { name: 'Terms of Service', path: '/terms-of-service' },
-  //   { name: 'Sitemap', path: '/sitemap' }
-  // ];
-
-  // const socialLinks: any[] = [];
-
   const trustBadges = [
     { icon: Award, text: '98% Success Rate' },
     { icon: Shield, text: 'Secure & Trusted' },
@@ -254,9 +241,9 @@ const Footer: React.FC = () => {
               <Link to="/terms-of-service" className="text-slate-500 hover:text-white transition-colors">
                 Terms
               </Link>
-              <Link to="/sitemap" className="text-slate-500 hover:text-white transition-colors">
+              <a href="/sitemap.xml" className="text-slate-500 hover:text-white transition-colors">
                 Sitemap
-              </Link>
+              </a>
             </div>
           </div>
         </div>
