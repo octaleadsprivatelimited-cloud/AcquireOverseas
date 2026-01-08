@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import { 
   GraduationCap, 
   UserCheck,
@@ -102,6 +103,12 @@ const Services: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50">
+      <SEO
+        title="Comprehensive Education Solutions - Study Abroad Services"
+        description="Complete education solutions including study abroad programs, visa services, university selection, course selection, application support, document attestation, and visa extension services in Hyderabad, India."
+        keywords="study abroad programs Hyderabad, visa services Hyderabad, university selection, course selection, application support, document attestation, visa extension services, student visa application Hyderabad, education consultation Hyderabad"
+        canonicalUrl="https://acquireoverseas.in/comprehensive-education-solutions"
+      />
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600">
         {/* Background Image */}

@@ -1,10 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 import { Shield } from 'lucide-react';
 const PrivacyPolicy: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Privacy Policy - Data Protection and Privacy"
+        description="Privacy policy of Acquire Overseas Education. Learn how we collect, use, and protect your personal information in compliance with data protection regulations."
+        keywords="privacy policy, data protection, privacy policy study abroad consultancy"
+        canonicalUrl="https://acquireoverseas.in/privacy-policy"
+        noindex={true}
+      />
       <section className="relative py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
