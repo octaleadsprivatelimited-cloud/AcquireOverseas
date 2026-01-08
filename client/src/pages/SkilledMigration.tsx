@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Globe, CheckCircle, Mail, Phone, ArrowRight, MessageCircle, Award, TrendingUp, Plane, FileText, ClipboardCheck, ShieldCheck, Target } from 'lucide-react';
+import { Globe, CheckCircle, Mail, ArrowRight, Award, TrendingUp, Plane, FileText, ClipboardCheck, ShieldCheck, Target } from 'lucide-react';
 const SkilledMigration = () => {
 
   const [formData, setFormData] = useState({

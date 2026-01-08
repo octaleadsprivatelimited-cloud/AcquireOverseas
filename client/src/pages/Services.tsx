@@ -3,10 +3,6 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   GraduationCap, 
-  Briefcase, 
-  Plane, 
-  Heart, 
-  Building2,
   UserCheck,
   CheckCircle,
   ArrowRight,

@@ -7,7 +7,6 @@ import {
   Clock, 
   Send,
   CheckCircle,
-  ArrowRight,
   Sparkles,
   Shield,
   Award,
