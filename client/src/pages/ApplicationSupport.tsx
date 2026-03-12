@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FileText, CheckCircle, ArrowRight, BookOpen, PenTool, Upload, Award } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const ApplicationSupport: React.FC = () => {
 
@@ -33,6 +34,12 @@ const ApplicationSupport: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Application Support Services - University Application Assistance"
+        description="Complete university application support services. Expert help with personal statements, essays, document preparation, and application submission. 98% success rate. Free consultation."
+        keywords="application support, university application help, personal statement writing, essay assistance, document preparation, application submission, study abroad application"
+        canonicalUrl="https://acquireoverseas.in/application-support"
+      />
       <section className="relative py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"

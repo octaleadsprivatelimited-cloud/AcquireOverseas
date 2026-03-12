@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { generateOrganizationSchema, generateLocalBusinessSchema, defaultOrganizationData } from '../utils/schemaMarkup';
 
 const Home: React.FC = () => {
 
@@ -78,6 +79,14 @@ const Home: React.FC = () => {
     { name: 'Sunita P.', role: 'Student', country: 'United Kingdom', text: 'Got into top UK university thanks to Acquire Overseas Education!', rating: 5 }
   ];
 
+  // Generate schema markup
+  const organizationSchema = generateOrganizationSchema(defaultOrganizationData);
+  const localBusinessSchema = generateLocalBusinessSchema({
+    ...defaultOrganizationData,
+    priceRange: '$$',
+    openingHours: ['Mo-Fr 09:00-18:00', 'Sa 10:00-16:00'],
+  });
+
   return (
     <div className="min-h-screen bg-white">
       <SEO
@@ -85,6 +94,10 @@ const Home: React.FC = () => {
         description="Acquire Overseas Education - Leading study abroad consultancy in Hyderabad, India. Expert guidance for study in USA, UK, Canada, Australia, Germany. 98% success rate, 5000+ students helped. Free consultation for study abroad programs, visa services, university selection & more."
         keywords="study abroad consultancy Hyderabad, visa consultancy Hyderabad, education consultancy India, study in USA from India, study in UK from India, study in Canada from India, study in Australia from India, study in Germany from India, student visa services Hyderabad, overseas education consultant Hyderabad, best visa consultancy Hyderabad, study visa consultant Telangana"
         canonicalUrl="https://acquireoverseas.in/"
+        schema={organizationSchema}
+        breadcrumbs={[
+          { name: 'Home', url: 'https://acquireoverseas.in/' }
+        ]}
       />
       <Hero />
 

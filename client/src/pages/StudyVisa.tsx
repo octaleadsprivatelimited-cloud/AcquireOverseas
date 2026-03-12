@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import { 
   GraduationCap, 
@@ -306,8 +307,35 @@ const StudyVisa: React.FC = () => {
         </div>
       </section>
 
-      {/* Process Section */}
+      {/* Introduction Section */}
       <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Introduction to Study Abroad Programs</h2>
+              <div className="prose prose-lg max-w-none text-gray-700 space-y-4">
+                <p>
+                  Studying abroad is a transformative experience that opens doors to world-class education, diverse cultures, and exceptional career opportunities. At Acquire Overseas Education, we specialize in helping students from India realize their dreams of studying at top universities in the USA, UK, Canada, Australia, Germany, and other premier destinations.
+                </p>
+                <p>
+                  Our comprehensive study abroad programs are designed to provide end-to-end support, from initial consultation and university selection to application submission and visa processing. With over 15 years of experience and a 98% success rate, we have helped more than 5,000 students secure admissions to prestigious universities worldwide.
+                </p>
+                <p>
+                  Whether you're interested in undergraduate programs, postgraduate studies, research opportunities, or professional certifications, our expert team guides you through every step of the process. We understand that each student has unique academic goals, financial considerations, and career aspirations, which is why we provide personalized guidance tailored to your specific needs.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -316,13 +344,13 @@ const StudyVisa: React.FC = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Process</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Comprehensive Process</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We follow a systematic approach to ensure your university application and study visa process is successful.
+              We follow a systematic, proven approach to ensure your university application and study visa process is successful.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
             {[
               { step: '01', title: 'Initial Consultation', description: 'Free assessment of your profile and study goals' },
               { step: '02', title: 'University Selection', description: 'Help you choose the right university and program' },
@@ -344,6 +372,186 @@ const StudyVisa: React.FC = () => {
                 <p className="text-gray-600">{process.description}</p>
               </motion.div>
             ))}
+          </div>
+
+          <div className="max-w-4xl mx-auto bg-white rounded-2xl p-8 shadow-lg">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Detailed Process Breakdown</h3>
+            <div className="space-y-6 text-gray-700">
+              <div>
+                <h4 className="text-xl font-semibold text-gray-900 mb-2">Step 1: Initial Consultation & Profile Assessment</h4>
+                <p>We begin with a comprehensive free consultation where we assess your academic background, career goals, financial situation, and personal preferences. Our experienced counselors analyze your profile to identify the best study destinations and programs that align with your aspirations.</p>
+              </div>
+              <div>
+                <h4 className="text-xl font-semibold text-gray-900 mb-2">Step 2: University & Course Selection</h4>
+                <p>Based on your profile assessment, we help you shortlist universities and courses that match your academic qualifications and career objectives. We provide detailed information about university rankings, program curriculum, faculty expertise, campus facilities, and career outcomes. Learn more about our <Link to="/university-selection" className="text-primary-600 hover:text-primary-700 font-semibold underline">university selection services</Link> and <Link to="/course-selection" className="text-primary-600 hover:text-primary-700 font-semibold underline">course selection guidance</Link>.</p>
+              </div>
+              <div>
+                <h4 className="text-xl font-semibold text-gray-900 mb-2">Step 3: Application Preparation & Submission</h4>
+                <p>Our team assists you with every aspect of the application process, including personal statement writing, essay preparation, recommendation letters, transcript verification, and portfolio development. We ensure all applications are submitted before deadlines and meet the highest standards. For comprehensive support, explore our <Link to="/application-support" className="text-primary-600 hover:text-primary-700 font-semibold underline">application support services</Link>.</p>
+              </div>
+              <div>
+                <h4 className="text-xl font-semibold text-gray-900 mb-2">Step 4: Visa Application & Interview Preparation</h4>
+                <p>Once you receive admission offers, we guide you through the student visa application process, including document preparation, financial proof organization, and interview preparation. Our visa experts ensure your application is complete and increases your chances of approval.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Eligibility Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Eligibility Requirements</h2>
+              <div className="prose prose-lg max-w-none text-gray-700 space-y-4">
+                <p>
+                  Eligibility requirements for study abroad programs vary by country, university, and program level. However, there are common criteria that most institutions look for:
+                </p>
+                <div className="bg-gray-50 rounded-xl p-6 space-y-4">
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Academic Requirements</h4>
+                    <p>Most universities require a minimum GPA of 3.0 (or equivalent) for undergraduate programs and 3.5+ for postgraduate programs. Specific subject prerequisites may apply for certain courses like engineering, medicine, or law.</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">English Language Proficiency</h4>
+                    <p>International students must demonstrate English proficiency through standardized tests such as IELTS (typically 6.0-7.5), TOEFL (80-100), or PTE Academic (58-70). Requirements vary by university and program.</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Financial Requirements</h4>
+                    <p>Students must provide proof of sufficient funds to cover tuition fees and living expenses for at least the first year of study. This typically ranges from $20,000 to $50,000 depending on the destination and program.</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Age Requirements</h4>
+                    <p>Most universities accept students who are at least 17-18 years old for undergraduate programs. There's usually no upper age limit for postgraduate programs, though some professional programs may have specific requirements.</p>
+                  </div>
+                </div>
+                <p>
+                  Our team helps you understand and meet all eligibility requirements for your chosen destination and program. We provide guidance on improving your profile if needed and help you identify alternative options if you don't meet certain criteria. For detailed information about specific programs, explore our <Link to="/university-selection" className="text-primary-600 hover:text-primary-700 font-semibold underline">university selection services</Link> and <Link to="/course-selection" className="text-primary-600 hover:text-primary-700 font-semibold underline">course selection guidance</Link>.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Timeline Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Application Timeline</h2>
+              <div className="bg-white rounded-2xl p-8 shadow-lg">
+                <div className="space-y-6">
+                  <div className="border-l-4 border-primary-600 pl-6">
+                    <h4 className="text-xl font-semibold text-gray-900 mb-2">12-18 Months Before Intake</h4>
+                    <p className="text-gray-700">Research universities and programs, prepare for standardized tests (IELTS/TOEFL, SAT/GRE/GMAT), and begin gathering academic documents.</p>
+                  </div>
+                  <div className="border-l-4 border-primary-600 pl-6">
+                    <h4 className="text-xl font-semibold text-gray-900 mb-2">9-12 Months Before Intake</h4>
+                    <p className="text-gray-700">Take standardized tests, finalize university shortlist, start preparing application documents (personal statements, essays, recommendation letters).</p>
+                  </div>
+                  <div className="border-l-4 border-primary-600 pl-6">
+                    <h4 className="text-xl font-semibold text-gray-900 mb-2">6-9 Months Before Intake</h4>
+                    <p className="text-gray-700">Submit university applications before deadlines (varies by country: January for UK, December-March for USA, varies for others), prepare financial documents.</p>
+                  </div>
+                  <div className="border-l-4 border-primary-600 pl-6">
+                    <h4 className="text-xl font-semibold text-gray-900 mb-2">3-6 Months Before Intake</h4>
+                    <p className="text-gray-700">Receive admission offers, accept offer and pay deposit, apply for student visa, complete medical examinations, arrange accommodation.</p>
+                  </div>
+                  <div className="border-l-4 border-primary-600 pl-6">
+                    <h4 className="text-xl font-semibold text-gray-900 mb-2">1-3 Months Before Intake</h4>
+                    <p className="text-gray-700">Receive visa approval, book flights, attend pre-departure orientation, finalize travel arrangements, prepare for departure.</p>
+                  </div>
+                </div>
+                <p className="mt-6 text-gray-600 italic">
+                  Note: Timelines vary by country and university. Our team provides specific timelines based on your chosen destination and intake period.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Common questions about our study abroad programs and services.
+            </p>
+          </motion.div>
+
+          <div className="max-w-4xl mx-auto space-y-6">
+            {[
+              {
+                question: 'How much does it cost to study abroad?',
+                answer: 'Costs vary significantly by country and program. On average, annual tuition ranges from $10,000-$50,000, with living expenses adding $12,000-$25,000 per year. We help you identify affordable options and scholarship opportunities to reduce costs.'
+              },
+              {
+                question: 'Can I work while studying abroad?',
+                answer: 'Yes, most countries allow international students to work part-time (typically 20 hours per week during term time) and full-time during holidays. This helps offset living costs and provides valuable work experience.'
+              },
+              {
+                question: 'What if I don\'t meet the English language requirements?',
+                answer: 'Many universities offer English language preparation courses or conditional admission programs. We can help you find programs that allow you to improve your English skills while preparing for your degree program.'
+              },
+              {
+                question: 'How long does the entire process take?',
+                answer: 'The complete process from initial consultation to visa approval typically takes 12-18 months. This includes university research, test preparation, application submission, admission processing, and visa application.'
+              },
+              {
+                question: 'Do you help with scholarships?',
+                answer: (
+                  <>
+                    Yes, we provide comprehensive scholarship guidance, including identifying available scholarships, preparing scholarship applications, and maximizing your chances of receiving financial aid. Learn more about{' '}
+                    <Link to="/scholarships-to-study-abroad" className="text-primary-600 hover:text-primary-700 font-semibold underline">
+                      scholarship opportunities
+                    </Link>{' '}
+                    and how we can help you secure funding for your studies.
+                  </>
+                )
+              }
+            ].map((faq, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-gray-50 rounded-xl p-6"
+              >
+                <h4 className="text-xl font-semibold text-gray-900 mb-3">{faq.question}</h4>
+                <p className="text-gray-700">{faq.answer}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <a
+              href="/frequently-asked-questions"
+              className="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold"
+            >
+              View All FAQs
+              <ArrowRight size={16} className="ml-2" />
+            </a>
           </div>
         </div>
       </section>

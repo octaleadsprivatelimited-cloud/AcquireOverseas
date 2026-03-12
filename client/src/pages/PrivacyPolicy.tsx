@@ -11,7 +11,7 @@ const PrivacyPolicy: React.FC = () => {
         description="Privacy policy of Acquire Overseas Education. Learn how we collect, use, and protect your personal information in compliance with data protection regulations."
         keywords="privacy policy, data protection, privacy policy study abroad consultancy"
         canonicalUrl="https://acquireoverseas.in/privacy-policy"
-        noindex={true}
+        noindex={false}
       />
       <section className="relative py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white overflow-hidden">
         <div 

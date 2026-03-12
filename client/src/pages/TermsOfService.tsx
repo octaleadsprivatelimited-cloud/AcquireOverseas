@@ -11,7 +11,7 @@ const TermsOfService: React.FC = () => {
         description="Terms of service for Acquire Overseas Education. Read our terms and conditions for using our study abroad consultancy services."
         keywords="terms of service, terms and conditions, study abroad consultancy terms"
         canonicalUrl="https://acquireoverseas.in/terms-of-service"
-        noindex={true}
+        noindex={false}
       />
       <section className="relative py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white overflow-hidden">
         <div 

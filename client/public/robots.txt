@@ -1,5 +1,11 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://your-domain.com/sitemap.xml
+# Disallow admin and private pages
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+Disallow: /api/
 
+# Sitemap location
+Sitemap: https://acquireoverseas.in/sitemap.xml

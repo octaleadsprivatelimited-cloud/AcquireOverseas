@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Building2, CheckCircle, Users, Target, ArrowRight, Award, TrendingUp, Star } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const UniversitySelection: React.FC = () => {
 
@@ -40,6 +41,12 @@ const UniversitySelection: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="University Selection Services - Find the Perfect University for You"
+        description="Expert university selection guidance for study abroad. Profile matching, ranking analysis, admission requirements review, and personalized university recommendations. Free consultation."
+        keywords="university selection, study abroad universities, university matching, university ranking, university admission, best universities, university selection consultancy"
+        canonicalUrl="https://acquireoverseas.in/university-selection"
+      />
       <section className="relative py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"

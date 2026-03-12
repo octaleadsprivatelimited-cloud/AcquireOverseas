@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { BookOpen, CheckCircle, Target, ArrowRight, Award, TrendingUp, Briefcase } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const CourseSelection: React.FC = () => {
 
@@ -40,6 +41,12 @@ const CourseSelection: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Course Selection Services - Choose the Right Course for Your Career"
+        description="Expert course selection guidance for study abroad. Career assessment, course matching, industry trend analysis, and personalized course recommendations. Free consultation."
+        keywords="course selection, study abroad courses, career assessment, course matching, study program selection, university course guidance, course selection consultancy"
+        canonicalUrl="https://acquireoverseas.in/course-selection"
+      />
       <section className="relative py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
