@@ -539,7 +539,7 @@ const StudyVisa: React.FC = () => {
                 className="bg-gray-50 rounded-xl p-6"
               >
                 <h4 className="text-xl font-semibold text-gray-900 mb-3">{faq.question}</h4>
-                <p className="text-gray-700">{faq.answer}</p>
+                <div className="text-gray-700">{faq.answer}</div>
               </motion.div>
             ))}
           </div>

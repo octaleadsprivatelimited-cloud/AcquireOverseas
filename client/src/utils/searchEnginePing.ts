@@ -65,7 +65,7 @@ export const submitToGoogleIndexing = async (
 
 // Notify search engines about new or updated page
 export const notifySearchEngines = async (
-  pageUrl: string,
+  _pageUrl: string,
   sitemapUrl: string = 'https://acquireoverseas.in/sitemap.xml'
 ): Promise<void> => {
   // Ping search engines about sitemap update
@@ -73,5 +73,5 @@ export const notifySearchEngines = async (
   
   // Optionally submit individual URL to Google Indexing API
   // This requires API key setup
-  // await submitToGoogleIndexing(pageUrl, process.env.GOOGLE_INDEXING_API_KEY);
+  // await submitToGoogleIndexing(_pageUrl, process.env.GOOGLE_INDEXING_API_KEY);
 };

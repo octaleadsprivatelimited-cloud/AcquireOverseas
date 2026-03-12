@@ -12,7 +12,7 @@ import {
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { generateOrganizationSchema, generateLocalBusinessSchema, defaultOrganizationData } from '../utils/schemaMarkup';
+import { generateOrganizationSchema, defaultOrganizationData } from '../utils/schemaMarkup';
 
 const Home: React.FC = () => {
 
@@ -81,11 +81,6 @@ const Home: React.FC = () => {
 
   // Generate schema markup
   const organizationSchema = generateOrganizationSchema(defaultOrganizationData);
-  const localBusinessSchema = generateLocalBusinessSchema({
-    ...defaultOrganizationData,
-    priceRange: '$$',
-    openingHours: ['Mo-Fr 09:00-18:00', 'Sa 10:00-16:00'],
-  });
 
   return (
     <div className="min-h-screen bg-white">
