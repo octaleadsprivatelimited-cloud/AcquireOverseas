@@ -26,7 +26,7 @@ const SkillAssessment: React.FC = () => {
         title="Academic Profile Assessment - Profile Evaluation for Study Abroad"
         description="Comprehensive academic profile assessment including academic evaluation, eligibility assessment, profile matching, and improvement guidance. Expert profile assessment from Acquire Overseas Education."
         keywords="academic profile assessment, profile evaluation study abroad, academic assessment abroad, eligibility assessment study abroad, profile matching study abroad"
-        canonicalUrl="https://acquireoverseas.in/skill-assessment"
+        canonicalUrl="https://www.acquireoverseas.in/skill-assessment"
       />
       <section className="relative py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white overflow-hidden">
         <div 

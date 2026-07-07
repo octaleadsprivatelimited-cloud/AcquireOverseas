@@ -136,8 +136,8 @@ export const generateBreadcrumbSchema = (data: BreadcrumbSchema) => {
 // Default organization data for Acquire Overseas Education
 export const defaultOrganizationData: OrganizationSchema = {
   name: 'Acquire Overseas Education',
-  url: 'https://acquireoverseas.in',
-  logo: 'https://acquireoverseas.in/logo.png',
+  url: 'https://www.acquireoverseas.in',
+  logo: 'https://www.acquireoverseas.in/logo.png',
   description: 'Leading study abroad and visa consultancy in Hyderabad, India. Expert guidance for study in USA, UK, Canada, Australia, Germany. 98% success rate, 5000+ students helped.',
   address: {
     streetAddress: 'Hyderabad',

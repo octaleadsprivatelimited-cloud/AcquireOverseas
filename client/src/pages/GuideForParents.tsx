@@ -89,7 +89,7 @@ const GuideForParents: React.FC = () => {
         title="Guide for Parents - Supporting Your Child's Study Abroad Journey"
         description="Complete guide for parents on supporting your child's study abroad journey. Learn about costs, safety, accommodation, visa process, and how to help your child succeed abroad. Expert advice from Acquire Overseas Education."
         keywords="study abroad guide for parents, parents guide study abroad, study abroad for parents, helping child study abroad, study abroad safety parents, study abroad expenses parents"
-        canonicalUrl="https://acquireoverseas.in/guide-for-parents"
+        canonicalUrl="https://www.acquireoverseas.in/guide-for-parents"
       />
       {/* Hero Section */}
       <section className="relative py-12 md:py-20 bg-gradient-to-br from-pink-900 via-purple-900 to-indigo-900 text-white overflow-hidden">

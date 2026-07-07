@@ -21,7 +21,7 @@ const Portfolio: React.FC = () => {
         title="Our Portfolio - Success Stories and Achievements"
         description="View our portfolio of successful study abroad cases including university admissions, scholarship achievements, visa approvals, and student success stories. See our track record at Acquire Overseas Education."
         keywords="study abroad portfolio, success stories study abroad, student achievements, study abroad success cases, portfolio study abroad consultancy"
-        canonicalUrl="https://acquireoverseas.in/portfolio"
+        canonicalUrl="https://www.acquireoverseas.in/portfolio"
       />
       <section className="py-16">
         <div className="container mx-auto px-4">

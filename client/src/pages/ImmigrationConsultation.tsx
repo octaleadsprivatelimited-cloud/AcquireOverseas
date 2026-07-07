@@ -26,7 +26,7 @@ const ImmigrationConsultation: React.FC = () => {
         title="Education Consultation - Free Study Abroad Consultation Services"
         description="Free education consultation for studying abroad including profile assessment, study plan creation, university selection, and ongoing support. Expert education consultation from Acquire Overseas Education in Hyderabad."
         keywords="education consultation Hyderabad, study abroad consultation, free education consultation, profile assessment study abroad, education consultancy free consultation"
-        canonicalUrl="https://acquireoverseas.in/immigration-consultation"
+        canonicalUrl="https://www.acquireoverseas.in/immigration-consultation"
       />
       <section className="relative py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white overflow-hidden">
         <div className="absolute inset-0">

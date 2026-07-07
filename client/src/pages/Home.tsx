@@ -88,10 +88,10 @@ const Home: React.FC = () => {
         title="Best Study Abroad & Visa Consultancy in Hyderabad, India"
         description="Acquire Overseas Education - Leading study abroad consultancy in Hyderabad, India. Expert guidance for study in USA, UK, Canada, Australia, Germany. 98% success rate, 5000+ students helped. Free consultation for study abroad programs, visa services, university selection & more."
         keywords="study abroad consultancy Hyderabad, visa consultancy Hyderabad, education consultancy India, study in USA from India, study in UK from India, study in Canada from India, study in Australia from India, study in Germany from India, student visa services Hyderabad, overseas education consultant Hyderabad, best visa consultancy Hyderabad, study visa consultant Telangana"
-        canonicalUrl="https://acquireoverseas.in/"
+        canonicalUrl="https://www.acquireoverseas.in/"
         schema={organizationSchema}
         breadcrumbs={[
-          { name: 'Home', url: 'https://acquireoverseas.in/' }
+          { name: 'Home', url: 'https://www.acquireoverseas.in/' }
         ]}
       />
       <Hero />

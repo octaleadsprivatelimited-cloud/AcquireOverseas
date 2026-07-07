@@ -45,7 +45,7 @@ const UniversitySelection: React.FC = () => {
         title="University Selection Services - Find the Perfect University for You"
         description="Expert university selection guidance for study abroad. Profile matching, ranking analysis, admission requirements review, and personalized university recommendations. Free consultation."
         keywords="university selection, study abroad universities, university matching, university ranking, university admission, best universities, university selection consultancy"
-        canonicalUrl="https://acquireoverseas.in/university-selection"
+        canonicalUrl="https://www.acquireoverseas.in/university-selection"
       />
       <section className="relative py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white overflow-hidden">
         <div 

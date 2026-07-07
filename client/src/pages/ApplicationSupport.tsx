@@ -38,7 +38,7 @@ const ApplicationSupport: React.FC = () => {
         title="Application Support Services - University Application Assistance"
         description="Complete university application support services. Expert help with personal statements, essays, document preparation, and application submission. 98% success rate. Free consultation."
         keywords="application support, university application help, personal statement writing, essay assistance, document preparation, application submission, study abroad application"
-        canonicalUrl="https://acquireoverseas.in/application-support"
+        canonicalUrl="https://www.acquireoverseas.in/application-support"
       />
       <section className="relative py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white overflow-hidden">
         <div 

@@ -93,7 +93,7 @@ const ScholarshipsToStudyAbroad: React.FC = () => {
         title="Scholarships to Study Abroad - Scholarship Opportunities for International Students"
         description="Find scholarships to study abroad in USA, UK, Canada, Australia, Germany. Learn about merit scholarships, need-based scholarships, government scholarships, and how to apply. Get expert scholarship guidance from Acquire Overseas Education."
         keywords="study abroad scholarships, scholarships for international students, study abroad scholarship India, merit scholarships abroad, need based scholarships, government scholarships study abroad, how to get scholarship abroad"
-        canonicalUrl="https://acquireoverseas.in/scholarships-to-study-abroad"
+        canonicalUrl="https://www.acquireoverseas.in/scholarships-to-study-abroad"
       />
       {/* Hero Section */}
       <section className="relative py-12 md:py-20 bg-gradient-to-br from-yellow-900 via-amber-900 to-orange-900 text-white overflow-hidden">

@@ -109,7 +109,7 @@ const StudyVisa: React.FC = () => {
         title="Study Abroad Programs - Best Universities in USA, UK, Canada, Australia"
         description="Study abroad programs at top universities in USA, UK, Canada, Australia, Germany. Expert guidance for admissions, scholarships, visa applications. 98% success rate. Free consultation in Hyderabad."
         keywords="study abroad programs, study in USA, study in UK, study in Canada, study in Australia, study in Germany, international study programs, overseas education programs, study abroad universities, student visa programs"
-        canonicalUrl="https://acquireoverseas.in/study-visa"
+        canonicalUrl="https://www.acquireoverseas.in/study-visa"
       />
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white overflow-hidden">

@@ -9,7 +9,7 @@ export interface SitemapUrl {
 }
 
 export const generateSitemap = (): string => {
-  const baseUrl = 'https://acquireoverseas.in';
+  const baseUrl = 'https://www.acquireoverseas.in';
   const currentDate = new Date().toISOString().split('T')[0];
 
   // Define all indexable pages
@@ -72,7 +72,7 @@ export const generateSitemap = (): string => {
 
 // Function to add blog posts to sitemap
 export const addBlogPostsToSitemap = (sitemapXml: string, blogPosts: Array<{ slug: string; date: string }>): string => {
-  const baseUrl = 'https://acquireoverseas.in';
+  const baseUrl = 'https://www.acquireoverseas.in';
   
   // Remove closing tag
   let xml = sitemapXml.replace('</urlset>', '');

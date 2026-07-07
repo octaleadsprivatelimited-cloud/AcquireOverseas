@@ -8,4 +8,4 @@ Disallow: /login
 Disallow: /api/
 
 # Sitemap location
-Sitemap: https://acquireoverseas.in/sitemap.xml
+Sitemap: https://www.acquireoverseas.in/sitemap.xml

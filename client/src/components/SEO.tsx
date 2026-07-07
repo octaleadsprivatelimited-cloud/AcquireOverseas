@@ -16,7 +16,7 @@ const SEO: React.FC<SEOProps> = ({
   title,
   description,
   keywords,
-  ogImage = 'https://acquireoverseas.in/logo.png',
+  ogImage = 'https://www.acquireoverseas.in/logo.png',
   ogType = 'website',
   canonicalUrl,
   noindex = false,
@@ -27,7 +27,7 @@ const SEO: React.FC<SEOProps> = ({
     const baseTitle = 'Acquire Overseas Education';
     const baseDescription = 'Leading study abroad and visa consultancy in Hyderabad, India. Expert guidance for study in USA, UK, Canada, Australia, Germany. 98% success rate, 5000+ students helped.';
     const baseKeywords = 'study abroad consultancy Hyderabad, visa consultancy Hyderabad, education consultancy India, study in USA, study in UK, study in Canada, study in Australia, student visa services Hyderabad';
-    const baseUrl = 'https://acquireoverseas.in';
+    const baseUrl = 'https://www.acquireoverseas.in';
 
     // Legacy to new path mappings for SEO canonical normalization
     const pathMapping: { [key: string]: string } = {

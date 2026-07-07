@@ -67,7 +67,7 @@ const StudyAbroadBenefits: React.FC = () => {
         title="Study Abroad Benefits - Advantages of Studying Overseas"
         description="Discover the amazing benefits of studying abroad including career opportunities, cultural exposure, personal growth, language skills, global network, and academic excellence. Learn why studying abroad is worth it from Acquire Overseas Education."
         keywords="study abroad benefits, advantages of studying abroad, benefits of international education, why study abroad, study abroad advantages, career benefits study abroad, study abroad experience"
-        canonicalUrl="https://acquireoverseas.in/study-abroad-benefits"
+        canonicalUrl="https://www.acquireoverseas.in/study-abroad-benefits"
       />
       {/* Hero Section */}
       <section className="relative py-12 md:py-20 bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white overflow-hidden">

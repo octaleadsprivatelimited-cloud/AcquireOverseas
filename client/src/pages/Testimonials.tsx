@@ -92,7 +92,7 @@ const Testimonials: React.FC = () => {
         title="Success Stories - Student Testimonials and Reviews"
         description="Read success stories and testimonials from our students who have successfully studied abroad. Real experiences from students who got admission to top universities worldwide with Acquire Overseas Education."
         keywords="study abroad testimonials, student success stories, study abroad reviews, overseas education testimonials, study abroad feedback, student reviews study abroad"
-        canonicalUrl="https://acquireoverseas.in/testimonials"
+        canonicalUrl="https://www.acquireoverseas.in/testimonials"
       />
       {/* Hero Section */}
       <section className="py-20 relative overflow-hidden bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600">

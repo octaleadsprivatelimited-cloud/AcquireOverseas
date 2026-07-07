@@ -66,7 +66,7 @@ export const submitToGoogleIndexing = async (
 // Notify search engines about new or updated page
 export const notifySearchEngines = async (
   _pageUrl: string,
-  sitemapUrl: string = 'https://acquireoverseas.in/sitemap.xml'
+  sitemapUrl: string = 'https://www.acquireoverseas.in/sitemap.xml'
 ): Promise<void> => {
   // Ping search engines about sitemap update
   await pingSearchEngines(sitemapUrl);

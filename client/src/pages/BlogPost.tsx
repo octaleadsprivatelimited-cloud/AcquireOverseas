@@ -40,7 +40,7 @@ const BlogPost: React.FC = () => {
         title={post.title}
         description={post.excerpt || post.content.substring(0, 160)}
         keywords={post.tags.join(', ')}
-        canonicalUrl={`https://acquireoverseas.in/blog/${post.slug}`}
+        canonicalUrl={`https://www.acquireoverseas.in/blog/${post.slug}`}
       />
       {/* Hero Section */}
       <section className="relative py-16 bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 text-white">

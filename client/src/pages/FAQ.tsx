@@ -185,7 +185,7 @@ const FAQ: React.FC = () => {
         title="Frequently Asked Questions - Study Abroad & Visa FAQ"
         description="Find answers to common questions about study abroad programs, student visas, work visas, family visas, and business visas. Expert guidance from Acquire Overseas Education in Hyderabad."
         keywords="study abroad FAQ, student visa FAQ, visa questions, study abroad questions, overseas education FAQ, visa consultancy FAQ Hyderabad, education consultancy FAQ"
-        canonicalUrl="https://acquireoverseas.in/faq"
+        canonicalUrl="https://www.acquireoverseas.in/faq"
       />
       <section className="relative py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-30">

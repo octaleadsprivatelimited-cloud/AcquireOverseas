@@ -107,7 +107,7 @@ const Services: React.FC = () => {
         title="Comprehensive Education Solutions - Study Abroad Services"
         description="Complete education solutions including study abroad programs, visa services, university selection, course selection, application support, document attestation, and visa extension services in Hyderabad, India."
         keywords="study abroad programs Hyderabad, visa services Hyderabad, university selection, course selection, application support, document attestation, visa extension services, student visa application Hyderabad, education consultation Hyderabad"
-        canonicalUrl="https://acquireoverseas.in/services"
+        canonicalUrl="https://www.acquireoverseas.in/services"
       />
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600">

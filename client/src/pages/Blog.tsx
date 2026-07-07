@@ -13,7 +13,7 @@ const Blog: React.FC = () => {
         title="Blog & Resources - Study Abroad Articles and Guides"
         description="Read our blog articles on study abroad topics including study guides, visa tips, university information, country guides, scholarships, and study abroad advice. Expert insights from Acquire Overseas Education."
         keywords="study abroad blog, study abroad articles, study abroad guides, overseas education blog, study abroad tips, study abroad resources"
-        canonicalUrl="https://acquireoverseas.in/blog"
+        canonicalUrl="https://www.acquireoverseas.in/blog"
       />
       <section className="py-16">
         <div className="container mx-auto px-4">

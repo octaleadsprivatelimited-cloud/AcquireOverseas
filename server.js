@@ -37,7 +37,7 @@ app.use(compression({
 // CORS configuration
 const corsOptions = {
   origin: NODE_ENV === 'production' 
-    ? ['https://yourdomain.com', 'https://www.yourdomain.com'] 
+    ? ['https://acquireoverseas.in', 'https://www.acquireoverseas.in'] 
     : ['http://localhost:3000', 'http://localhost:3001'],
   credentials: true,
   optionsSuccessStatus: 200

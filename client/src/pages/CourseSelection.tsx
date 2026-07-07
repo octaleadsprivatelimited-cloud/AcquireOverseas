@@ -45,7 +45,7 @@ const CourseSelection: React.FC = () => {
         title="Course Selection Services - Choose the Right Course for Your Career"
         description="Expert course selection guidance for study abroad. Career assessment, course matching, industry trend analysis, and personalized course recommendations. Free consultation."
         keywords="course selection, study abroad courses, career assessment, course matching, study program selection, university course guidance, course selection consultancy"
-        canonicalUrl="https://acquireoverseas.in/course-selection"
+        canonicalUrl="https://www.acquireoverseas.in/course-selection"
       />
       <section className="relative py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white overflow-hidden">
         <div 
