@@ -74,24 +74,22 @@ function App() {
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
             
-            {/* Legacy Short Path Redirects */}
+            {/* Legacy Path Redirects */}
             <Route path="/about" element={<Navigate to="/about-us" replace />} />
-            
-            {/* Legacy Long Path Redirects */}
-            <Route path="/about-us" element={<Navigate to="/about-us" replace />} />
-            <Route path="/services" element={<Navigate to="/services" replace />} />
-            <Route path="/portfolio" element={<Navigate to="/portfolio" replace />} />
-            <Route path="/blog" element={<Navigate to="/blog" replace />} />
-            <Route path="/testimonials" element={<Navigate to="/testimonials" replace />} />
-            <Route path="/careers" element={<Navigate to="/careers" replace />} />
-            <Route path="/contact" element={<Navigate to="/contact" replace />} />
-            <Route path="/faq" element={<Navigate to="/faq" replace />} />
-            <Route path="/study-visa" element={<Navigate to="/study-visa" replace />} />
-            <Route path="/immigration-consultation" element={<Navigate to="/immigration-consultation" replace />} />
-            <Route path="/job-placement" element={<Navigate to="/job-placement" replace />} />
-            <Route path="/skill-assessment" element={<Navigate to="/skill-assessment" replace />} />
-            <Route path="/document-attestation" element={<Navigate to="/document-attestation" replace />} />
-            <Route path="/visa-extension" element={<Navigate to="/visa-extension" replace />} />
+            <Route path="/your-trusted-education-partner" element={<Navigate to="/about-us" replace />} />
+            <Route path="/comprehensive-education-solutions" element={<Navigate to="/services" replace />} />
+            <Route path="/our-portfolio" element={<Navigate to="/portfolio" replace />} />
+            <Route path="/blog-resources" element={<Navigate to="/blog" replace />} />
+            <Route path="/success-stories" element={<Navigate to="/testimonials" replace />} />
+            <Route path="/build-your-career-with-us" element={<Navigate to="/careers" replace />} />
+            <Route path="/lets-start-your-journey" element={<Navigate to="/contact" replace />} />
+            <Route path="/frequently-asked-questions" element={<Navigate to="/faq" replace />} />
+            <Route path="/study-abroad-programs" element={<Navigate to="/study-visa" replace />} />
+            <Route path="/education-consultation" element={<Navigate to="/immigration-consultation" replace />} />
+            <Route path="/career-counseling-services" element={<Navigate to="/job-placement" replace />} />
+            <Route path="/academic-profile-assessment" element={<Navigate to="/skill-assessment" replace />} />
+            <Route path="/document-preparation-services" element={<Navigate to="/document-attestation" replace />} />
+            <Route path="/student-visa-extension-services" element={<Navigate to="/visa-extension" replace />} />
             
             <Route path="/blog/:slug" element={<BlogPost />} />
             

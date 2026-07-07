@@ -10,7 +10,7 @@ export interface SitemapUrl {
 
 export const generateSitemap = (): string => {
   const baseUrl = 'https://www.acquireoverseas.in';
-  const currentDate = new Date().toISOString().split('T')[0];
+  const currentDate = '2025-07-07';
 
   // Define all indexable pages
   const urls: SitemapUrl[] = [

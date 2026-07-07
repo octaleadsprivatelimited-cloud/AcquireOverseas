@@ -46,6 +46,17 @@ const SEO: React.FC<SEOProps> = ({
       '/skill-assessment': '/skill-assessment',
       '/document-attestation': '/document-attestation',
       '/visa-extension': '/visa-extension',
+      '/application-support': '/application-support',
+      '/course-selection': '/course-selection',
+      '/university-selection': '/university-selection',
+      '/guide-to-study-abroad': '/guide-to-study-abroad',
+      '/study-abroad-benefits': '/study-abroad-benefits',
+      '/guide-for-parents': '/guide-for-parents',
+      '/cost-to-study-abroad': '/cost-to-study-abroad',
+      '/scholarships-to-study-abroad': '/scholarships-to-study-abroad',
+      '/studying-abroad-faqs': '/studying-abroad-faqs',
+      '/privacy-policy': '/privacy-policy',
+      '/terms-of-service': '/terms-of-service',
     };
 
     // Get clean canonical URL (remove query params and hash)
