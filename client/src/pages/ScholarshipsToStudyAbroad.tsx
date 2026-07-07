@@ -259,7 +259,7 @@ const ScholarshipsToStudyAbroad: React.FC = () => {
               Our experts can help you identify and apply for the right scholarships
             </p>
             <Link
-              to="/lets-start-your-journey"
+              to="/contact"
               className="inline-flex items-center px-8 py-4 bg-white text-amber-600 rounded-lg font-semibold text-lg hover:bg-yellow-400 hover:text-orange-900 transition-all duration-300 hover:scale-105 shadow-lg"
             >
               <span>Get Scholarship Assistance</span>

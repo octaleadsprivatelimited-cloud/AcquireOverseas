@@ -27,7 +27,7 @@ const Home: React.FC = () => {
     { 
       title: 'Study Abroad Programs', 
       desc: 'Top universities worldwide', 
-      link: '/study-abroad-programs', 
+      link: '/study-visa', 
       gradient: 'from-blue-500 to-cyan-500', 
       size: 'large',
       image: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1200&h=800&fit=crop&q=80'
@@ -59,7 +59,7 @@ const Home: React.FC = () => {
     { 
       title: 'Student Visa Services', 
       desc: 'Expert visa guidance', 
-      link: '/study-abroad-programs', 
+      link: '/study-visa', 
       gradient: 'from-amber-500 to-yellow-500', 
       size: 'medium',
       image: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&h=600&fit=crop&q=80'
@@ -218,7 +218,7 @@ const Home: React.FC = () => {
             className="text-center mt-6"
           >
             <Link
-              to="/comprehensive-education-solutions"
+              to="/services"
               className="inline-flex items-center px-5 py-2.5 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white rounded-lg font-semibold text-sm hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               <span>View All Services</span>
@@ -500,7 +500,7 @@ const Home: React.FC = () => {
             
             <div className="flex flex-row gap-2 md:gap-4 justify-center">
               <Link
-                to="/lets-start-your-journey"
+                to="/contact"
                 className="group inline-flex items-center justify-center bg-yellow-400 text-gray-900 hover:bg-yellow-500 hover:text-black px-3 py-2.5 md:px-8 md:py-4 rounded-lg md:rounded-xl font-bold text-xs md:text-base transition-all duration-300 hover:scale-105 shadow-xl"
               >
                 <Sparkles size={14} className="md:w-5 md:h-5 mr-1 md:mr-2 group-hover:rotate-12 transition-transform" />

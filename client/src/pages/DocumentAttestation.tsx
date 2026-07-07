@@ -26,7 +26,7 @@ const DocumentAttestation: React.FC = () => {
         title="Document Attestation Services - Document Verification for Study Abroad"
         description="Professional document attestation services for study abroad including academic document verification, embassy attestation, translation services, and express processing. Expert document attestation from Acquire Overseas Education."
         keywords="document attestation study abroad, document verification abroad, embassy attestation, document attestation services Hyderabad, academic document attestation, study abroad document attestation"
-        canonicalUrl="https://acquireoverseas.in/document-preparation-services"
+        canonicalUrl="https://acquireoverseas.in/document-attestation"
       />
       <section className="relative py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white overflow-hidden">
         <div 
@@ -168,7 +168,7 @@ const DocumentAttestation: React.FC = () => {
             
             <div className="flex flex-row gap-4 justify-center">
               <a
-                href="/lets-start-your-journey"
+                href="/contact"
                 className="inline-flex items-center justify-center bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
               >
                 Start Attestation
@@ -176,7 +176,7 @@ const DocumentAttestation: React.FC = () => {
               </a>
               
               <a
-                href="/comprehensive-education-solutions"
+                href="/services"
                 className="inline-flex items-center justify-center bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary-600 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
               >
                 View All Services

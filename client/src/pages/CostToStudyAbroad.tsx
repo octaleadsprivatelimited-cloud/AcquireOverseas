@@ -274,7 +274,7 @@ const CostToStudyAbroad: React.FC = () => {
               Our experts can help you create a realistic budget and explore funding options
             </p>
             <Link
-              to="/lets-start-your-journey"
+              to="/contact"
               className="inline-flex items-center px-8 py-4 bg-white text-green-600 rounded-lg font-semibold text-lg hover:bg-yellow-400 hover:text-green-900 transition-all duration-300 hover:scale-105 shadow-lg"
             >
               <span>Get Free Consultation</span>

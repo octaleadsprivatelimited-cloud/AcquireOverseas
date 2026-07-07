@@ -108,7 +108,7 @@ const About: React.FC = () => {
         title="About Us - Your Trusted Education Partner in Hyderabad"
         description="Learn about Acquire Overseas Education - Leading study abroad consultancy in Hyderabad. Founded by Mettumedi Sandeep, we've helped 5000+ students achieve their study abroad dreams. 98% success rate, 15+ years experience."
         keywords="about acquire overseas education, study abroad consultancy Hyderabad, education partner Hyderabad, best study abroad consultants Hyderabad, overseas education about, education consultancy about us"
-        canonicalUrl="https://acquireoverseas.in/your-trusted-education-partner"
+        canonicalUrl="https://acquireoverseas.in/about-us"
       />
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600">
@@ -140,14 +140,14 @@ const About: React.FC = () => {
             </p>
             <div className="flex flex-row gap-2 md:gap-4 justify-center">
               <a
-                href="/lets-start-your-journey"
+                href="/contact"
                 className="inline-flex items-center justify-center bg-white text-blue-600 hover:bg-gray-100 px-4 py-3 md:px-8 md:py-4 rounded-lg md:rounded-2xl font-semibold text-sm md:text-base transition-all duration-300 hover:scale-105 shadow-xl"
               >
                 <span>Get Started Today</span>
                 <ArrowRight size={16} className="ml-1 md:ml-2 md:w-5 md:h-5" />
               </a>
               <a
-                href="/comprehensive-education-solutions"
+                href="/services"
                 className="inline-flex items-center justify-center bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-4 py-3 md:px-8 md:py-4 rounded-lg md:rounded-2xl font-semibold text-sm md:text-base transition-all duration-300 hover:scale-105"
               >
                 <span>Our Services</span>
@@ -475,7 +475,7 @@ const About: React.FC = () => {
             
             <div className="flex flex-row gap-6 justify-center items-center">
               <a
-                href="/lets-start-your-journey"
+                href="/contact"
                 className="inline-flex items-center justify-center bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 <Sparkles className="w-4 h-4 mr-2" />
@@ -484,7 +484,7 @@ const About: React.FC = () => {
               </a>
               
               <a
-                href="/comprehensive-education-solutions"
+                href="/services"
                 className="inline-flex items-center justify-center bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 hover:scale-105"
               >
                 <span>Explore Services</span>

@@ -82,7 +82,7 @@ const Careers: React.FC = () => {
         title="Careers - Join Our Team at Acquire Overseas Education"
         description="Join Acquire Overseas Education team. We're looking for passionate professionals to help students achieve their study abroad dreams. Career opportunities in education consultancy, counseling, and support roles."
         keywords="careers education consultancy, jobs study abroad consultancy, education consultancy jobs Hyderabad, study abroad career opportunities, join education consultancy"
-        canonicalUrl="https://acquireoverseas.in/build-your-career-with-us"
+        canonicalUrl="https://acquireoverseas.in/careers"
       />
       {/* Hero Section */}
       <section className="py-20 relative overflow-hidden bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600">
@@ -309,7 +309,7 @@ const Careers: React.FC = () => {
             
             <div className="flex flex-row gap-2 md:gap-4 justify-center">
               <a
-                href="/lets-start-your-journey"
+                href="/contact"
                 className="inline-flex items-center justify-center bg-white text-blue-600 hover:bg-gray-100 px-4 py-3 md:px-8 md:py-4 rounded-lg md:rounded-xl font-semibold text-sm md:text-base transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 <span>Send Your Resume</span>

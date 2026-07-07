@@ -21,7 +21,7 @@ const Portfolio: React.FC = () => {
         title="Our Portfolio - Success Stories and Achievements"
         description="View our portfolio of successful study abroad cases including university admissions, scholarship achievements, visa approvals, and student success stories. See our track record at Acquire Overseas Education."
         keywords="study abroad portfolio, success stories study abroad, student achievements, study abroad success cases, portfolio study abroad consultancy"
-        canonicalUrl="https://acquireoverseas.in/our-portfolio"
+        canonicalUrl="https://acquireoverseas.in/portfolio"
       />
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -46,7 +46,7 @@ const Portfolio: React.FC = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Link to="/lets-start-your-journey" className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700">Start Your Case <ArrowRight size={16} className="ml-1" /></Link>
+            <Link to="/contact" className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700">Start Your Case <ArrowRight size={16} className="ml-1" /></Link>
           </div>
         </div>
       </section>

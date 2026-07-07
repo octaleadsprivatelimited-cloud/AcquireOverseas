@@ -185,7 +185,7 @@ const FAQ: React.FC = () => {
         title="Frequently Asked Questions - Study Abroad & Visa FAQ"
         description="Find answers to common questions about study abroad programs, student visas, work visas, family visas, and business visas. Expert guidance from Acquire Overseas Education in Hyderabad."
         keywords="study abroad FAQ, student visa FAQ, visa questions, study abroad questions, overseas education FAQ, visa consultancy FAQ Hyderabad, education consultancy FAQ"
-        canonicalUrl="https://acquireoverseas.in/frequently-asked-questions"
+        canonicalUrl="https://acquireoverseas.in/faq"
       />
       <section className="relative py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-30">
@@ -317,7 +317,7 @@ const FAQ: React.FC = () => {
                 Get a free consultation with our immigration experts to discuss your specific case.
               </p>
               <a
-                href="/lets-start-your-journey"
+                href="/contact"
                 className="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold"
               >
                 Schedule Consultation
@@ -340,7 +340,7 @@ const FAQ: React.FC = () => {
                 Chat with our support team in real-time for immediate assistance with your questions.
               </p>
               <a
-                href="/lets-start-your-journey"
+                href="/contact"
                 className="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold"
               >
                 Start Chat
@@ -391,7 +391,7 @@ const FAQ: React.FC = () => {
             
             <div className="flex flex-row gap-4 justify-center">
               <a
-                href="/lets-start-your-journey"
+                href="/contact"
                 className="inline-flex items-center justify-center bg-white text-primary-600 hover:bg-gray-100 px-5 py-3 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105"
               >
                 Contact Us
@@ -399,7 +399,7 @@ const FAQ: React.FC = () => {
               </a>
               
               <a
-                href="/comprehensive-education-solutions"
+                href="/services"
                 className="inline-flex items-center justify-center bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary-600 px-5 py-3 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105"
               >
                 View Our Services

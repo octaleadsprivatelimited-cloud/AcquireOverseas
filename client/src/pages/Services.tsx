@@ -22,7 +22,7 @@ const Services: React.FC = () => {
       description: 'Secure your place at top universities worldwide with our expert study abroad guidance.',
       features: ['University Selection', 'Application Support', 'Visa Processing'],
       image: '/services/study_visa.jpg',
-      link: '/study-abroad-programs',
+      link: '/study-visa',
       gradient: 'from-blue-500 to-cyan-500',
       iconBg: 'bg-gradient-to-br from-blue-500 to-cyan-500',
       successRate: '98%'
@@ -107,7 +107,7 @@ const Services: React.FC = () => {
         title="Comprehensive Education Solutions - Study Abroad Services"
         description="Complete education solutions including study abroad programs, visa services, university selection, course selection, application support, document attestation, and visa extension services in Hyderabad, India."
         keywords="study abroad programs Hyderabad, visa services Hyderabad, university selection, course selection, application support, document attestation, visa extension services, student visa application Hyderabad, education consultation Hyderabad"
-        canonicalUrl="https://acquireoverseas.in/comprehensive-education-solutions"
+        canonicalUrl="https://acquireoverseas.in/services"
       />
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600">
@@ -139,14 +139,14 @@ const Services: React.FC = () => {
             </p>
             <div className="flex flex-row gap-4 justify-center">
               <Link
-                to="/lets-start-your-journey"
+                to="/contact"
                 className="inline-flex items-center justify-center bg-white text-blue-600 hover:bg-gray-100 px-5 py-3 rounded-xl font-semibold text-sm transition-all duration-300 hover:scale-105 shadow-lg"
               >
                 <span>Get Free Consultation</span>
                 <ArrowRight size={16} className="ml-2" />
               </Link>
               <Link
-                to="/your-trusted-education-partner"
+                to="/about-us"
                 className="inline-flex items-center justify-center bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-5 py-3 rounded-xl font-semibold text-sm transition-all duration-300 hover:scale-105"
               >
                 <span>Learn More About Us</span>
@@ -385,7 +385,7 @@ const Services: React.FC = () => {
             
             <div className="flex flex-row gap-6 justify-center items-center">
               <Link
-                to="/lets-start-your-journey"
+                to="/contact"
                 className="inline-flex items-center justify-center bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 <Sparkles className="w-4 h-4 mr-2" />
@@ -394,7 +394,7 @@ const Services: React.FC = () => {
               </Link>
               
               <Link
-                to="/your-trusted-education-partner"
+                to="/about-us"
                 className="inline-flex items-center justify-center bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 hover:scale-105"
               >
                 <span>Learn About Us</span>

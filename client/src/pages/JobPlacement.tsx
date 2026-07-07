@@ -26,7 +26,7 @@ const JobPlacement: React.FC = () => {
         title="Career Counseling Services - Career Guidance for Study Abroad"
         description="Professional career counseling services including career assessment, career guidance, course matching, and future planning. Expert career counseling from Acquire Overseas Education in Hyderabad."
         keywords="career counseling study abroad, career guidance abroad, career counseling services Hyderabad, study abroad career guidance, career assessment study abroad"
-        canonicalUrl="https://acquireoverseas.in/career-counseling-services"
+        canonicalUrl="https://acquireoverseas.in/job-placement"
       />
       <section className="relative py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white overflow-hidden">
         <div 
@@ -172,7 +172,7 @@ const JobPlacement: React.FC = () => {
             
             <div className="flex flex-row gap-4 justify-center">
               <a
-                href="/lets-start-your-journey"
+                href="/contact"
                 className="inline-flex items-center justify-center bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
               >
                 Get Started
@@ -180,7 +180,7 @@ const JobPlacement: React.FC = () => {
               </a>
               
               <a
-                href="/comprehensive-education-solutions"
+                href="/services"
                 className="inline-flex items-center justify-center bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary-600 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
               >
                 View All Services

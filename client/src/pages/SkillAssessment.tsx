@@ -26,7 +26,7 @@ const SkillAssessment: React.FC = () => {
         title="Academic Profile Assessment - Profile Evaluation for Study Abroad"
         description="Comprehensive academic profile assessment including academic evaluation, eligibility assessment, profile matching, and improvement guidance. Expert profile assessment from Acquire Overseas Education."
         keywords="academic profile assessment, profile evaluation study abroad, academic assessment abroad, eligibility assessment study abroad, profile matching study abroad"
-        canonicalUrl="https://acquireoverseas.in/academic-profile-assessment"
+        canonicalUrl="https://acquireoverseas.in/skill-assessment"
       />
       <section className="relative py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white overflow-hidden">
         <div 
@@ -168,7 +168,7 @@ const SkillAssessment: React.FC = () => {
             
             <div className="flex flex-row gap-4 justify-center">
               <a
-                href="/lets-start-your-journey"
+                href="/contact"
                 className="inline-flex items-center justify-center bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
               >
                 Start Assessment
@@ -176,7 +176,7 @@ const SkillAssessment: React.FC = () => {
               </a>
               
               <a
-                href="/comprehensive-education-solutions"
+                href="/services"
                 className="inline-flex items-center justify-center bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary-600 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
               >
                 View All Services

@@ -144,7 +144,7 @@ const Contact: React.FC = () => {
         title="Contact Us - Get Free Study Abroad Consultation in Hyderabad"
         description="Contact Acquire Overseas Education in Hyderabad for free study abroad consultation. Call +91-95156-12909 or email info@acquireoverseas.in. Expert guidance for study in USA, UK, Canada, Australia, Germany."
         keywords="contact study abroad consultancy Hyderabad, study abroad consultation Hyderabad, acquire overseas education contact, visa consultancy contact Hyderabad, education consultant Hyderabad phone number"
-        canonicalUrl="https://acquireoverseas.in/lets-start-your-journey"
+        canonicalUrl="https://acquireoverseas.in/contact"
       />
       {/* Hero Section */}
       <section className="relative py-12 md:py-16 overflow-hidden bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600">
@@ -306,7 +306,7 @@ const Contact: React.FC = () => {
                         <option value="university-selection">University Selection</option>
                         <option value="course-selection">Course Selection</option>
                         <option value="application-support">Application Support</option>
-                        <option value="education-consultation">Education Consultation</option>
+                        <option value="immigration-consultation">Education Consultation</option>
                       </select>
                     </div>
                   </div>

@@ -26,7 +26,7 @@ const VisaExtension: React.FC = () => {
         title="Student Visa Extension Services - Extend Your Study Visa"
         description="Professional student visa extension services including visa renewal, program extension, compliance guidance, and renewal support. Expert visa extension services from Acquire Overseas Education in Hyderabad."
         keywords="student visa extension, visa extension services, study visa renewal, visa extension Hyderabad, student visa renewal services, extend student visa abroad"
-        canonicalUrl="https://acquireoverseas.in/student-visa-extension-services"
+        canonicalUrl="https://acquireoverseas.in/visa-extension"
       />
       <section className="relative py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white overflow-hidden">
         <div 
@@ -168,7 +168,7 @@ const VisaExtension: React.FC = () => {
             
             <div className="flex flex-row gap-4 justify-center">
               <a
-                href="/lets-start-your-journey"
+                href="/contact"
                 className="inline-flex items-center justify-center bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
               >
                 Start Extension Process
@@ -176,7 +176,7 @@ const VisaExtension: React.FC = () => {
               </a>
               
               <a
-                href="/comprehensive-education-solutions"
+                href="/services"
                 className="inline-flex items-center justify-center bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary-600 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
               >
                 View All Services

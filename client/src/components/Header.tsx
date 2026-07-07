@@ -18,6 +18,28 @@ const Header: React.FC = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
 
+  const servicesPaths = [
+    '/services',
+    '/study-visa',
+    '/immigration-consultation',
+    '/job-placement',
+    '/skill-assessment',
+    '/document-attestation',
+    '/visa-extension',
+    '/university-selection',
+    '/course-selection',
+    '/application-support'
+  ];
+
+  const studyAbroadPaths = [
+    '/guide-to-study-abroad',
+    '/study-abroad-benefits',
+    '/guide-for-parents',
+    '/cost-to-study-abroad',
+    '/scholarships-to-study-abroad',
+    '/studying-abroad-faqs'
+  ];
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -54,17 +76,17 @@ const Header: React.FC = () => {
 
   const servicesCategories = {
     educationServices: [
-      { name: 'Study Abroad Programs', path: '/study-abroad-programs', desc: 'Pursue education at top universities worldwide', icon: '🎓' },
+      { name: 'Study Abroad Programs', path: '/study-visa', desc: 'Pursue education at top universities worldwide', icon: '🎓' },
       { name: 'University Selection', path: '/university-selection', desc: 'Expert guidance on choosing the right university', icon: '🏫' },
       { name: 'Course Selection', path: '/course-selection', desc: 'Find the perfect course for your career goals', icon: '📚' },
       { name: 'Application Support', path: '/application-support', desc: 'Complete application process guidance', icon: '📝' },
-      { name: 'Student Visa Services', path: '/study-abroad-programs', desc: 'Expert student visa application assistance', icon: '🛂' }
+      { name: 'Student Visa Services', path: '/study-visa', desc: 'Expert student visa application assistance', icon: '🛂' }
     ],
     consultationServices: [
-      { name: 'Education Consultation', path: '/education-consultation', desc: 'Expert guidance from certified education consultants', icon: '📋' },
-      { name: 'Career Counseling', path: '/career-counseling-services', desc: 'Career guidance and pathway planning', icon: '🎯' },
-      { name: 'Document Preparation', path: '/document-preparation-services', desc: 'Official document verification and preparation', icon: '📄' },
-      { name: 'Pre-Departure Support', path: '/comprehensive-education-solutions', desc: 'Comprehensive support before you leave', icon: '✈️' }
+      { name: 'Education Consultation', path: '/immigration-consultation', desc: 'Expert guidance from certified education consultants', icon: '📋' },
+      { name: 'Career Counseling', path: '/job-placement', desc: 'Career guidance and pathway planning', icon: '🎯' },
+      { name: 'Document Preparation', path: '/document-attestation', desc: 'Official document verification and preparation', icon: '📄' },
+      { name: 'Pre-Departure Support', path: '/services', desc: 'Comprehensive support before you leave', icon: '✈️' }
     ],
     studyAbroad: [
       { name: 'Guide to Study Abroad', path: '/guide-to-study-abroad' },
@@ -79,15 +101,15 @@ const Header: React.FC = () => {
 
   const mainNavigation = [
     { name: 'Home', path: '/' },
-    { name: 'About', path: '/your-trusted-education-partner' },
+    { name: 'About', path: '/about-us' },
     { name: 'Study Abroad', path: '/guide-to-study-abroad', hasDropdown: true, dropdownType: 'studyAbroad' },
-    { name: 'Services', path: '/comprehensive-education-solutions', hasDropdown: true, dropdownType: 'services' },
-    { name: 'Portfolio', path: '/our-portfolio' },
-    { name: 'Blog', path: '/blog-resources' },
-    { name: 'Testimonials', path: '/success-stories' },
-    { name: 'FAQ', path: '/frequently-asked-questions' },
-    { name: 'Careers', path: '/build-your-career-with-us' },
-    { name: 'Contact', path: '/lets-start-your-journey' }
+    { name: 'Services', path: '/services', hasDropdown: true, dropdownType: 'services' },
+    { name: 'Portfolio', path: '/portfolio' },
+    { name: 'Blog', path: '/blog' },
+    { name: 'Testimonials', path: '/testimonials' },
+    { name: 'FAQ', path: '/faq' },
+    { name: 'Careers', path: '/careers' },
+    { name: 'Contact', path: '/contact' }
   ];
 
   return (
@@ -123,8 +145,8 @@ const Header: React.FC = () => {
                         onMouseEnter={() => setActiveDropdown(item.dropdownType || 'services')}
                         onClick={() => setActiveDropdown(activeDropdown === (item.dropdownType || 'services') ? null : (item.dropdownType || 'services'))}
                         className={`px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 flex items-center space-x-1 ${
-                          ((item.dropdownType === 'services' && (location.pathname.includes('/services') || location.pathname.includes('visa') || location.pathname.includes('education') || location.pathname.includes('study') || location.pathname.includes('university'))) ||
-                           (item.dropdownType === 'studyAbroad' && (location.pathname.includes('/guide-to-study-abroad') || location.pathname.includes('/study-abroad-benefits') || location.pathname.includes('/guide-for-parents') || location.pathname.includes('/cost-to-study-abroad') || location.pathname.includes('/scholarships-to-study-abroad') || location.pathname.includes('/studying-abroad-faqs'))))
+                          ((item.dropdownType === 'services' && servicesPaths.includes(location.pathname)) ||
+                           (item.dropdownType === 'studyAbroad' && studyAbroadPaths.includes(location.pathname)))
                             ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg'
                             : 'text-white hover:bg-white/10 hover:text-white'
                         }`}
@@ -351,7 +373,7 @@ const Header: React.FC = () => {
                   <h4 className="text-sm font-bold mb-0.5">Not Sure Which Service You Need?</h4>
                   <p className="text-white/90 mb-1 text-xs">Get a free consultation with our experts</p>
                   <Link
-                    to="/lets-start-your-journey"
+                    to="/contact"
                     onClick={() => setActiveDropdown(null)}
                     className="inline-flex items-center px-3 py-1.5 bg-white text-indigo-600 hover:bg-yellow-300 hover:text-purple-900 rounded-md font-semibold text-sm transition-all duration-300 hover:scale-105 shadow-lg"
                   >

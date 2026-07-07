@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
@@ -40,21 +40,24 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/your-trusted-education-partner" element={<About />} />
-            <Route path="/comprehensive-education-solutions" element={<Services />} />
-            <Route path="/our-portfolio" element={<Portfolio />} />
-            <Route path="/blog-resources" element={<Blog />} />
-            <Route path="/success-stories" element={<Testimonials />} />
-            <Route path="/build-your-career-with-us" element={<Careers />} />
-            <Route path="/lets-start-your-journey" element={<Contact />} />
-            <Route path="/frequently-asked-questions" element={<FAQ />} />
             
-            <Route path="/study-abroad-programs" element={<StudyVisa />} />
-            <Route path="/education-consultation" element={<ImmigrationConsultation />} />
-            <Route path="/career-counseling-services" element={<JobPlacement />} />
-            <Route path="/academic-profile-assessment" element={<SkillAssessment />} />
-            <Route path="/document-preparation-services" element={<DocumentAttestation />} />
-            <Route path="/student-visa-extension-services" element={<VisaExtension />} />
+            {/* Primary Simplified Routes */}
+            <Route path="/about-us" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/testimonials" element={<Testimonials />} />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/faq" element={<FAQ />} />
+            
+            <Route path="/study-visa" element={<StudyVisa />} />
+            <Route path="/immigration-consultation" element={<ImmigrationConsultation />} />
+            <Route path="/job-placement" element={<JobPlacement />} />
+            <Route path="/skill-assessment" element={<SkillAssessment />} />
+            <Route path="/document-attestation" element={<DocumentAttestation />} />
+            <Route path="/visa-extension" element={<VisaExtension />} />
+            
             <Route path="/application-support" element={<ApplicationSupport />} />
             <Route path="/course-selection" element={<CourseSelection />} />
             <Route path="/university-selection" element={<UniversitySelection />} />
@@ -70,21 +73,24 @@ function App() {
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
             
-            {/* Legacy routes for backward compatibility */}
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/testimonials" element={<Testimonials />} />
-            <Route path="/careers" element={<Careers />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/faq" element={<FAQ />} />
-            <Route path="/study-visa" element={<StudyVisa />} />
-            <Route path="/immigration-consultation" element={<ImmigrationConsultation />} />
-            <Route path="/job-placement" element={<JobPlacement />} />
-            <Route path="/skill-assessment" element={<SkillAssessment />} />
-            <Route path="/document-attestation" element={<DocumentAttestation />} />
-            <Route path="/visa-extension" element={<VisaExtension />} />
+            {/* Legacy Short Path Redirects */}
+            <Route path="/about" element={<Navigate to="/about-us" replace />} />
+            
+            {/* Legacy Long Path Redirects */}
+            <Route path="/about-us" element={<Navigate to="/about-us" replace />} />
+            <Route path="/services" element={<Navigate to="/services" replace />} />
+            <Route path="/portfolio" element={<Navigate to="/portfolio" replace />} />
+            <Route path="/blog" element={<Navigate to="/blog" replace />} />
+            <Route path="/testimonials" element={<Navigate to="/testimonials" replace />} />
+            <Route path="/careers" element={<Navigate to="/careers" replace />} />
+            <Route path="/contact" element={<Navigate to="/contact" replace />} />
+            <Route path="/faq" element={<Navigate to="/faq" replace />} />
+            <Route path="/study-visa" element={<Navigate to="/study-visa" replace />} />
+            <Route path="/immigration-consultation" element={<Navigate to="/immigration-consultation" replace />} />
+            <Route path="/job-placement" element={<Navigate to="/job-placement" replace />} />
+            <Route path="/skill-assessment" element={<Navigate to="/skill-assessment" replace />} />
+            <Route path="/document-attestation" element={<Navigate to="/document-attestation" replace />} />
+            <Route path="/visa-extension" element={<Navigate to="/visa-extension" replace />} />
             
             <Route path="/blog/:slug" element={<BlogPost />} />
           </Routes>

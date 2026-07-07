@@ -4,6 +4,23 @@
   "outputDirectory": "client/build",
   "installCommand": "npm install",
   "framework": null,
+  "redirects": [
+    { "source": "/about", "destination": "/about-us", "permanent": true },
+    { "source": "/your-trusted-education-partner", "destination": "/about-us", "permanent": true },
+    { "source": "/comprehensive-education-solutions", "destination": "/services", "permanent": true },
+    { "source": "/our-portfolio", "destination": "/portfolio", "permanent": true },
+    { "source": "/blog-resources", "destination": "/blog", "permanent": true },
+    { "source": "/success-stories", "destination": "/testimonials", "permanent": true },
+    { "source": "/build-your-career-with-us", "destination": "/careers", "permanent": true },
+    { "source": "/lets-start-your-journey", "destination": "/contact", "permanent": true },
+    { "source": "/frequently-asked-questions", "destination": "/faq", "permanent": true },
+    { "source": "/study-abroad-programs", "destination": "/study-visa", "permanent": true },
+    { "source": "/education-consultation", "destination": "/immigration-consultation", "permanent": true },
+    { "source": "/career-counseling-services", "destination": "/job-placement", "permanent": true },
+    { "source": "/academic-profile-assessment", "destination": "/skill-assessment", "permanent": true },
+    { "source": "/document-preparation-services", "destination": "/document-attestation", "permanent": true },
+    { "source": "/student-visa-extension-services", "destination": "/visa-extension", "permanent": true }
+  ],
   "rewrites": [
     {
       "source": "/api/(.*)",

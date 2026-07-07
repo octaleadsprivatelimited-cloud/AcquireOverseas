@@ -181,14 +181,14 @@ const Hero: React.FC = () => {
               className="flex flex-row gap-2 md:gap-4 justify-center mb-8 md:mb-10 lg:mb-12"
             >
               <Link
-                to="/lets-start-your-journey"
+                to="/contact"
                 className="group inline-flex items-center justify-center px-4 md:px-6 py-2.5 md:py-3 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white rounded-lg md:rounded-xl font-semibold text-xs md:text-sm hover:shadow-2xl transition-all duration-300 hover:scale-105 shadow-xl"
               >
                 <span>Get Started</span>
                 <ArrowRight size={14} className="ml-1 md:ml-2 group-hover:translate-x-2 transition-transform md:w-4 md:h-4" />
               </Link>
               <Link
-                to="/comprehensive-education-solutions"
+                to="/services"
                 className="inline-flex items-center justify-center px-4 md:px-6 py-2.5 md:py-3 bg-white text-gray-900 rounded-lg md:rounded-xl font-semibold text-xs md:text-sm hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-indigo-200"
               >
                 <span>Explore Services</span>

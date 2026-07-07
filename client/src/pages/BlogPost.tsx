@@ -195,7 +195,7 @@ const BlogPost: React.FC = () => {
                       Get personalized consultation for your study abroad journey.
                     </p>
                     <Link
-                      to="/lets-start-your-journey"
+                      to="/contact"
                       className="block w-full bg-white text-indigo-600 py-3 rounded-lg font-semibold hover:bg-yellow-400 hover:text-gray-900 transition text-center"
                     >
                       Contact Us

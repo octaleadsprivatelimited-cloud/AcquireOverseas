@@ -237,14 +237,14 @@ const StudyingAbroadFAQs: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
-                to="/lets-start-your-journey"
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 rounded-lg font-semibold text-lg hover:bg-yellow-400 hover:text-purple-900 transition-all duration-300 hover:scale-105 shadow-lg"
               >
                 <span>Contact Us</span>
                 <ArrowRight className="ml-2" size={20} />
               </Link>
               <Link
-                to="/frequently-asked-questions"
+                to="/faq"
                 className="inline-flex items-center px-8 py-4 bg-white/10 text-white rounded-lg font-semibold text-lg hover:bg-white/20 transition-all duration-300 border border-white/30"
               >
                 <HelpCircle className="mr-2" size={20} />

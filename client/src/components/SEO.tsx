@@ -29,14 +29,43 @@ const SEO: React.FC<SEOProps> = ({
     const baseKeywords = 'study abroad consultancy Hyderabad, visa consultancy Hyderabad, education consultancy India, study in USA, study in UK, study in Canada, study in Australia, student visa services Hyderabad';
     const baseUrl = 'https://acquireoverseas.in';
 
+    // Legacy to new path mappings for SEO canonical normalization
+    const pathMapping: { [key: string]: string } = {
+      '/about': '/about-us',
+      '/about-us': '/about-us',
+      '/services': '/services',
+      '/portfolio': '/portfolio',
+      '/blog': '/blog',
+      '/testimonials': '/testimonials',
+      '/careers': '/careers',
+      '/contact': '/contact',
+      '/faq': '/faq',
+      '/study-visa': '/study-visa',
+      '/immigration-consultation': '/immigration-consultation',
+      '/job-placement': '/job-placement',
+      '/skill-assessment': '/skill-assessment',
+      '/document-attestation': '/document-attestation',
+      '/visa-extension': '/visa-extension',
+    };
+
     // Get clean canonical URL (remove query params and hash)
     const getCleanCanonicalUrl = () => {
       if (canonicalUrl) {
         return canonicalUrl;
       }
+      
       // Get current path without query params or hash
-      const path = window.location.pathname;
-      return `${baseUrl}${path}`;
+      let path = window.location.pathname;
+      
+      // Remove trailing slash if present (except for root path)
+      if (path.length > 1 && path.endsWith('/')) {
+        path = path.slice(0, -1);
+      }
+      
+      // Map legacy path to new clean path if matched
+      const mappedPath = pathMapping[path] || path;
+      
+      return `${baseUrl}${mappedPath}`;
     };
 
     const finalCanonicalUrl = getCleanCanonicalUrl();
@@ -152,6 +181,13 @@ const SEO: React.FC<SEOProps> = ({
       schemaScript.text = JSON.stringify(schema);
       document.head.appendChild(schemaScript);
     }
+
+    // Cleanup: remove the canonical tag when this SEO component unmounts
+    return () => {
+      if (canonical && canonical.parentNode) {
+        canonical.parentNode.removeChild(canonical);
+      }
+    };
   }, [title, description, keywords, ogImage, ogType, canonicalUrl, noindex, schema, breadcrumbs]);
 
   return null;

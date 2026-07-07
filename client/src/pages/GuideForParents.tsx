@@ -249,7 +249,7 @@ const GuideForParents: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
-                to="/lets-start-your-journey"
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 rounded-lg font-semibold text-lg hover:bg-yellow-400 hover:text-purple-900 transition-all duration-300 hover:scale-105 shadow-lg"
               >
                 <span>Schedule a Consultation</span>

@@ -26,7 +26,7 @@ const ImmigrationConsultation: React.FC = () => {
         title="Education Consultation - Free Study Abroad Consultation Services"
         description="Free education consultation for studying abroad including profile assessment, study plan creation, university selection, and ongoing support. Expert education consultation from Acquire Overseas Education in Hyderabad."
         keywords="education consultation Hyderabad, study abroad consultation, free education consultation, profile assessment study abroad, education consultancy free consultation"
-        canonicalUrl="https://acquireoverseas.in/education-consultation"
+        canonicalUrl="https://acquireoverseas.in/immigration-consultation"
       />
       <section className="relative py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white overflow-hidden">
         <div className="absolute inset-0">
@@ -174,7 +174,7 @@ const ImmigrationConsultation: React.FC = () => {
             
             <div className="flex flex-row gap-4 justify-center">
               <a
-                href="/lets-start-your-journey"
+                href="/contact"
                 className="inline-flex items-center justify-center bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
               >
                 Book Free Consultation
@@ -182,7 +182,7 @@ const ImmigrationConsultation: React.FC = () => {
               </a>
               
               <a
-                href="/comprehensive-education-solutions"
+                href="/services"
                 className="inline-flex items-center justify-center bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary-600 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
               >
                 View All Services

@@ -24,34 +24,34 @@ const Footer: React.FC = () => {
   // Quick Links - Most important pages for easy access
   const quickLinks = [
     { name: 'Home', path: '/' },
-    { name: 'About Us', path: '/your-trusted-education-partner' },
-    { name: 'Our Services', path: '/comprehensive-education-solutions' },
-    { name: 'Contact Us', path: '/lets-start-your-journey' },
-    { name: 'Success Stories', path: '/success-stories' },
-    { name: 'FAQ', path: '/frequently-asked-questions' }
+    { name: 'About Us', path: '/about-us' },
+    { name: 'Our Services', path: '/services' },
+    { name: 'Contact Us', path: '/contact' },
+    { name: 'Success Stories', path: '/testimonials' },
+    { name: 'FAQ', path: '/faq' }
   ];
 
   // Study Destinations - Popular countries
   const studyDestinations = [
-    { name: 'Study in USA', path: '/study-abroad-programs' },
-    { name: 'Study in Canada', path: '/study-abroad-programs' },
-    { name: 'Study in UK', path: '/study-abroad-programs' },
-    { name: 'Study in Australia', path: '/study-abroad-programs' },
-    { name: 'Study in Germany', path: '/study-abroad-programs' },
-    { name: 'Study in Europe', path: '/study-abroad-programs' }
+    { name: 'Study in USA', path: '/study-visa' },
+    { name: 'Study in Canada', path: '/study-visa' },
+    { name: 'Study in UK', path: '/study-visa' },
+    { name: 'Study in Australia', path: '/study-visa' },
+    { name: 'Study in Germany', path: '/study-visa' },
+    { name: 'Study in Europe', path: '/study-visa' }
   ];
 
   // Our Services - All education services
   const ourServices = [
-    { name: 'Study Abroad Programs', path: '/study-abroad-programs' },
+    { name: 'Study Abroad Programs', path: '/study-visa' },
     { name: 'University Selection', path: '/university-selection' },
     { name: 'Course Selection', path: '/course-selection' },
     { name: 'Application Support', path: '/application-support' },
-    { name: 'Education Consultation', path: '/education-consultation' },
-    { name: 'Career Counseling', path: '/career-counseling-services' },
-    { name: 'Academic Profile Assessment', path: '/academic-profile-assessment' },
-    { name: 'Document Preparation', path: '/document-preparation-services' },
-    { name: 'Student Visa Extension', path: '/student-visa-extension-services' }
+    { name: 'Education Consultation', path: '/immigration-consultation' },
+    { name: 'Career Counseling', path: '/job-placement' },
+    { name: 'Academic Profile Assessment', path: '/skill-assessment' },
+    { name: 'Document Preparation', path: '/document-attestation' },
+    { name: 'Student Visa Extension', path: '/visa-extension' }
   ];
 
   const trustBadges = [
