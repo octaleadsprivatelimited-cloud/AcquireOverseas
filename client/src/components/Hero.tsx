@@ -121,16 +121,14 @@ const Hero: React.FC = () => {
               transition={{ duration: 1.5, ease: "easeInOut" }}
               className="absolute inset-0"
             >
-              <div 
-                key={image}
-                className="w-full h-full bg-cover"
+              <img 
+                src={image}
+                alt={`Study Abroad Programs and Visa Services - Slide ${index + 1}`}
+                className="w-full h-full object-cover"
                 style={{
-                  backgroundImage: `url(${image})`,
-                  backgroundPosition: isMobile ? getMobilePosition() : 'center',
-                  backgroundSize: 'cover',
-                  backgroundRepeat: 'no-repeat'
+                  objectPosition: isMobile ? getMobilePosition() : 'center'
                 }}
-              ></div>
+              />
               {/* Dark overlay for text readability */}
               <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/40"></div>
             </motion.div>

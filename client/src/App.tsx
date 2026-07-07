@@ -30,6 +30,7 @@ import GuideForParents from './pages/GuideForParents';
 import CostToStudyAbroad from './pages/CostToStudyAbroad';
 import ScholarshipsToStudyAbroad from './pages/ScholarshipsToStudyAbroad';
 import StudyingAbroadFAQs from './pages/StudyingAbroadFAQs';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -93,6 +94,9 @@ function App() {
             <Route path="/visa-extension" element={<Navigate to="/visa-extension" replace />} />
             
             <Route path="/blog/:slug" element={<BlogPost />} />
+            
+            {/* Fallback route */}
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />

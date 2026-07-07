@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Minus, ArrowRight, HelpCircle } from 'lucide-react';
 import SEO from '../components/SEO';
@@ -143,41 +143,19 @@ const FAQ: React.FC = () => {
   ];
 
   // Create FAQ structured data
-  useEffect(() => {
-    const allFAQs = faqCategories.flatMap(category => category.items);
-    const faqSchema = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": allFAQs.map(faq => ({
-        "@type": "Question",
-        "name": faq.question,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": faq.answer
-        }
-      }))
-    };
-
-    // Remove existing FAQ schema if any
-    const existingSchema = document.querySelector('script[type="application/ld+json"][data-faq]');
-    if (existingSchema) {
-      existingSchema.remove();
-    }
-
-    // Add FAQ schema
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.setAttribute('data-faq', 'true');
-    script.text = JSON.stringify(faqSchema);
-    document.head.appendChild(script);
-
-    return () => {
-      const scriptToRemove = document.querySelector('script[type="application/ld+json"][data-faq]');
-      if (scriptToRemove) {
-        scriptToRemove.remove();
+  const allFAQs = faqCategories.flatMap(category => category.items);
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": allFAQs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
       }
-    };
-  }, [faqCategories]);
+    }))
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -186,6 +164,7 @@ const FAQ: React.FC = () => {
         description="Find answers to common questions about study abroad programs, student visas, work visas, family visas, and business visas. Expert guidance from Acquire Overseas Education in Hyderabad."
         keywords="study abroad FAQ, student visa FAQ, visa questions, study abroad questions, overseas education FAQ, visa consultancy FAQ Hyderabad, education consultancy FAQ"
         canonicalUrl="https://www.acquireoverseas.in/faq"
+        schema={faqSchema}
       />
       <section className="relative py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-30">

@@ -123,6 +123,24 @@ const StudyingAbroadFAQs: React.FC = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  const allQuestions = faqs.flatMap(cat => cat.questions.map(q => ({
+    question: q.q,
+    answer: q.a
+  })));
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: allQuestions.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
+  };
+
   let questionIndex = 0;
 
   return (
@@ -132,6 +150,7 @@ const StudyingAbroadFAQs: React.FC = () => {
         description="Get answers to frequently asked questions about studying abroad including admission process, visa requirements, costs, scholarships, accommodation, and more. Expert answers from Acquire Overseas Education in Hyderabad."
         keywords="study abroad FAQ, studying abroad questions, study abroad frequently asked questions, study abroad queries, overseas education FAQ, study abroad answers"
         canonicalUrl="https://www.acquireoverseas.in/studying-abroad-faqs"
+        schema={faqSchema}
       />
       {/* Hero Section */}
       <section className="relative py-12 md:py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white overflow-hidden">
